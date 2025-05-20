@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.31">
+<meta name="generator" content="quarto-1.7.30">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -75,7 +75,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-e1a5c8363afafaef2c763b6775fbf3ca.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-de070a7b0ab54f8780927367ac907214.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="site_libs/bootstrap/bootstrap-e22fbe6e69edb8577f7b7bd0719516f0.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
@@ -302,7 +302,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#commit-your-edits-on-github-desktop" id="toc-commit-your-edits-on-github-desktop" class="nav-link" data-scroll-target="#commit-your-edits-on-github-desktop">4. Commit your edits on GitHub Desktop</a></li>
   <li><a href="#create-a-pull-request" id="toc-create-a-pull-request" class="nav-link" data-scroll-target="#create-a-pull-request">5. Create a Pull Request</a></li>
   </ul></li>
-  <li><a href="#get-contributing" id="toc-get-contributing" class="nav-link" data-scroll-target="#get-contributing">Get contributing!</a></li>
+  <li><a href="#get-contributing" id="toc-get-contributing" class="nav-link" data-scroll-target="#get-contributing">Get contributing!</a>
+  <ul>
+  <li><a href="#workflow" id="toc-workflow" class="nav-link" data-scroll-target="#workflow">Workflow:</a></li>
+  <li><a href="#authoring" id="toc-authoring" class="nav-link" data-scroll-target="#authoring">Authoring</a></li>
+  <li><a href="#code-additions" id="toc-code-additions" class="nav-link" data-scroll-target="#code-additions">Code additions</a></li>
+  </ul></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/EARTHTIME/MassSpecAcademy/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li><li><a href="https://github.com/EARTHTIME/MassSpecAcademy/edit/main/contributing.qmd" class="toc-action"><i class="bi empty"></i>Edit this page</a></li></ul></div></nav>
     </div>
@@ -644,21 +649,6 @@ GitHub Desktop screenshot with uncommitted changes
 </p>
 </div>
 </div>
-<p>You’ll recognize some of the files on the list as ones you added, edited, or deleted, and perhaps others as ones that Quarto created for your preview. You just want to commit the files that you added/edited/deleted. Un-check the preview-related files, which end with .html, .js, .css, and .woff.</p>
-<div class="callout callout-style-simple callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-GitHub Desktop: only stage (leave checkbox checked) the files you added/edited/deleted
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p><img src="figs/tutorials/GitHub Desktop staging screenshot.png" class="img-fluid" style="width:80.0%" alt="GitHub desktop screenshot staging edited files"><br>
-</p>
-</div>
-</div>
 <p>Next, find the commit message area in the bottom left of the GitHub Desktop window. In the “Summary” bar, write a short summary of your edits (ideally &lt; 50 characters), like “Add explanation of work function for TIMS.” In the the “Description” box below, you can optionally leave a concise explanation of your edits. The commit message will be preserved alongside your edits and will help everyone understand your proposed changes and find where/when content was edited in case changes need to be reverted.</p>
 <div class="callout callout-style-simple callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -708,7 +698,8 @@ GitHub Desktop screenshot of the pull requests tab on the “Current Branch” d
 </p>
 </div>
 </div>
-<p>Clicking the blue link to “create a pull request” will open a new browser tab at the EARTHTIME/MassSpecAcademy repository. The tab will be pre-populated with all the right selections for creating a new pull request from the branch in your forked repository that you’ve been working on. Enter a good summary and description for what you plan to contribute in this pull request (e.g., “update SIMS figures” or “add chapter on calutron history”). Then click the dropdown arrow next to the green “Create Pull Request” button and choose “Create draft pull request”:</p>
+<p>Clicking the blue link to “create a pull request” will open a new browser tab at the EARTHTIME/MassSpecAcademy repository. If you don’t see the little spaceship drawing, you can also go to the main menu at the top of the screen, click “Branch”, then “View Pull Request on GitHub.”</p>
+<p>The EARTHTIME/MassSpecAcademy GitHub.com page will be pre-populated with all the right selections for creating a new pull request from the branch in your forked repository that you’ve been working on. Enter a good summary and description for what you plan to contribute in this pull request (e.g., “update SIMS figures” or “add chapter on calutron history”). Then click the dropdown arrow next to the green “Create Pull Request” button and choose “Create draft pull request”:</p>
 <div class="callout callout-style-simple callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -745,6 +736,8 @@ GitHub website screenshot of a draft pull request that’s ready for review.
 </div>
 </div>
 <p>Once your branch is merged, you can check <a href="https://massspec.academy/">https://massspec.academy/</a> to see it live – new content should appear in about a minute.</p>
+<section id="workflow" class="level3">
+<h3 class="anchored" data-anchor-id="workflow">Workflow:</h3>
 <p>The contribution process now looks like:</p>
 <ol type="1">
 <li>Start another branch with a new name for your new task in GitHub Desktop,</li>
@@ -754,9 +747,17 @@ GitHub website screenshot of a draft pull request that’s ready for review.
 <li>keep writing and committing as you go, then</li>
 <li>when you’re done, indicate on GitHub.com your pull request is ready to review.</li>
 </ol>
+</section>
+<section id="authoring" class="level3">
+<h3 class="anchored" data-anchor-id="authoring">Authoring</h3>
 <p>For Quarto syntax and formatting, like headings, figures, equations, and more, check out the <a href="https://quarto.org/docs/authoring/markdown-basics.html">Authoring Guide</a> on the <a href="https://quarto.org/">https://quarto.org/</a> website.</p>
+</section>
+<section id="code-additions" class="level3">
+<h3 class="anchored" data-anchor-id="code-additions">Code additions</h3>
+<p>The current conda environment includes Python 3.13 and Jupyter notebook requirements along with numpy, pandas, matplotlib, seaborn, and bokeh. If you need additional requirements for the code you wish to include in Mass Spec Academy, then you can add them to the environment, then export them to the environment.yml file.</p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
