@@ -55,63 +55,159 @@
     ]
   },
   {
-    "objectID": "background.html",
-    "href": "background.html",
-    "title": "1  Physics and Chemistry Background",
+    "objectID": "template_chapter.html",
+    "href": "template_chapter.html",
+    "title": "1  Template Chapter",
     "section": "",
-    "text": "1.1 Forget the Spectrometer, What is a Mass?",
+    "text": "1.1 Basics\nWrite using Markdown syntax, and find a quick tutorial here: https://quarto.org/docs/authoring/markdown-basics.html. Some tips for the syntax we’ll use in Mass Spec Academy follows.",
     "crumbs": [
       "Contribute",
       "Background",
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Concept Review</span>"
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Template Chapter</span>"
+    ]
+  },
+  {
+    "objectID": "template_chapter.html#sec-template-headings",
+    "href": "template_chapter.html#sec-template-headings",
+    "title": "1  Template Chapter",
+    "section": "1.2 This is a top-level section, like Headings and Labels",
+    "text": "1.2 This is a top-level section, like Headings and Labels\nAfter the title of the section, you can optionally add a label in curly braces {} so that you can refer to it later. The #sec- at the start of the section label is mandatory for Quarto. Quarto will yell at you if you have accidentally duplicated a label name from another chapter so that you can change yours.\nTo refer to this section anywhere in the book, just write @sec-template-headings.\nWith a labelled section like this one, you can link back to Section 1.2. If you want to just refer to the section number (without the word “Section”), then use [-@sec-template-headings]. Please use hyphens instead of underscores in your label names to keep LaTeX happy.\nRelevant headers and references docs\n\n1.2.1 This is a subsection, like Ion Counter Types\n\nThis is a subsubsection like Dynode Voltage Schemes",
+    "crumbs": [
+      "Contribute",
+      "Background",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Template Chapter</span>"
+    ]
+  },
+  {
+    "objectID": "template_chapter.html#figures",
+    "href": "template_chapter.html#figures",
+    "title": "1  Template Chapter",
+    "section": "1.3 Figures",
+    "text": "1.3 Figures\nThe Quarto syntax for a figure looks like\n![Caption text here](relative_path_to_figure.png){#fig-my-label fig-alt=\"Alt text\" width=\"XX%\"}\nHere’s an example. Use a blank line between the text and the figure syntax so that it isn’t set inline. Figures are numbered sequentially and can refer to them if you add a label, just like for sections. The label must start with #fig- and don’t use underscores please. Also, if the contents of the curly braces appear below the figures instead of styling the figure, it’s because you used commas between the options that appear inside the curly braces (don’t do that).\n\n\n\n\n\n\nFigure 1.1: An extended geometry magnetic sector mass spectrometer.\n\n\n\nRelevant Quarto Docs for many more figure options\nAnother way to format a figure",
+    "crumbs": [
+      "Contribute",
+      "Background",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Template Chapter</span>"
+    ]
+  },
+  {
+    "objectID": "template_chapter.html#citations",
+    "href": "template_chapter.html#citations",
+    "title": "1  Template Chapter",
+    "section": "1.4 Citations",
+    "text": "1.4 Citations\nExport your references from your reference manager or from the online journal article in a BibTeX format, then add the work to the references.bib file. The name of the bibliography entry is the first element after the opening curly brace. You can reference the entry in the text using an @ followed by the name of the entry. For instance, Wang et al. (2021) typesets a reference to an atomic mass table reference.\nAll the usual inline reference formats are included, like (Wang et al. 2021) or (e.g., Wang et al. 2021) or (Wang et al. 2021; Yergey and Yergey 1997).\nYour cited reference will automatically be added to the References section.\nRelevant citations docs",
+    "crumbs": [
+      "Contribute",
+      "Background",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Template Chapter</span>"
+    ]
+  },
+  {
+    "objectID": "template_chapter.html#equations",
+    "href": "template_chapter.html#equations",
+    "title": "1  Template Chapter",
+    "section": "1.5 Equations",
+    "text": "1.5 Equations\nYou can typeset inline equations like \\(F = ma\\) and display-style equations like:\n\\[\n\\sigma^2_z = \\sigma^2_x \\left( \\dfrac{\\partial z}{\\partial x} \\right)^{\\hspace{-4pt}2} + 2\\sigma^2_{xy}\\left( \\dfrac{\\partial z}{\\partial x} \\right) \\!\\! \\left( \\dfrac{\\partial z}{\\partial y} \\right) + \\sigma^2_y \\left( \\dfrac{\\partial z}{\\partial y} \\right)^{\\hspace{-4pt}2}\n\\tag{1.1}\\]\nTypeset equations like Equation 1.1 using LaTeX syntax. VS Code with the Quarto extension gives you a nice interactive preview of the display-style equation on the left-hand panel if you hit the “Preview” button above the first double dollar sign. A display equation will be numbered if you include a label after the final double dollar sign, like {#eq-unct-propagation-xyz} above.\nFor more complicated equation environments, you’re best off with a trial and error approach, but Quarto seems to include many of the usual (e.g., amsmath) packages by default.\nRelevant equations docs",
+    "crumbs": [
+      "Contribute",
+      "Background",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Template Chapter</span>"
+    ]
+  },
+  {
+    "objectID": "template_chapter.html#callout-blocks",
+    "href": "template_chapter.html#callout-blocks",
+    "title": "1  Template Chapter",
+    "section": "1.6 Callout Blocks",
+    "text": "1.6 Callout Blocks\n\n\n\n\n\n\nNote\n\n\n\nWe could use callout blocks in the html version of our book. This might be helpful for text asides in a less formal tone.\n\n\n\n\n\n\n\n\nWhat are the three parts of a mass spectrometer?\n\n\n\n\n\nPerhaps we could use collapse callouts for the end-of-chapter questions and answers?\n\n\n\nRelevant callouts docs",
+    "crumbs": [
+      "Contribute",
+      "Background",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Template Chapter</span>"
+    ]
+  },
+  {
+    "objectID": "template_chapter.html#code",
+    "href": "template_chapter.html#code",
+    "title": "1  Template Chapter",
+    "section": "1.7 Code",
+    "text": "1.7 Code\nCheck out background.qmd for a short Python code that creates a figure output. The code that created that figure is automatically included on the website as a collapsible code block above the figure. You can edit and execute the Python inside VS Code and then preview in Quarto to see the results.\nIf you wish to add an executable code block, then make sure to un-comment the jupyter: python3 line from the header at the top of the document by removing the # in front of it.\nRelevant code block docs\n\n\n\n\nWang, Meng, W. J. Huang, F. G. Kondev, G. Audi, and S. Naimi. 2021. “The AME 2020 Atomic Mass Evaluation (II). Tables, Graphs and References*.” Chinese Physics C 45 (3): 030003. https://doi.org/10.1088/1674-1137/abddaf.\n\n\nYergey, Alfred L., and A. Karl Yergey. 1997. “Preparative Scale Mass Spectrometry: A Brief History of the Calutron.” Journal of the American Society for Mass Spectrometry 8 (9): 943–53. https://doi.org/https://doi.org/10.1016/S1044-0305(97)00123-2.",
+    "crumbs": [
+      "Contribute",
+      "Background",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Template Chapter</span>"
+    ]
+  },
+  {
+    "objectID": "background.html",
+    "href": "background.html",
+    "title": "2  Physics and Chemistry Background",
+    "section": "",
+    "text": "2.1 Forget the Spectrometer, What is a Mass?",
+    "crumbs": [
+      "Contribute",
+      "Background",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Concept Review</span>"
     ]
   },
   {
     "objectID": "background.html#forget-the-spectrometer-what-is-a-mass",
     "href": "background.html#forget-the-spectrometer-what-is-a-mass",
-    "title": "1  Physics and Chemistry Background",
+    "title": "2  Physics and Chemistry Background",
     "section": "",
-    "text": "1.1.1 SI units for mass\nThe SI unit for mass is the kilogram, but samples analyzed for mass spectrometry are usually much smaller. The table below lists some typical sample sizes for geochemistry, both as SI terms with prefixes and as fractions of a gram. As we will soon learn, the number of atoms in a gram depends on the atomic mass of the atoms. The third column gives the number of atoms of that mass. It starts with atoms of mass 12 unified mass units (i.e., \\(^{12}\\)C), but you can hover your slider over the blue atomic mass and drag left or right to increase or decrease its value.\n\nSI prefixes for small things.\n\n\n\n\n\n\n\n\nMass with Prefix\nMass in grams\nAtoms of \\(^{12}\\)C\nAtoms of \\(^{238}\\)U\n\n\n\n\nkilogram\n\\(10^3\\) grams\n\\(6 \\times 10^{26}\\)\n\\(3 \\times 10^{25}\\)\n\n\ngram\n1 gram\n\\(6 \\times 10^{23}\\)\n\\(3 \\times 10^{22}\\)\n\n\nmiligram\n\\(10^{-3}\\) grams\n\\(6 \\times 10^{20}\\)\n\\(3 \\times 10^{19}\\)\n\n\nmicrogram\n\\(10^{-6}\\) grams\n\\(6 \\times 10^{17}\\)\n\\(3 \\times 10^{16}\\)\n\n\nnanogram\n\\(10^{-9}\\) grams\n\\(6 \\times 10^{14}\\)\n\\(3 \\times 10^{13}\\)\n\n\npicogram\n\\(10^{-12}\\) grams\n\\(6 \\times 10^{11}\\)\n\\(3 \\times 10^{10}\\)\n\n\nfemtogram\n\\(10^{-15}\\) grams\n\\(6 \\times 10^{8}\\)\n\\(3 \\times 10^{7}\\)\n\n\nattogram\n\\(10^{-18}\\) grams\n\\(602214\\)\n\\(30357\\)\n\n\n\n\n\n1.1.2 Other units for mass\nThe familiar (and perhaps unfamiliar!) SI prefixes down to the attogram still don’t reach a small enough value to easily compare the masses of single atoms, like \\(^{238}\\)U and \\(^{235}\\)U. For that, we’ll need a new unit, the unified mass unit, also known as the Dalton (symbols: u or Da). The unified atomic mass unit is not in the SI, but it’s commonly used in physics and chemistry for very small masses, like the mass of a single atom or molecule. It’s defined as \\(\\frac{1}{12}\\) the mass of a \\(^{12}\\)C atom. That’s about \\(1.660539 \\times 10^{-27}\\) kilograms. The equivalent unit Dalton is more widely used in the organic chemistry community.\nWhat about the atomic mass unit, or amu? This very similar unit was used widely in the mid-twentieth century but was defined differently by physicists and chemists. It was formally abandoned in 1961, replaced by the unified atomic mass unit and the Dalton, and assigned unique unit abbreviations. However, many scientific communities still use amu to abbreviate the unified atomic mass unit. The inorganic mass spectrometry community is among them, and this textbook will use amu below.\n\n\n1.1.3 Atomic masses of your favorite isotopes\nThe isotope \\(^{12}\\)C is the only isotope with an integer mass (it has a mass of 12 amu). Other isotopes have non-integer masses, which are determined to high precision by nuclear physicists. Masses and 1\\(\\sigma\\) uncertainty in parentheses are from Wang et al. (2021):\n\n\\(^{1}\\)H has a mass of 1.007825031898(14) amu\n\\(^{86}\\)Sr has a mass of 85.9092607309(91) amu\n\\(^{144}\\)Nd has a mass of 143.9100873(25) amu\n\\(^{208}\\)Pb has a mass of 207.9766521(13) amu\n\\(^{238}\\)U has a mass of 238.0507882(20) amu\n\nIsotopic masses aren’t integers for several reasons. First, neutrons and protons don’t have exactly the same mass. Neutrons are slightly heavier than protons (1.0087 vs. 1.0073 amu, respectively). But an atomic mass is different from the sum of the masses of its protons, neutrons, and much lighter electrons. The difference is the binding energy of the atom and specifically the nucleus, or the energy released by the formation of the nucleus from its constituent parts. This energy of fusion, which powers the sun and stars, can be converted to mass via Einstein’s famous equation \\(e=mc^2\\). So the combined mass of 6 protons + 6 neutrons + 6 electrons is 12.0989 amu, and the difference between that mass and the 12 amu mass of a \\(^{12}\\)C atom is the energy released by putting the atom together.\nThe chemical energy released by forming a molecule out of atoms is small relative to the nuclear forces responsible for forming atoms, so the molecular mass of a molecule is very close to the sum of the atomic masses of its atoms. Note that two molecules with the same chemical formula might have two different molecular masses. For instance, \\(^{12}\\)C\\(^{16}\\)O\\(_2\\) will have a different molecular mass than \\(^{13}\\)C\\(^{16}\\)O\\(_2\\) will have a different mass than \\(^{12}\\)C\\(^{18}\\)O\\(^{16}\\)O. These three molecules, all with a different molecular mass, are called isotopologues.\nBecause each isotope has a slightly different mass, different atoms and/or molecules may have very similar masses. For instance, the mass of \\(^{40}\\)Ar is 39.96238 amu, the mass of \\(^{40}\\)Ca is 39.96259 amu, and the mass of \\(^{40}\\)K is 39.96400 amu. Their proximity in mass makes these isotopes difficult (but not impossible) to separate with mass spectrometers. The more atoms a molecule has, the more opportunities isotopic substitution has to create near-overlaps. For instance, natural U is often measured by TIMS as UO\\(^{+}_{2}\\) after adding a tracer containing synthetic U isotopes.\n\n\n\n\n\n\nFigure 1.1: Uranium oxide (UO\\(_2\\)) isotopologues for a natural U sample with a \\(^{233}\\)U-\\(^{236}\\)U tracer added. The \\(^{238}\\)U/\\(^{236}\\)U ratio is 0.5 for this sample, and the tracer \\(^{233}\\)U/\\(^{236}\\)U is 1. Click to enlarge the figure.",
+    "text": "2.1.1 SI units for mass\nThe SI unit for mass is the kilogram, but samples analyzed for mass spectrometry are usually much smaller. The table below lists some typical sample sizes for geochemistry, both as SI terms with prefixes and as fractions of a gram. As we will soon learn, the number of atoms in a gram depends on the atomic mass of the atoms. The third column gives the number of atoms of that mass. It starts with atoms of mass 12 unified mass units (i.e., \\(^{12}\\)C), but you can hover your slider over the blue atomic mass and drag left or right to increase or decrease its value.\n\nSI prefixes for small things.\n\n\n\n\n\n\n\n\nMass with Prefix\nMass in grams\nAtoms of \\(^{12}\\)C\nAtoms of \\(^{238}\\)U\n\n\n\n\nkilogram\n\\(10^3\\) grams\n\\(6 \\times 10^{26}\\)\n\\(3 \\times 10^{25}\\)\n\n\ngram\n1 gram\n\\(6 \\times 10^{23}\\)\n\\(3 \\times 10^{22}\\)\n\n\nmiligram\n\\(10^{-3}\\) grams\n\\(6 \\times 10^{20}\\)\n\\(3 \\times 10^{19}\\)\n\n\nmicrogram\n\\(10^{-6}\\) grams\n\\(6 \\times 10^{17}\\)\n\\(3 \\times 10^{16}\\)\n\n\nnanogram\n\\(10^{-9}\\) grams\n\\(6 \\times 10^{14}\\)\n\\(3 \\times 10^{13}\\)\n\n\npicogram\n\\(10^{-12}\\) grams\n\\(6 \\times 10^{11}\\)\n\\(3 \\times 10^{10}\\)\n\n\nfemtogram\n\\(10^{-15}\\) grams\n\\(6 \\times 10^{8}\\)\n\\(3 \\times 10^{7}\\)\n\n\nattogram\n\\(10^{-18}\\) grams\n\\(602214\\)\n\\(30357\\)\n\n\n\n\n\n2.1.2 Other units for mass\nThe familiar (and perhaps unfamiliar!) SI prefixes down to the attogram still don’t reach a small enough value to easily compare the masses of single atoms, like \\(^{238}\\)U and \\(^{235}\\)U. For that, we’ll need a new unit, the unified mass unit, also known as the Dalton (symbols: u or Da). The unified atomic mass unit is not in the SI, but it’s commonly used in physics and chemistry for very small masses, like the mass of a single atom or molecule. It’s defined as \\(\\frac{1}{12}\\) the mass of a \\(^{12}\\)C atom. That’s about \\(1.660539 \\times 10^{-27}\\) kilograms. The equivalent unit Dalton is more widely used in the organic chemistry community.\nWhat about the atomic mass unit, or amu? This very similar unit was used widely in the mid-twentieth century but was defined differently by physicists and chemists. It was formally abandoned in 1961, replaced by the unified atomic mass unit and the Dalton, and assigned unique unit abbreviations. However, many scientific communities still use amu to abbreviate the unified atomic mass unit. The inorganic mass spectrometry community is among them, and this textbook will use amu below.\n\n\n2.1.3 Atomic masses of your favorite isotopes\nThe isotope \\(^{12}\\)C is the only isotope with an integer mass (it has a mass of 12 amu). Other isotopes have non-integer masses, which are determined to high precision by nuclear physicists. Masses and 1\\(\\sigma\\) uncertainty in parentheses are from Wang et al. (2021):\n\n\\(^{1}\\)H has a mass of 1.007825031898(14) amu\n\\(^{86}\\)Sr has a mass of 85.9092607309(91) amu\n\\(^{144}\\)Nd has a mass of 143.9100873(25) amu\n\\(^{208}\\)Pb has a mass of 207.9766521(13) amu\n\\(^{238}\\)U has a mass of 238.0507882(20) amu\n\nIsotopic masses aren’t integers for several reasons. First, neutrons and protons don’t have exactly the same mass. Neutrons are slightly heavier than protons (1.0087 vs. 1.0073 amu, respectively). But an atomic mass is different from the sum of the masses of its protons, neutrons, and much lighter electrons. The difference is the binding energy of the atom and specifically the nucleus, or the energy released by the formation of the nucleus from its constituent parts. This energy of fusion, which powers the sun and stars, can be converted to mass via Einstein’s famous equation \\(e=mc^2\\). So the combined mass of 6 protons + 6 neutrons + 6 electrons is 12.0989 amu, and the difference between that mass and the 12 amu mass of a \\(^{12}\\)C atom is the energy released by putting the atom together.\nThe chemical energy released by forming a molecule out of atoms is small relative to the nuclear forces responsible for forming atoms, so the molecular mass of a molecule is very close to the sum of the atomic masses of its atoms. Note that two molecules with the same chemical formula might have two different molecular masses. For instance, \\(^{12}\\)C\\(^{16}\\)O\\(_2\\) will have a different molecular mass than \\(^{13}\\)C\\(^{16}\\)O\\(_2\\) will have a different mass than \\(^{12}\\)C\\(^{18}\\)O\\(^{16}\\)O. These three molecules, all with a different molecular mass, are called isotopologues.\nBecause each isotope has a slightly different mass, different atoms and/or molecules may have very similar masses. For instance, the mass of \\(^{40}\\)Ar is 39.96238 amu, the mass of \\(^{40}\\)Ca is 39.96259 amu, and the mass of \\(^{40}\\)K is 39.96400 amu. Their proximity in mass makes these isotopes difficult (but not impossible) to separate with mass spectrometers. The more atoms a molecule has, the more opportunities isotopic substitution has to create near-overlaps. For instance, natural U is often measured by TIMS as UO\\(^{+}_{2}\\) after adding a tracer containing synthetic U isotopes.\n\n\n\n\n\n\nFigure 2.1: Uranium oxide (UO\\(_2\\)) isotopologues for a natural U sample with a \\(^{233}\\)U-\\(^{236}\\)U tracer added. The \\(^{238}\\)U/\\(^{236}\\)U ratio is 0.5 for this sample, and the tracer \\(^{233}\\)U/\\(^{236}\\)U is 1. Click to enlarge the figure.",
     "crumbs": [
       "Contribute",
       "Background",
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Concept Review</span>"
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Concept Review</span>"
     ]
   },
   {
     "objectID": "background.html#energy-electricity-and-magnetism",
     "href": "background.html#energy-electricity-and-magnetism",
-    "title": "1  Physics and Chemistry Background",
-    "section": "1.2 Energy, Electricity, and Magnetism",
-    "text": "1.2 Energy, Electricity, and Magnetism\nTo separate dissimilar objects like minerals or legos, one good strategy is to place them all together and then sort through and choose different elements from the pile. A chemical reaction might dissolve or precipitate one element and leave another behind. However, isotopes of the same element have nearly identical chemical behavior. Mass spectrometers don’t inspect and sort a stack of static individual atoms like sorting legos, and they can’t rely on chemical reactions to sort isotopes.\nInstead, mass spectrometers move the atoms by first ionizing them and then manipulating the ions with electrical and magnetic forces. The resulting kinetic changes in the isotopes’ motion depend on their atomic or molecular mass, which can be exploited to separate different isotopes. Once separated, the streams of ions in motion must be measured by sensitive electronic instruments. Here again, the ions’ electrical properties are important.\n\n1.2.1 Energy\n\\[\nKE = qV = \\dfrac{1}{2}mv^2\n\\tag{1.1}\\]\n\n\nCode\nimport numpy as np\nimport matplotlib.pyplot as plt\n\nkg_per_amu = 1.66e-27\nmass_amu = 238\nmass_kg = mass_amu * kg_per_amu\nvelocity_meters_per_second = np.linspace(0, 2, 100)\nkinetic_energy_joule = mass_kg * velocity_meters_per_second ** 2\n\nfig, ax = plt.subplots()\n\nax.plot(velocity_meters_per_second, kinetic_energy_joule)\n\nax.set_xlabel('Veclocity (m/s)')\nax.set_ylabel('Kinetic Energy (J)')\nax.set_title('Quadratic Function')\nfig.tight_layout\n\nplt.show()\n\n\n\n\n\n\n\n\nFigure 1.2: Kinetic energy as a function of velocity for \\(^{238}\\)U\n\n\n\n\n\n\n\nMagnetic force acts on a positively charged ion. Figure after Bill O.\n\n\n\nReferences\n\n\nWang, Meng, W. J. Huang, F. G. Kondev, G. Audi, and S. Naimi. 2021.\n“The AME 2020 Atomic Mass Evaluation (II). Tables, Graphs and\nReferences*.” Chinese Physics C 45 (3): 030003. https://doi.org/10.1088/1674-1137/abddaf.\n\n\nYergey, Alfred L., and A. Karl Yergey. 1997. “Preparative Scale\nMass Spectrometry: A Brief History of the Calutron.” Journal\nof the American Society for Mass Spectrometry 8 (9): 943–53.\nhttps://doi.org/https://doi.org/10.1016/S1044-0305(97)00123-2.",
+    "title": "2  Physics and Chemistry Background",
+    "section": "2.2 Energy, Electricity, and Magnetism",
+    "text": "2.2 Energy, Electricity, and Magnetism\nTo separate dissimilar objects like minerals or legos, one good strategy is to place them all together and then sort through and choose different elements from the pile. A chemical reaction might dissolve or precipitate one element and leave another behind. However, isotopes of the same element have nearly identical chemical behavior. Mass spectrometers don’t inspect and sort a stack of static individual atoms like sorting legos, and they can’t rely on chemical reactions to sort isotopes.\nInstead, mass spectrometers move the atoms by first ionizing them and then manipulating the ions with electrical and magnetic forces. The resulting kinetic changes in the isotopes’ motion depend on their atomic or molecular mass, which can be exploited to separate different isotopes. Once separated, the streams of ions in motion must be measured by sensitive electronic instruments. Here again, the ions’ electrical properties are important.\n\n2.2.1 Energy\n\\[\nKE = qV = \\dfrac{1}{2}mv^2\n\\tag{2.1}\\]\n\n\nCode\nimport numpy as np\nimport matplotlib.pyplot as plt\n\nkg_per_amu = 1.66e-27\nmass_amu = 238\nmass_kg = mass_amu * kg_per_amu\nvelocity_meters_per_second = np.linspace(0, 2, 100)\nkinetic_energy_joule = mass_kg * velocity_meters_per_second ** 2\n\nfig, ax = plt.subplots()\n\nax.plot(velocity_meters_per_second, kinetic_energy_joule)\n\nax.set_xlabel('Veclocity (m/s)')\nax.set_ylabel('Kinetic Energy (J)')\nax.set_title('Quadratic Function')\nfig.tight_layout\n\nplt.show()\n\n\n\n\n\n\n\n\nFigure 2.2: Kinetic energy as a function of velocity for \\(^{238}\\)U\n\n\n\n\n\n\n\nMagnetic force acts on a positively charged ion. Figure after Bill O.\n\n\n\nReferences\n\n\nWang, Meng, W. J. Huang, F. G. Kondev, G. Audi, and S. Naimi. 2021.\n“The AME 2020 Atomic Mass Evaluation (II). Tables, Graphs and\nReferences*.” Chinese Physics C 45 (3): 030003. https://doi.org/10.1088/1674-1137/abddaf.\n\n\nYergey, Alfred L., and A. Karl Yergey. 1997. “Preparative Scale\nMass Spectrometry: A Brief History of the Calutron.” Journal\nof the American Society for Mass Spectrometry 8 (9): 943–53.\nhttps://doi.org/https://doi.org/10.1016/S1044-0305(97)00123-2.",
     "crumbs": [
       "Contribute",
       "Background",
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Concept Review</span>"
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Concept Review</span>"
     ]
   },
   {
     "objectID": "ion_sources.html",
     "href": "ion_sources.html",
-    "title": "2  Ion Sources",
+    "title": "3  Ion Sources",
     "section": "",
-    "text": "Figure 2.1: One of the beta unit calutron sources. ORNL Photo 24574, from Yergey and Yergey (1997).\n\n\n\n\n\n\n\nYergey, Alfred L., and A. Karl Yergey. 1997. “Preparative Scale Mass Spectrometry: A Brief History of the Calutron.” Journal of the American Society for Mass Spectrometry 8 (9): 943–53. https://doi.org/https://doi.org/10.1016/S1044-0305(97)00123-2.",
+    "text": "Figure 3.1: One of the beta unit calutron sources. ORNL Photo 24574, from Yergey and Yergey (1997).\n\n\n\n\n\n\n\nYergey, Alfred L., and A. Karl Yergey. 1997. “Preparative Scale Mass Spectrometry: A Brief History of the Calutron.” Journal of the American Society for Mass Spectrometry 8 (9): 943–53. https://doi.org/https://doi.org/10.1016/S1044-0305(97)00123-2.",
     "crumbs": [
       "Contribute",
       "Background",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Ion Sources</span>"
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Ion Sources</span>"
     ]
   },
   {
     "objectID": "peak_tails_abundance_sensitivity.html",
     "href": "peak_tails_abundance_sensitivity.html",
-    "title": "4  Peak Tails and Abundance Sensitivity",
+    "title": "5  Peak Tails and Abundance Sensitivity",
     "section": "",
     "text": "References",
     "crumbs": [
       "Contribute",
       "Analytical Considerations",
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Peak Tails and Abundance Sensitivity</span>"
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Peak Tails and Abundance Sensitivity</span>"
+    ]
+  },
+  {
+    "objectID": "Re-Os.html",
+    "href": "Re-Os.html",
+    "title": "9  Re-Os",
+    "section": "",
+    "text": "Sample text here",
+    "crumbs": [
+      "Contribute",
+      "Isotope Systems",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Re-Os</span>"
     ]
   },
   {
@@ -172,6 +268,42 @@
       "Contribute",
       "Appendices",
       "<span class='chapter-number'>A</span>  <span class='chapter-title'>Contributing to Mass Spec Academy</span>"
+    ]
+  },
+  {
+    "objectID": "citing.html",
+    "href": "citing.html",
+    "title": "Appendix B — Citing Mass Spec Academy",
+    "section": "",
+    "text": "How to cite the web version in static work\nMass Spec Academy is maintained by the project maintainers in collaboration with a group of editors and section authors. The materials that make up MSA are maintained in a Github repository that is part of the EARTHTIME organization. Updates are periodically pushed to the website and assigned a version number. The current version is 0.1.\nCitations in peer-reviewed published work should refer to the version number using the format below, and should include the full author list. Dynamic citations may refer to individual sections but we recommend that they also include the version number and access date. You can access past versions and changelogs below.\nIf your work will be peer-reviewed and published online or in print as either a static resources (like a journal article) or with a version number, use the citation format below to refer to the specific version of the website that you accessed. Refer in text to the specific section referenced if necessary.\nCox, S. E., Mclean, N. M., Arkula, C., Cruz-Uribe, A. M., Ickert, R, B., Lloyd, M. K., Panahi, F., Piasecki, A. M., Runyon, M. L., Souders, A. K., Tremblay, M. M. Mass Spec Academy, v. 0.1, https://massspec.academy/versions/web/v0_1.",
+    "crumbs": [
+      "Contribute",
+      "Appendices",
+      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Citing Mass Spec Academy</span>"
+    ]
+  },
+  {
+    "objectID": "citing.html#how-to-cite-the-pdf-or-printed-version-in-static-work",
+    "href": "citing.html#how-to-cite-the-pdf-or-printed-version-in-static-work",
+    "title": "Appendix B — Citing Mass Spec Academy",
+    "section": "How to cite the pdf or printed version in static work",
+    "text": "How to cite the pdf or printed version in static work\nMass Spec Academy will be availabled as a printed and static pdf resource starting with version 1.0.",
+    "crumbs": [
+      "Contribute",
+      "Appendices",
+      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Citing Mass Spec Academy</span>"
+    ]
+  },
+  {
+    "objectID": "citing.html#how-to-cite-sections-using-a-hyperlink-in-web-and-dynamic-resources",
+    "href": "citing.html#how-to-cite-sections-using-a-hyperlink-in-web-and-dynamic-resources",
+    "title": "Appendix B — Citing Mass Spec Academy",
+    "section": "How to cite sections using a hyperlink in web and dynamic resources",
+    "text": "How to cite sections using a hyperlink in web and dynamic resources\nIf your work refers to a section of Mass Spec Academy using a hyperlink and does not require a traceable reference, you may directly link to https://massspec.academy or to specific sections of the web resource. However, we recommend including information about the version and date of access to avoid confusion if MSA is updated. You may also use the versions list below to access static versions for direct hyperlinking.\n\nVersions\nStatic versions will be periodically compiled and listed here along with a changelog. The links below refer to older versions of the live resource that will not be changed, and the corresponding files are also available in version-specific branches on Github.",
+    "crumbs": [
+      "Contribute",
+      "Appendices",
+      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Citing Mass Spec Academy</span>"
     ]
   }
 ]
