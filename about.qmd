@@ -4,3 +4,4 @@ title: "About"
 
 ## This is a website about isotopes and the mass spectrometers that love them.
 
+One person who loves mass spectrometers is Max Lloyd
