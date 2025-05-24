@@ -59,7 +59,7 @@
     "href": "template_chapter.html",
     "title": "1  Template Chapter",
     "section": "",
-    "text": "1.1 Basics\nWrite using Markdown syntax, and find a quick tutorial here: https://quarto.org/docs/authoring/markdown-basics.html. Some tips for the syntax we’ll use in Mass Spec Academy follows.",
+    "text": "1.1 Basics\nWrite using Markdown syntax, and find a quick tutorial here: My link text.\nCheck out template_chapter.qmd on VS Code to see how this is all typeset.\nTo be consistent across the project, let’s typeset the mass number of an isotope with a LaTeX superscript, like \\(^{12}\\)C. The element symbol’s letters go outside the dollar signs. Likewise for a chemical formula, like CO\\(_2\\). Numbers and uncertainties are in unicode, like 10 ± 2 Ma, rather than LaTeX like \\(10 \\pm 2\\) Ma.",
     "crumbs": [
       "Contribute",
       "Background",
@@ -187,27 +187,171 @@
     ]
   },
   {
+    "objectID": "about/aboutme_cox.html",
+    "href": "about/aboutme_cox.html",
+    "title": "Stephen E. Cox",
+    "section": "",
+    "text": "Stephen Cox is an isotope geochemist who measures noble gases to date rocks and minerals. His interests extend from deep time thermochronology in the western United States to the geology of winemaking. He has a PhD from Caltech and has been at Lamont-Doherty Earth Observatory since 2017.\nStephen Cox Geology",
+    "crumbs": [
+      "Contribute",
+      "Contributors",
+      "Stephen E. Cox"
+    ]
+  },
+  {
+    "objectID": "about/aboutme_mclean.html",
+    "href": "about/aboutme_mclean.html",
+    "title": "Noah McLean",
+    "section": "",
+    "text": "My research interests center around using high-precision isotopic measurements to study geologic and geochemical systems, with a focus on U-Pb geochronology. I often develop new statistical methods to better understand and interpret data, and I frequently work with other scientists to integrate these approaches into scientific workflows.",
+    "crumbs": [
+      "Contribute",
+      "Contributors",
+      "Noah McLean"
+    ]
+  },
+  {
+    "objectID": "about/aboutme_arkula.html",
+    "href": "about/aboutme_arkula.html",
+    "title": "Cemil Arkula",
+    "section": "",
+    "text": "Empty\nI am a PhD student at University of Maine working on in situ Rb-Sr dating of micas using LA-ICP-MS/MS. My PhD work includes understanding the analytical chalenges (e.g., down hole fractionation) during Rb-Sr measurements and applying on tectonized rocks to understand the Rb-Sr system. Before my PhD, I did my BSc in Geological Engineering at Istanbul University and MSc in Earth, Structure and Dynamics at Utrecht University.",
+    "crumbs": [
+      "Contribute",
+      "Contributors",
+      "Cemil Arkula"
+    ]
+  },
+  {
+    "objectID": "about/aboutme_cruz-uribe.html",
+    "href": "about/aboutme_cruz-uribe.html",
+    "title": "Alicia (Cici) Cruz-Uribe",
+    "section": "",
+    "text": "Dr. Alicia Marie Cruz-Uribe is the Edward Sturgis Grew Associate Professor of Petrology and Mineralogy at the University of Maine, USA. She is head of the MAGIC (MicroAnalytical Geochemistry and Isotope Characterization) Laboratory. Her research interests span the fields of solid Earth petrology, geochemistry, and geochronology, with a current focus on laser ablation coupled to tandem mass spectrometers. Dr. Cruz-Uribe is a current Distinguished Lecturer for the Association of Women Geoscientists, is a member of the Editorial Board of Geostandards and Geoanalytical Research, and serves on the Council for the International Association of Geoanalysts.",
+    "crumbs": [
+      "Contribute",
+      "Contributors",
+      "Alicia (Cici) Cruz-Uribe"
+    ]
+  },
+  {
+    "objectID": "about/aboutme_dutton.html",
+    "href": "about/aboutme_dutton.html",
+    "title": "Andrea Dutton",
+    "section": "",
+    "text": "Andrea lives and works in Wisconsin where she will measure U and Th.",
+    "crumbs": [
+      "Contribute",
+      "Contributors",
+      "Andrea Dutton"
+    ]
+  },
+  {
+    "objectID": "about/aboutme_ickert.html",
+    "href": "about/aboutme_ickert.html",
+    "title": "Ryan Ickert",
+    "section": "",
+    "text": "Ryan Ickert is a Senior Research Scientist at Purdue University. He has used SIMS and TIMS instrumentation extensively, and has experience in (LA) MC-ICPMS and IRMS&gt;",
+    "crumbs": [
+      "Contribute",
+      "Contributors",
+      "Ryan Ickert"
+    ]
+  },
+  {
+    "objectID": "about/aboutme_lloyd.html",
+    "href": "about/aboutme_lloyd.html",
+    "title": "Max K. Lloyd",
+    "section": "",
+    "text": "Max Lloyd is a stable isotope geochemist and Assistant Professor at Penn State. Max and his lab pull small bits off of large organic molecules, and put them into gas-source mass spectrometers to analyze their clumped and position-specific isotope compositions.\nMax got his PhD in Geochemistry from Caltech in 2017. He spent two years as an Agouron Geobiology Postdoctoral Scholar at UC Berkeley working with Daniel Stolper. He started at Penn State in 2020.\nemail: mlloyd@psu.edu",
+    "crumbs": [
+      "Contribute",
+      "Contributors",
+      "Max K. Lloyd"
+    ]
+  },
+  {
+    "objectID": "about/aboutme_panahi.html",
+    "href": "about/aboutme_panahi.html",
+    "title": "Fatema Panahi",
+    "section": "",
+    "text": "Hi there! 👋 I’m Fatema Panahi\nI’m a geoscientist with a PhD in Geology from the University of Kansas, passionate about tectonics, geochronology, and geochemistry. My research focuses on subduction-related magmatism, structural geology, and and thermochronology.\nStarting a postdoc at the University of Manitoba\nInterests: Mass spectrometry | Arc magmatism | Thermochronology | CA-ID-TIMS Geochronology\nReach me: fpanahi@ku.edu",
+    "crumbs": [
+      "Contribute",
+      "Contributors",
+      "Fatema Panahi"
+    ]
+  },
+  {
+    "objectID": "about/aboutme_piasecki.html",
+    "href": "about/aboutme_piasecki.html",
+    "title": "Alison Piasecki",
+    "section": "",
+    "text": "email: apiasecki@usgs.gov\nI am a research geologist at the U. S. Geological Survey in Denver, CO. I develop new mass spectromectric methods for small samples, rare species, and new instruments and compare that to a theoretical quantum mechanical based framework. I have apply this to important topics such as critical minerals and mine waste as a resource, non-conventional oil and gas reserves, glaciation of Antarctica, and modern biogenic fluxes of methane to the atmosphere.\nKeywords:\n- mass spectrometry \n- instrumentation \n- isotope geochemistry\n- stable isotopes",
+    "crumbs": [
+      "Contribute",
+      "Contributors",
+      "Alison Piasecki"
+    ]
+  },
+  {
+    "objectID": "about/aboutme_runyon.html",
+    "href": "about/aboutme_runyon.html",
+    "title": "Maddy Runyon",
+    "section": "",
+    "text": "Maddy is an undergraduate physics student at Columbia University’s School of General Studies. Maddy works as a lab asistant for Stephen Cox in the noble gas lab at the Lamont Doherty Earth Observatory, where they assist with setup and maintence of mass spectrometry equipment.",
+    "crumbs": [
+      "Contribute",
+      "Contributors",
+      "Maddy Runyon"
+    ]
+  },
+  {
+    "objectID": "about/aboutme_souders.html",
+    "href": "about/aboutme_souders.html",
+    "title": "Kate Souders",
+    "section": "",
+    "text": "I am a Research Geologist at the U.S. Geological Survey serving as Principal Investigator and Lab Manager for the USGS PlasmaLab and Lab Manager for the Denver Isotope Laser Lab (DILL), two laser ablation-inductively coupled plasma-mass spectrometry (LA-ICP-MS) laboratories focused on innovative in-situ uranium-thorium-lead (U-Th-Pb) geochronology and radiogenic isotope measurements. My research focuses on mass spectrometry method development to constrain timing and formation of geologic systems. This information is essential for critical mineral systems research and mapping our nations natural resources.\nemail: asouders@usgs.gov",
+    "crumbs": [
+      "Contribute",
+      "Contributors",
+      "Kate Souders"
+    ]
+  },
+  {
+    "objectID": "about/aboutme_tremblay.html",
+    "href": "about/aboutme_tremblay.html",
+    "title": "Dr. Marissa Tremblay",
+    "section": "",
+    "text": "Dr. Marissa Tremblay is an Assistant Professsor at Purdue University in the Department of Earth, Atmospheric, and Planetary Sciences. Marissa is the PI of the Thermochronology @ Purdue (T@P) research group, which includes a noble gas mass spectrometry facility focused on measurements of comsmogenic and radiogenic noble gases.",
+    "crumbs": [
+      "Contribute",
+      "Contributors",
+      "Dr. Marissa Tremblay"
+    ]
+  },
+  {
     "objectID": "peak_tails_abundance_sensitivity.html",
     "href": "peak_tails_abundance_sensitivity.html",
-    "title": "5  Peak Tails and Abundance Sensitivity",
+    "title": "12  Peak Tails and Abundance Sensitivity",
     "section": "",
     "text": "References",
     "crumbs": [
       "Contribute",
       "Analytical Considerations",
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Peak Tails and Abundance Sensitivity</span>"
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Peak Tails and Abundance Sensitivity</span>"
     ]
   },
   {
     "objectID": "Re-Os.html",
     "href": "Re-Os.html",
-    "title": "9  Re-Os",
+    "title": "16  Re-Os",
     "section": "",
     "text": "Sample text here",
     "crumbs": [
       "Contribute",
       "Isotope Systems",
-      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Re-Os</span>"
+      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Re-Os</span>"
     ]
   },
   {
