@@ -1,6 +1,5 @@
 ---
 title: Citing Mass Spec Academy
-author: Stephen Cox
 date: May 21, 2025
 editor:
   render-on-save: true

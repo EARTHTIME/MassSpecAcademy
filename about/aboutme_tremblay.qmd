@@ -1,5 +1,6 @@
-![](figs/profile/marissa.jpeg){fig-alt="Dr. Marissa Tremblay in Antarctica." width="500" height="370"}
 
-# Dr. Marissa Tremblay
+# Dr. Marissa Tremblay {.unnumbered}
+
+![](profile/marissa.jpg){fig-alt="Dr. Marissa Tremblay in Antarctica." width="500" height="370"}
 
 Dr. Marissa Tremblay is an Assistant Professsor at Purdue University in the Department of Earth, Atmospheric, and Planetary Sciences. Marissa is the PI of the Thermochronology \@ Purdue (T\@P) research group, which includes a noble gas mass spectrometry facility focused on measurements of comsmogenic and radiogenic noble gases.

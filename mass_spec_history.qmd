@@ -2,3 +2,30 @@
 title: "Mass spec history"
 ---
 
+## 1890s-1920s: Early developments
+
+<!-- Cathode rays, JJ Thomson, F Aston, AJ Dempster W Bleakney, 1906 Nobel Prize -->
+
+## 1930s: The first mass spectrometers
+
+<!-- A Nier, E Johnson,  -->
+<!-- https://pubs.acs.org/doi/10.1021/ac8013065 -->
+
+## 1940s-1950s: The Manhattan Project and World War II
+
+<!-- H Urey, W Paul, Calutrons, growth of isotope geochemistry, first TOF in late 40s -->
+
+## 1960s-1970s: Diversification of techniques
+
+<!-- SIMS, glow discharge, Viking mass spectrometers, AMS, commercial TOF, commercial QMS -->
+
+## 1980s-1990s: Commercializaiton and plasma sources
+
+<!-- Early ICP, very first laser ablation in 1980s -->
+<!-- https://www.isotopx.com/whats-the-story-behind-isotopx -->
+<!-- https://www.asms.org/docs/default-source/history-posters/vendor_tfs-history-asms-poster_mss_jeps_48-for-jane.pdf?sfvrsn=313576c3_0 -->
+<!-- Laser ablation's explosive growth in 90s, Galileo MS -->
+
+## 2000s-modern: Multicollection and modern electronics
+
+<!-- Multicollector dominance, Mars rover -->

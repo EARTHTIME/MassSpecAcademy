@@ -1,9 +1,9 @@
 
-# Stephen E. Cox
+# Stephen E. Cox {.unnumbered}
 
 
 
-![](figs/profile/cox.jpg){fig-alt="Stephen Cox headshot." width="300"}
+![](profile/cox.jpg){fig-alt="Stephen Cox headshot." width="300"}
 
 Stephen Cox is an isotope geochemist who measures noble gases to date rocks and minerals. His interests extend from deep time thermochronology in the western United States to the geology of winemaking. He has a PhD from Caltech and has been at Lamont-Doherty Earth Observatory since 2017.
 

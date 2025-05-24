@@ -1,4 +1,134 @@
----
-title: "Mass spec design"
----
+# Mass Spectrometer Components
+
+General outline of a mass spectrometer
+
+Diagram with parts labeled. Ion optics will point to several different pieces.
+
+
+## Sample introduction system
+
+### Wet plasma
+
+### Desolvating nebulizer
+
+### Laser ablation
+
+### Other
+
+Clean lab (a bunch of chemistry)
+
+Noble gas extraction line
+
+## Ion sources
+
+### Electron Impact
+
+### Thermal ionization
+
+### Inductively Coupled Plasma
+
+### Secondary ion sources
+
+### Other ion sources
+
+Glow discharge
+Electrospray
+MALDI
+Laser desorption
+RIMS
+
+## Analyzers
+
+### Magnetic sectors
+
+### Electrostatic analyzers
+
+### Quadrupoles
+
+### Collision cells
+
+### AMS
+
+### Time of Flight
+
+### Orbitrap
+
+### Others
+
+FT-ion cyclotron resonance
+
+
+## Detectors
+
+### Faraday detector
+
+#### Amplifiers
+
+Capacitive
+
+Resistance-based
+
+### Electron Multipliers and/or Ion Counters
+
+#### Secondary Electron Multipliers
+
+#### Daly Detectors
+
+#### Channeltrons
+
+### Other
+
+AMS Detectors (ion counters with information on energy). Gas ionization detectors.
+
+Array detectors
+
+## Ion optics
+
+### Ion lenses/deflectors
+
+### Using magnets as ion optics
+
+### Retardation lenses
+
+### Zoom/dispersion lenses
+
+## Vacuum Systems
+
+### Low vacuum pumps
+
+Oil pumps
+Mercury diffusion pumps
+Scroll pumps
+Rotary vane pump
+Diaphragm pumps
+Roots pumps
+Getter pumps
+
+### High vacuum components
+
+Turbos
+Ion pumps
+Cryo pumps
+
+### Material considerations
+
+### Flanges, gaskets, valves
+
+### Vacuum guages 
+
+## Power components
+
+### High voltages and considerations
+
+### Mass spec power systems
+
+UPS
+Transformer
+Power conditioner
+Chillers
+
+
+## Computers
+
+### Data loops
 

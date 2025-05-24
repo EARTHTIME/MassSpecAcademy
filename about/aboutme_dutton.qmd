@@ -1,7 +1,7 @@
 
-# About Me
+# Andrea Dutton {.unnumbered}
 
 Andrea lives and works in Wisconsin where she will measure U and Th.
 
-![](figs/profile/name.jpg)
+<!-- ![](profile/name.jpg) -->
 

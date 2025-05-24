@@ -22,18 +22,18 @@ book:
       - ion_sources.qmd
     - part: "Contributors"
       chapters:
-      - aboutme_cox.qmd
-      - aboutme_mclean.qmd 
-      - aboutme_arkula.qmd 
-      - aboutme_cruz-uribe.qmd 
-      - aboutme_dutton.qmd 
-      - aboutme_ickert.qmd 
-      - aboutme_lloyd.qmd 
-      - aboutme_panahi.qmd 
-      - aboutme_piasecki.qmd 
-      - aboutme_runyon.qmd 
-      - aboutme_souders.qmd 
-      - aboutme_tremblay.qmd 
+      - about/aboutme_cox.qmd
+      - about/aboutme_mclean.qmd 
+      - about/aboutme_arkula.qmd 
+      - about/aboutme_cruz-uribe.qmd 
+      - about/aboutme_dutton.qmd 
+      - about/aboutme_ickert.qmd 
+      - about/aboutme_lloyd.qmd 
+      - about/aboutme_panahi.qmd 
+      - about/aboutme_piasecki.qmd 
+      - about/aboutme_runyon.qmd 
+      - about/aboutme_souders.qmd 
+      - about/aboutme_tremblay.qmd 
     - part: "Mass Spectrometry Overview"
       chapters: 
       - mass_spec_history.qmd
@@ -60,7 +60,6 @@ book:
       - basic_stats_refresher.qmd
     - references.qmd
   appendices: 
-    - aboutme_piasecki.qmd
     - contributing.qmd
     - citing.qmd
   navbar:

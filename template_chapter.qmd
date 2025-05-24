@@ -9,29 +9,7 @@ lightbox: true
 image: figs/Template_LineDrawing.svg
 editor:
   render-on-save: true
-
 # for front matter options, see https://quarto.org/docs/authoring/front-matter.html
-author: 
-  - name: Noah M. McLean
-    orcid: 0000-0003-0388-1862
-    corresponding: true
-    email: noahmc@ku.edu
-    roles:
-      - Conceptualization
-      - Writing - original draft
-      - Project administration
-      - Funding acquisition
-    affiliations:
-      - Department of Geology, University of Kansas
-  - name: Stephen E. Cox
-    email: sec2125@columbia.edu
-    roles:
-      - Conceptualization
-      - Writing - original draft
-      - Project administration
-      - Funding acquisition
-    affiliations:
-      - Lamont-Doherty Earth Observatory, Columbia University in the City of New York
 keywords:
   - mass spectrometry
   - instrumentation
@@ -48,7 +26,11 @@ funding: "This material is based upon work supported by the National Science Fou
 
 ## Basics
 
-Write using Markdown syntax, and find a quick tutorial here: [https://quarto.org/docs/authoring/markdown-basics.html](https://quarto.org/docs/authoring/markdown-basics.html). Some tips for the syntax we'll use in Mass Spec Academy follows.
+Write using Markdown syntax, and find a quick tutorial here: [My link text](https://quarto.org/docs/authoring/markdown-basics.html). 
+
+Check out template_chapter.qmd on VS Code to see how this is all typeset.
+
+To be consistent across the project, let's typeset the mass number of an isotope with a LaTeX superscript, like $^{12}$C. The element symbol's letters go outside the dollar signs. Likewise for a chemical formula, like CO$_2$. Numbers and uncertainties are in unicode, like 10 ± 2 Ma, rather than LaTeX like $10 \pm 2$ Ma.
 
 ## This is a top-level section, like Headings and Labels {#sec-template-headings}
 

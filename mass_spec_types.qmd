@@ -2,3 +2,60 @@
 title: "Types of mass spectrometer"
 ---
 
+## Defining characteristics
+
+< Max's diagram goes here also with some text.>
+
+## Thermal Ionization
+
+Doesn't need subheadings because it is a light bulb.
+
+## Electron Impact Source
+
+### Sector Field Mass Spectrometers
+
+#### Noble Gas Mass Sepctrometers (static)
+
+#### Isotope Ratio Mass Spectrometers
+
+### Quadrupoles
+
+#### Residual Gas Analyzers
+
+#### Gas Chromatograph Mass Spectrometer
+
+### Electric Field Sector Instruments
+
+#### Ion Traps
+
+#### Orbitraps
+
+## Secondary Impact Source
+
+### Accelerator Mass Spectrometers
+
+### Secodnary Ion Mass Spectrometers (SIMS and NanoSIMS)
+
+### TOF-SIMS
+
+## Inductively Copuled Plasma Source
+
+### Quadrupole ICPs
+
+#### ICP-Q-MS
+
+#### ICP-TOF
+
+#### ICP-SF-MS (often just referred to as ICP-MS)
+
+### Tandem mass spectrometers (ICP-MS/MS)
+
+#### Two mass analyzers + collision reaction cell
+
+## Electrospray Ionization
+
+### Orbitrap
+
+### Quadrupole
+
+### TOF

@@ -1,0 +1,9 @@
+
+# Kate Souders {.unnumbered}
+
+I am a Research Geologist at the U.S. Geological Survey serving as Principal Investigator and Lab Manager for the USGS PlasmaLab and Lab Manager for the Denver Isotope Laser Lab (DILL), two laser ablation-inductively coupled plasma-mass spectrometry (LA-ICP-MS) laboratories focused on innovative in-situ uranium-thorium-lead (U-Th-Pb) geochronology and radiogenic isotope measurements. My research focuses on mass spectrometry method development to constrain timing and formation of geologic systems. This information is essential for critical mineral systems research and mapping our nations natural resources.
+
+email: asouders@usgs.gov
+
+<!-- ![](profile/name.jpg) -->
+

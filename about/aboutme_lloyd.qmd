@@ -1,5 +1,5 @@
 
-# Max K. Lloyd
+# Max K. Lloyd {.unnumbered}
 
 Max Lloyd is a stable isotope geochemist and Assistant Professor at Penn State. Max and his lab pull small bits off of large organic molecules, and put them into gas-source mass spectrometers to analyze their clumped and position-specific isotope compositions.
 
@@ -7,5 +7,5 @@ Max got his PhD in Geochemistry from Caltech in 2017. He spent two years as an A
 
 email: mlloyd@psu.edu
 
-![](figs/profile/lloyd.jpg)
+![](profile/lloyd.jpg)
 

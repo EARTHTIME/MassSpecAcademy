@@ -1,6 +1,5 @@
 ---
 title: Contributing to Mass Spec Academy
-author: Noah McLean
 date: May 1, 2025
 editor:
   render-on-save: true
