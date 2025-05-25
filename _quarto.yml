@@ -45,6 +45,13 @@ book:
       - mass_analyzer_design.qmd
       - detector_design.qmd
       - vacuum_systems.qmd
+    - part: "Mass Spectrometry Techniques"
+      chapters: 
+      - NGMS.qmd
+      - TIMS.qmd
+      - ICPMS.qmd
+      - SIMS.qmd
+      - Oribtrap.qmd
     - part: "Analytical Considerations"
       chapters: 
       - baselines.qmd
