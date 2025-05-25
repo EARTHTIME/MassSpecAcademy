@@ -84,13 +84,13 @@ It's really important to control the temperature and humidity of the room becaus
 
 ## Examples of ICP Mass Spectrometers
 
-The mass-analyzer used in the instrumental setup defines the type of the ICP-MS. These set-ups consist of magnetic sector, quadrupole, TOF, and tandem mass spectometers (two or more mass analyzers)  
+The mass-analyzer used in the instrumental setup defines the type of the ICP-MS. These set-ups consist of magnetic sector, quadrupole, TOF, and tandem mass spectometers (two or more mass analyzers).  
 
 ### Quads
-To resolve the spectral overlaps with unwanted ions (e.g., ArO^+^+ and ^56^Fe) most of the instrument (especially since 2000s) have included a [collision/reaction cell](@sec-design-crc) that is pressurized with reactive or non-reactive gasses. 
 
+In most of the set-ups ions are guided to a [collision/reaction cell](@sec-design-crc) that is pressurized with reactive or non-reactive gasses to reduce the spectral interferences between unwanted ions (e.g., ArO^+^+ and ^56^Fe). Many ions and reaction products emerge from cell and passes through [quads](@sec-analzer-quadrupoles).  
 
-Thermo is vertical [aglient](@https://www.agilent.com/en/product/atomic-spectroscopy/inductively-coupled-plasma-mass-spectrometry-icp-ms/what-is-icp-ms-icp-ms-faqs) is horizontal 
+Similar set-ups are used by different manufactures [Thermo](@https://www.thermofisher.com/us/en/home/industrial/mass-spectrometry/inductively-coupled-plasma-mass-spectrometry-icp-ms/quadrupole-icp-ms-systems.html) and [aglient](@https://www.agilent.com/en/product/atomic-spectroscopy/inductively-coupled-plasma-mass-spectrometry-icp-ms/what-is-icp-ms-icp-ms-faqs) in which the ion paths are respectively perpendicular and horizontal.  
 
 ### TOFs
 
