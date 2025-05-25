@@ -25,6 +25,14 @@ Noble gas mass spectrometry
 
 ## Noble Gas Mass Spectrometer System
 
+### Noble gas ion sources
+
+Noble gas mass spectrometer sources typically use a Nier-type ion source, named after A.O. Nier who described the design in a series of publications in the 1930s and 1940s (refs).
+
+<!-- Nier, Alfred O. (1936), A mass-spectrographic study of the isotopes of argon, potassium, rubidium, zinc and cadmium, Physical Review 50, 1041-1045.
+Nier, Alfred O. (1940), A mass Spectrometer for routine isotope abundance measurements, Review of Scientific Instruments 11, 212-216.
+Nier, Alfred O. (1947), A mass spectrometer for isotope and gas analysis, Review of Scientific Instruments 18, 398-216. -->
+
 * Nier-type source
     - Cathode variety
     - Source parameters and tuning
