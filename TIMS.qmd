@@ -1,3 +1,72 @@
-# TIMS
+# TIMS {#sec-TIMS}
 
-Thermal ionization mass spectrometry
+## TIMS designs {#sec-TIMS-designs}
+
+There's a list of ingredients in the components chapters. Here is the general recipe for a TIMS:
+
+- sources are mostly the same (some brand differences, one vs. several filaments)
+- short vs. long ion optics lens stacks
+- just a magnet
+- magnet + ESA
+- a mix of faradays and/or electron multiplication systems
+- other components: retardation filter, zoom optics
+- high vacuum (turbo backed by dry scroll/rotary/piston)
+- high vacuum bits: ion pumps, TSPs, ion gauge.
+- 
+
+## Making ions {#sec-TIMS-making-ions}
+
+- how we get samples on filaments. emitters, sample loading schemes (triple filament with an evaporation filament and an ionization filament). Silica gel + phosphoric or graphite or tantalum oxide or etc. 
+- What determines which of these schemes gets used? Work function, first ionization potential, other concerns (electrochemistry of glasses). Dark arts and magic.
+- Langmuir and Langmuir-Saha equation, filament temperature, controls on ionization efficiency vs. ionization rate. Note we should ignore Carlson here.
+- positive and negative ions (osmium and boron?)
+- Warmup, stepwise heating, evaporation and fractionation of sample. Considerations in how to load and adjust the temperature.
+- Periodic table with positive vs. negative ions, another with first ionization potentials. 
+- Cavity sources
+
+## Steering ions {#sec-TIMS-source-ion-optics}
+
+- Lens stacks are mostly the same, accelerating voltages near 8-10 kV. 
+- Defining slit sizes are in the 0.3 mm range.
+- TIMS tend to use low resolution
+
+## Analyzers {#sec-TIMS-analyzers}
+
+- Magnetic sector, usually with extended geometry. 
+- Laminated vs. wrapped electromagnet. Speed vs. cooling.
+- ESF sometimes (OG S54)
+- More magnets are possible, not often used outside nuclear operations
+
+## Detectors {#sec-TIMS-detectors}
+
+- Can have just one collector, but usually multicollector setup.
+- Faradays often large, 1 mm opening slit, movable, equipped with suppressors and porous graphite insert. 
+- Electron multipliers (one or many), analog or ion counting
+
+### Amplification systems {#sec-TIMS-amplifiers}
+
+- Resistive vs. Capacitive Trans-Impedence Amplifiers (see also NGMS)
+- $10^{10}$ to $10^{13}$ $\Omega$ amplifiers for resistive.
+- ATONA and older capacitive systems.
+
+## TIMS methods {#sec-TIMS-methods}
+
+- Dynamic vs. static methods
+- Single collector methods
+
+## Vacuum systems {#sec-TIMS-vacuum-systems}
+
+- TIMS need high vacuum in general
+- Source has a turbo backed by a dry rough pump.
+- Analyzer side has ion pumps, plus maybe a TSP.
+- Pirani and ion gauge on the source, separate ion gauge on the analyzer.
+- High vacuum considerations for TIMS sources --- samples must be "smoked" or dried down, no low-temp volatile compounds, 
+
+## Other components {#sec-TIMS-other-components}
+
+- retardation lens useful for peak tailing problems
+- zoom optics makes for multidynamic measurements without peak top position compromise
+
+## Troubleshooting TIMS 
+
+- Causes of no ion beams.

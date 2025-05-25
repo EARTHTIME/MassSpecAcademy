@@ -1,3 +1,104 @@
-# SIMS
+# Secondary Ionization Mass Spectrometry (SIMS)
 
-Secondary ion mass spectrometry
+## What makes it unique
+
+### Insitu Analysis
+
+### Differences with AMS
+
+### SIMS vs Nano SIMS
+
+### Modes
+
+#### Ion Microprobe
+
+illuminate source slit and that is the image you are projecting to the mass spectrometer 
+
+#### Ion Microscope 
+
+### Applications  
+not to many compound specific things since the sputtering breaks to many bonds 
+
+#### Isotopic Measurements 
+
+#### Elemental abundance 
+
+done more with the compact geometry instruments 
+
+#### Imaging applications with high resolution 
+
+#### Depth Profiling 
+
+### MEGA SIMS 
+
+measure the bulk isotopic oxygen isotope composition of the sun 
+
+IMS 7f commercial front end then an accelerator and then a commercial back end 
+
+### Commercially available types 
+
+#### SHRIMP 
+
+#### Cameca 
+
+- there are three geoscience ion probes 
+
+- technology was acquired by a chinese company a few years ago unclear if they will continue to produce 
+
+- has a normal incidence electron gun, primary ions come in on angle, extract secondary ions normal to the sample surface, the electrons are delivered in the opposite direction to the sample beam, get a cloud of electrons over teh top of teh sample surface, get equilibrium of electrons over surface, eliminates the desorption problem, since in the other method the electrons have a non zero energy  
+
+## Mass Spectrometer Parts 
+
+### Ion Probe as Ion Source 
+
+### Mass Analyzers 
+
+These are always double focusing. Most are normal Nier-Johnson geometry. Some are reverse geometry. Nano SIMS has Mac Herzog geometry (Benefit is that the focal plane is so wide you can collect a lot more for the geometry) 
+
+### Electron Guns 
+
+Extract negative vs positive ions you need to deliver electrons to the surface that are charged 
+
+### Detectors 
+
+#### CCD Charge Coupled Device 
+
+- same acronym different thing 
+
+- Camera 
+
+- Look at the Ion image 
+
+#### Faraday 
+
+
+
+## Calibration 
+
+- More important since SIMS is uniquely highly matrix dependent 
+
+- Also get orientation effects (for things with low symmetry) 
+
+- Your incident ion beam intersects with a mineral if it does this sub parallel to an axis you can get weird isotope effects 
+
+- Get a bias of the sputtered isotope effects as a result 
+
+
+
+## Sample Preparation 
+
+- Any vacuum stable solid 
+
+- Organics and tissues are difficult, there are additional sample prep necessary for cells etc. 
+
+### Grain Mounts 
+
+### Sample Flatness 
+
+### Conductivity 
+
+If you are doing water you cannot use epoxy as a mount you have to embed the sample in indium or soft alloys 
+
+### Coating 
+
+Typically gold coating. You can get adsorbed oxygen on the gold coat. The electron beam can desorb (electro stimulated desorption) and ionize these oxygen ions and they can be accelerated and form a contaminant if you are measuring oxygen. If you use a coating that acts more like a getter (Al (can use a sputter evaporative coating) or Ti) 

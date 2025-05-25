@@ -1,3 +1,65 @@
 # NGMS
 
 Noble gas mass spectrometry
+
+## Overview
+
+* Focus on sector instruments
+
+* Also mention other platforms that are less commonly used to measure NG
+
+## Gas Exraction and Sample Preparation
+
+* Generic processes of cleaning up a sample
+    - actual gas extraction
+    - valves
+        - manual
+        - automated
+    - gas cleanup
+        - gettering
+        - cryogenic separation
+    - isotope dilution
+    - gas standards and how to prepare them
+        - depletion
+    -volume considerations (& design)
+
+## Noble Gas Mass Spectrometer System
+
+* Nier-type source
+    - Cathode variety
+    - Source parameters and tuning
+* Magnetic sector
+    - Geometries
+    - Physical tuning of the magnet
+    - Magnet hysteresis
+* Electric sectors
+* Collectors
+    - Types of detectors 
+    - Single collector instruments
+    - Multi-collector setups
+        - Flight tubes (split or not)
+
+## Vacuum Considerations
+
+* Need for UHV
+    - Material considerations
+    - Cleanliness
+    - Memory effects
+    - Baking
+
+## Peak Shapes
+
+* Beam focusing and steering
+* Isobaric interferences & mass resolution considerations
+
+## Time-zero and isotopic evolutions
+
+* Why time-zero in the first place
+* Theoretically what isotope evolutions should look like
+* Different strategies for curve fitting
+
+## Other ways to measure noble gases
+
+### Quadrupoles
+
+### IRMS

@@ -1,3 +1,93 @@
 # ICP-MS
 
 Inductively-coupled plasma mass spectrometry
+
+Intro - Plasmas are incredibly efficient ionizers. We can access a large portion of the periodic table. Thus, many types of samples can be analyzed (solids, liquids, and gases), elemental compositions an isotope ratios - the decisions that you make about treating those samples beforehand are really important. 
+
+## Sample introduction for ICP-MS
+Because we can analyze solids, liquids, and gases, there are a lot of different sample introduction methods. 
+
+### Solids
+crushed and picked (and/or mineral sep) vs in situ
+
+### Liquids
+dilute and shoot vs chemical separation
+
+Spray chambers, desolvating nebulizers
+
+### Gases
+some things travel in the gaseous phase when they're introduced. For instance, mercury, sulfur
+
+## Inductively Coupled Plasma
+how a plasma is generated
+gen schematic fig
+
+### Plasma types
+Ar plasmas are the most common
+Links to other types of plasmas (i.e., Ne, N) 
+
+### Plasma state
+The plasma can exist at a range of temperatures, controlled by gas flows and RF
+Those choices are made based on the type of analyses and/or the sample introduction system
+
+## The interface
+The interface is like the vestibule of the ICP-MS. You have to get through the door, take off your shoes, hang up your coat. 
+This is where we're moving toward higher vacuum, getting the ions into the instrument
+
+Schematic of the interface region (cones + whatever for different types of instruments). Have pictures of the parts too
+torch
+>quartz or ceramic
+guard electrode - some steel, some platinum
+bonnet - the purpose of the bonnet is to try to limit the amount of atmospheric gases that you are drawing into your ICP
+
+Cones - all differnt types of cones
+
+Ion Extraction Lenses
+
+>low vs high voltage extraction - is this where we introduce the concept of quads vs multicollectors? 
+
+## Ion optics
+Now we have an ion beam, and we are steering and shaping
+
+>appertures and defining slits
+
+>lenses
+
+>steering plates
+
+>Wien filters
+
+## Ion separation
+
+### Collision/reaction cells
+
+### Quadrupoles
+
+### Magnets
+
+### ESAs
+
+### Tandem mass spectrometry
+
+### TOF
+
+## Ion detection
+
+different detector types
+
+quadrupoles/TOFs have SEMs (with pulse and analog modes)
+
+Sector field instruments - all the options
+
+## Environmental considerations
+It's really important to control the temperature and humidity of the room because you're going from atmospheric pressure into a high vacuum environment
+
+## Examples of ICP Mass Spectrometers
+
+### Quads
+
+### TOFs
+
+### Magnetic sectors
+
+### Tandem (MS/MS) machines
