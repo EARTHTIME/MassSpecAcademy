@@ -71,6 +71,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="styles.css">
 </head>
@@ -236,7 +265,7 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./about/aboutme_tremblay.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Dr.&nbsp;Marissa Tremblay</span></a>
+ <span class="menu-text">Marissa Tremblay</span></a>
   </div>
 </li>
       </ul>
@@ -259,7 +288,7 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./mass_spec_design.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Mass spec design</span></span></a>
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Mass Spectrometer Components</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -414,8 +443,58 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active" data-toc-expanded="3">
+    <h2 id="toc-title">Contents</h2>
+   
+  <ul>
+  <li><a href="#sec-types-overview" id="toc-sec-types-overview" class="nav-link active" data-scroll-target="#sec-types-overview"><span class="header-section-number">6.1</span> Overview</a></li>
+  <li><a href="#sec-typesTIMS" id="toc-sec-typesTIMS" class="nav-link" data-scroll-target="#sec-typesTIMS"><span class="header-section-number">6.2</span> Thermal Ionization (TIMS)</a></li>
+  <li><a href="#sec-types-electronimpact" id="toc-sec-types-electronimpact" class="nav-link" data-scroll-target="#sec-types-electronimpact"><span class="header-section-number">6.3</span> Electron Impact Source</a>
+  <ul>
+  <li><a href="#sector-field-mass-spectrometers" id="toc-sector-field-mass-spectrometers" class="nav-link" data-scroll-target="#sector-field-mass-spectrometers"><span class="header-section-number">6.3.1</span> Sector Field Mass Spectrometers</a>
+  <ul class="collapse">
+  <li><a href="#sec-types-static-NGMS" id="toc-sec-types-static-NGMS" class="nav-link" data-scroll-target="#sec-types-static-NGMS">Static Volume Mass Spectrometers, Including Noble Gas Mass Spectrometers (NGMS)</a></li>
+  <li><a href="#sec-types-IRMS" id="toc-sec-types-IRMS" class="nav-link" data-scroll-target="#sec-types-IRMS">Isotope Ratio Mass Spectrometers (IRMS)</a></li>
+  </ul></li>
+  <li><a href="#quadrupoles" id="toc-quadrupoles" class="nav-link" data-scroll-target="#quadrupoles"><span class="header-section-number">6.3.2</span> Quadrupoles</a>
+  <ul class="collapse">
+  <li><a href="#residual-gas-analyzers-rgas" id="toc-residual-gas-analyzers-rgas" class="nav-link" data-scroll-target="#residual-gas-analyzers-rgas">Residual Gas Analyzers (RGAs)</a></li>
+  <li><a href="#gas-chromatograph-mass-spectrometer" id="toc-gas-chromatograph-mass-spectrometer" class="nav-link" data-scroll-target="#gas-chromatograph-mass-spectrometer">Gas Chromatograph Mass Spectrometer</a></li>
+  </ul></li>
+  <li><a href="#electric-field-sector-instruments" id="toc-electric-field-sector-instruments" class="nav-link" data-scroll-target="#electric-field-sector-instruments"><span class="header-section-number">6.3.3</span> Electric Field Sector Instruments</a>
+  <ul class="collapse">
+  <li><a href="#ion-traps" id="toc-ion-traps" class="nav-link" data-scroll-target="#ion-traps">Ion Traps</a></li>
+  <li><a href="#orbitraps" id="toc-orbitraps" class="nav-link" data-scroll-target="#orbitraps">Orbitraps</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#secondary-impact-source" id="toc-secondary-impact-source" class="nav-link" data-scroll-target="#secondary-impact-source"><span class="header-section-number">6.4</span> Secondary Impact Source</a>
+  <ul>
+  <li><a href="#secodnary-ion-mass-spectrometers-sims-and-nanosims" id="toc-secodnary-ion-mass-spectrometers-sims-and-nanosims" class="nav-link" data-scroll-target="#secodnary-ion-mass-spectrometers-sims-and-nanosims"><span class="header-section-number">6.4.1</span> Secodnary Ion Mass Spectrometers (SIMS and NanoSIMS)</a></li>
+  <li><a href="#tof-sims" id="toc-tof-sims" class="nav-link" data-scroll-target="#tof-sims"><span class="header-section-number">6.4.2</span> TOF-SIMS</a></li>
+  </ul></li>
+  <li><a href="#accelerator-mass-spectrometers-ams" id="toc-accelerator-mass-spectrometers-ams" class="nav-link" data-scroll-target="#accelerator-mass-spectrometers-ams"><span class="header-section-number">6.5</span> Accelerator Mass Spectrometers (AMS)</a></li>
+  <li><a href="#inductively-copuled-plasma-source" id="toc-inductively-copuled-plasma-source" class="nav-link" data-scroll-target="#inductively-copuled-plasma-source"><span class="header-section-number">6.6</span> Inductively Copuled Plasma Source</a>
+  <ul>
+  <li><a href="#quadrupole-icps" id="toc-quadrupole-icps" class="nav-link" data-scroll-target="#quadrupole-icps"><span class="header-section-number">6.6.1</span> Quadrupole ICPs</a>
+  <ul class="collapse">
+  <li><a href="#icp-q-ms" id="toc-icp-q-ms" class="nav-link" data-scroll-target="#icp-q-ms">ICP-Q-MS</a></li>
+  <li><a href="#icp-tof" id="toc-icp-tof" class="nav-link" data-scroll-target="#icp-tof">ICP-TOF</a></li>
+  <li><a href="#icp-sf-ms-often-just-referred-to-as-icp-ms" id="toc-icp-sf-ms-often-just-referred-to-as-icp-ms" class="nav-link" data-scroll-target="#icp-sf-ms-often-just-referred-to-as-icp-ms">ICP-SF-MS (often just referred to as ICP-MS)</a></li>
+  </ul></li>
+  <li><a href="#tandem-mass-spectrometers-icp-msms" id="toc-tandem-mass-spectrometers-icp-msms" class="nav-link" data-scroll-target="#tandem-mass-spectrometers-icp-msms"><span class="header-section-number">6.6.2</span> Tandem mass spectrometers (ICP-MS/MS)</a>
+  <ul class="collapse">
+  <li><a href="#two-mass-analyzers-collision-reaction-cell" id="toc-two-mass-analyzers-collision-reaction-cell" class="nav-link" data-scroll-target="#two-mass-analyzers-collision-reaction-cell">Two mass analyzers + collision reaction cell</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#electrospray-ionization" id="toc-electrospray-ionization" class="nav-link" data-scroll-target="#electrospray-ionization"><span class="header-section-number">6.7</span> Electrospray Ionization</a>
+  <ul>
+  <li><a href="#orbitrap" id="toc-orbitrap" class="nav-link" data-scroll-target="#orbitrap"><span class="header-section-number">6.7.1</span> Orbitrap</a></li>
+  <li><a href="#quadrupole" id="toc-quadrupole" class="nav-link" data-scroll-target="#quadrupole"><span class="header-section-number">6.7.2</span> Quadrupole</a></li>
+  <li><a href="#tof" id="toc-tof" class="nav-link" data-scroll-target="#tof"><span class="header-section-number">6.7.3</span> TOF</a></li>
+  </ul></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/EARTHTIME/MassSpecAcademy/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li><li><a href="https://github.com/EARTHTIME/MassSpecAcademy/edit/main/mass_spec_types.qmd" class="toc-action"><i class="bi empty"></i>Edit this page</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -439,8 +518,107 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<section id="sec-types-overview" class="level2" data-number="6.1">
+<h2 data-number="6.1" class="anchored" data-anchor-id="sec-types-overview"><span class="header-section-number">6.1</span> Overview</h2>
+<p>A variety of different types of mass spectrometers exist. In detail, the type of mass spectrometer is defined by the combination of an ion source, one more type of mass analyzer, and one or more type of detector.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figs/ms_mixnmatch.jpg" class="img-fluid figure-img" alt="Combinations of ion sources, mass analyzers, and detectors that can define a mass spectrometer."></p>
+<figcaption><em>The combinations of ion sources, mass analyzers, and detector types/configurations are endless.</em> <strong>ENDLESS.</strong></figcaption>
+</figure>
+</div>
+<p>Different combinations of these three components will give you a different type of mass spectrometer. Since each type of mass spectrometer typically only has one type of ion source, we have organized this section at a high level by ion source, and then by type of mass analyzer or analyzers. We do not delve into detector arrays at this stage; while in practice the detector configuration matters for specific mass spectrometer applications, in terms of defining mass spectrometer ‘types’ this is the least important characteristic.</p>
+</section>
+<section id="sec-typesTIMS" class="level2" data-number="6.2">
+<h2 data-number="6.2" class="anchored" data-anchor-id="sec-typesTIMS"><span class="header-section-number">6.2</span> Thermal Ionization (TIMS)</h2>
+<p>Thermal ionization sources are basically only used in one type of mass spectrometer: a Thermal Ionization Mass Spectrometer, or TIMS. It’s pretty straightforward: the ions are generated by thermal ionization, and then the ions are accelerated through a magnetic sector to achieve momentum to charge separation. Boom! It’s that easy. The beautiful simplicity of the TIMS is why this was the first mass spectrometer to come into existence. In the geosciences, TIMS is most commonly used for high-precision and high-temperature geochronology (e.g., zircon U-Pb geochronology) and geochemistry (e.g., W isotopes). Before the advent of ICP-MS technology, TIMS was also commonly used for trace element analyses.</p>
+</section>
+<section id="sec-types-electronimpact" class="level2" data-number="6.3">
+<h2 data-number="6.3" class="anchored" data-anchor-id="sec-types-electronimpact"><span class="header-section-number">6.3</span> Electron Impact Source</h2>
+<p>Mass spectrometers with electron impact sources are used to analyze materials or samples that, upon being let into the mass spectrometer, are already in a gaseous state. The type of mass spectrometer that has an electron impact source is then defined by the type (or types) of mass analyzer the gaseous ions encounter after being accelerated away from the ion source.</p>
+<section id="sector-field-mass-spectrometers" class="level3" data-number="6.3.1">
+<h3 data-number="6.3.1" class="anchored" data-anchor-id="sector-field-mass-spectrometers"><span class="header-section-number">6.3.1</span> Sector Field Mass Spectrometers</h3>
+<section id="sec-types-static-NGMS" class="level4">
+<h4 class="anchored" data-anchor-id="sec-types-static-NGMS">Static Volume Mass Spectrometers, Including Noble Gas Mass Spectrometers (NGMS)</h4>
+<p>Static volume mass spectrometers consist of an electron impact source and a magnetic sector mass analyzer. Importantly, with these mass spectrometers measurements are made ‘statically’, i.e., the volume of the mass spectrometer is not being pumped on by vacuum pumps during the analysis. Static volume mass spectrometers are very commonly utilized to analyze noble gas isotopes and other gases (e.g., N isotopes) extracted from solid materials where there is a finite, comparably small amount of gas that would be consumed too quickly if the mass spectrometer volume was being pumped on during the analysis. This type of instrument is commonly used for geochronology using noble gas systems (e.g., <span class="math inline">\(^{40}\)</span>Ar<span class="math inline">\(^{39}\)</span>Ar).</p>
+</section>
+<section id="sec-types-IRMS" class="level4">
+<h4 class="anchored" data-anchor-id="sec-types-IRMS">Isotope Ratio Mass Spectrometers (IRMS)</h4>
+<!---
+Someone who knows more about IRMS than me should write this yay!!
+--->
+</section>
+</section>
+<section id="quadrupoles" class="level3" data-number="6.3.2">
+<h3 data-number="6.3.2" class="anchored" data-anchor-id="quadrupoles"><span class="header-section-number">6.3.2</span> Quadrupoles</h3>
+<section id="residual-gas-analyzers-rgas" class="level4">
+<h4 class="anchored" data-anchor-id="residual-gas-analyzers-rgas">Residual Gas Analyzers (RGAs)</h4>
+<p>Residual gas analyzers, or RGAs, are actually used in a variety of mass spectrometry laboratories for leak checking/testing: if atmosphere is somehow getting into your instrument via a leak somewhere in the vacuum system, RGAs can be used to detect it. However, RGAs can also be used for geochemical analyses involving gases when high sensitivity, precision, and mass resolution are not required. For example, this type of instrument is commonly used by the (U-Th)/He community to measure radiogenic <span class="math inline">\(^{4}\)</span>He analyses by isotope dilution.</p>
+</section>
+<section id="gas-chromatograph-mass-spectrometer" class="level4">
+<h4 class="anchored" data-anchor-id="gas-chromatograph-mass-spectrometer">Gas Chromatograph Mass Spectrometer</h4>
+</section>
+</section>
+<section id="electric-field-sector-instruments" class="level3" data-number="6.3.3">
+<h3 data-number="6.3.3" class="anchored" data-anchor-id="electric-field-sector-instruments"><span class="header-section-number">6.3.3</span> Electric Field Sector Instruments</h3>
+<section id="ion-traps" class="level4">
+<h4 class="anchored" data-anchor-id="ion-traps">Ion Traps</h4>
+</section>
+<section id="orbitraps" class="level4">
+<h4 class="anchored" data-anchor-id="orbitraps">Orbitraps</h4>
+</section>
+</section>
+</section>
+<section id="secondary-impact-source" class="level2" data-number="6.4">
+<h2 data-number="6.4" class="anchored" data-anchor-id="secondary-impact-source"><span class="header-section-number">6.4</span> Secondary Impact Source</h2>
+<section id="secodnary-ion-mass-spectrometers-sims-and-nanosims" class="level3" data-number="6.4.1">
+<h3 data-number="6.4.1" class="anchored" data-anchor-id="secodnary-ion-mass-spectrometers-sims-and-nanosims"><span class="header-section-number">6.4.1</span> Secodnary Ion Mass Spectrometers (SIMS and NanoSIMS)</h3>
+</section>
+<section id="tof-sims" class="level3" data-number="6.4.2">
+<h3 data-number="6.4.2" class="anchored" data-anchor-id="tof-sims"><span class="header-section-number">6.4.2</span> TOF-SIMS</h3>
+</section>
+</section>
+<section id="accelerator-mass-spectrometers-ams" class="level2" data-number="6.5">
+<h2 data-number="6.5" class="anchored" data-anchor-id="accelerator-mass-spectrometers-ams"><span class="header-section-number">6.5</span> Accelerator Mass Spectrometers (AMS)</h2>
+<p>Accelerator mass spectrometers, or AMS, are undoubtedly the most complex type of mass spectrometers utilized in the geosciences. They can have secondary ion sources or laser ionization sources that ionize either solid or gaseous materials, and can have numerous magnetic sectors, quadrupoles, and electrostatic analyzers in various positions along the path through which ions traverse. The key or defining feature of an AMS, however, is the electrostatic tandem accelerator, which is a large (sometimes very large!) particle accelerator consisting of two stages.</p>
+<p><img src="figs/accelerator.jpg" class="img-fluid" alt="Marissa Tremblay inside the tandem accelerator at PRIME lab, the Purdue University AMS." width="200"></p>
+<p>The first stage of a tandem accelerator has a huge potential voltage across it that accelerates ions to very, very high kinetic energies. These high kinetic energy ions pass through a stripping material (e.g., gas or foil) that destroys molecules and also transforms the ions from negatively charged ions that originate from the source into positive ions, typically with high charge states. This is one if (if not the) most sensitive mass spectrometry techniques for measuring very rare isotopes, particularly when there is a major isotope of the same element that is many, many orders of magnitude more abundant. In the geosciences, AMS is most commonly used to measure cosmogenic radionuclides, which are isotopes generated in the atmosphere or in solid minerals by interactions with cosmic rays, such as <span class="math inline">\(^{14}\)</span>C, <span class="math inline">\(^{10}\)</span>Be, and <span class="math inline">\(^{26}\)</span>Al.</p>
+</section>
+<section id="inductively-copuled-plasma-source" class="level2" data-number="6.6">
+<h2 data-number="6.6" class="anchored" data-anchor-id="inductively-copuled-plasma-source"><span class="header-section-number">6.6</span> Inductively Copuled Plasma Source</h2>
+<section id="quadrupole-icps" class="level3" data-number="6.6.1">
+<h3 data-number="6.6.1" class="anchored" data-anchor-id="quadrupole-icps"><span class="header-section-number">6.6.1</span> Quadrupole ICPs</h3>
+<section id="icp-q-ms" class="level4">
+<h4 class="anchored" data-anchor-id="icp-q-ms">ICP-Q-MS</h4>
+</section>
+<section id="icp-tof" class="level4">
+<h4 class="anchored" data-anchor-id="icp-tof">ICP-TOF</h4>
+</section>
+<section id="icp-sf-ms-often-just-referred-to-as-icp-ms" class="level4">
+<h4 class="anchored" data-anchor-id="icp-sf-ms-often-just-referred-to-as-icp-ms">ICP-SF-MS (often just referred to as ICP-MS)</h4>
+</section>
+</section>
+<section id="tandem-mass-spectrometers-icp-msms" class="level3" data-number="6.6.2">
+<h3 data-number="6.6.2" class="anchored" data-anchor-id="tandem-mass-spectrometers-icp-msms"><span class="header-section-number">6.6.2</span> Tandem mass spectrometers (ICP-MS/MS)</h3>
+<section id="two-mass-analyzers-collision-reaction-cell" class="level4">
+<h4 class="anchored" data-anchor-id="two-mass-analyzers-collision-reaction-cell">Two mass analyzers + collision reaction cell</h4>
+</section>
+</section>
+</section>
+<section id="electrospray-ionization" class="level2" data-number="6.7">
+<h2 data-number="6.7" class="anchored" data-anchor-id="electrospray-ionization"><span class="header-section-number">6.7</span> Electrospray Ionization</h2>
+<section id="orbitrap" class="level3" data-number="6.7.1">
+<h3 data-number="6.7.1" class="anchored" data-anchor-id="orbitrap"><span class="header-section-number">6.7.1</span> Orbitrap</h3>
+</section>
+<section id="quadrupole" class="level3" data-number="6.7.2">
+<h3 data-number="6.7.2" class="anchored" data-anchor-id="quadrupole"><span class="header-section-number">6.7.2</span> Quadrupole</h3>
+</section>
+<section id="tof" class="level3" data-number="6.7.3">
+<h3 data-number="6.7.3" class="anchored" data-anchor-id="tof"><span class="header-section-number">6.7.3</span> TOF</h3>
 
 
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -851,8 +1029,8 @@ ul.task-list li input[type="checkbox"] {
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./mass_spec_design.html" class="pagination-link" aria-label="Mass spec design">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Mass spec design</span></span>
+      <a href="./mass_spec_design.html" class="pagination-link" aria-label="Mass Spectrometer Components">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Mass Spectrometer Components</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
@@ -866,4 +1044,4 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions"><ul><li><a href="https://github.com/EARTHTIME/MassSpecAcademy/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li><li><a href="https://github.com/EARTHTIME/MassSpecAcademy/edit/main/mass_spec_types.qmd" class="toc-action"><i class="bi empty"></i>Edit this page</a></li></ul></div></div></div></footer></body></html>
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/EARTHTIME/MassSpecAcademy/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li><li><a href="https://github.com/EARTHTIME/MassSpecAcademy/edit/main/mass_spec_types.qmd" class="toc-action"><i class="bi empty"></i>Edit this page</a></li></ul></div></div></div></footer></body></html>

@@ -236,7 +236,7 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./about/aboutme_tremblay.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Dr.&nbsp;Marissa Tremblay</span></a>
+ <span class="menu-text">Marissa Tremblay</span></a>
   </div>
 </li>
       </ul>
@@ -259,7 +259,7 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./mass_spec_design.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Mass spec design</span></span></a>
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Mass Spectrometer Components</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -414,8 +414,89 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active" data-toc-expanded="3">
+    <h2 id="toc-title">Contents</h2>
+   
+  <ul>
+  <li><a href="#why-ionization" id="toc-why-ionization" class="nav-link active" data-scroll-target="#why-ionization"><span class="header-section-number">8</span> Why ionization?</a></li>
+  <li><a href="#metrics-of-ionization-performance" id="toc-metrics-of-ionization-performance" class="nav-link" data-scroll-target="#metrics-of-ionization-performance"><span class="header-section-number">9</span> Metrics of ionization performance?</a></li>
+  <li><a href="#types-of-ion-sources" id="toc-types-of-ion-sources" class="nav-link" data-scroll-target="#types-of-ion-sources"><span class="header-section-number">10</span> Types of ion sources</a>
+  <ul>
+  <li><a href="#tims" id="toc-tims" class="nav-link" data-scroll-target="#tims"><span class="header-section-number">10.1</span> TIMS</a>
+  <ul class="collapse">
+  <li><a href="#principles" id="toc-principles" class="nav-link" data-scroll-target="#principles"><span class="header-section-number">10.1.1</span> Principles</a></li>
+  <li><a href="#metrics" id="toc-metrics" class="nav-link" data-scroll-target="#metrics"><span class="header-section-number">10.1.2</span> Metrics</a></li>
+  <li><a href="#usesapplications" id="toc-usesapplications" class="nav-link" data-scroll-target="#usesapplications"><span class="header-section-number">10.1.3</span> Uses/applications</a></li>
+  <li><a href="#arcane-knowledgedecision-points" id="toc-arcane-knowledgedecision-points" class="nav-link" data-scroll-target="#arcane-knowledgedecision-points"><span class="header-section-number">10.1.4</span> Arcane knowledge/decision points</a>
+  <ul class="collapse">
+  <li><a href="#filament-choice" id="toc-filament-choice" class="nav-link" data-scroll-target="#filament-choice">Filament choice</a></li>
+  <li><a href="#ionization-temperature" id="toc-ionization-temperature" class="nav-link" data-scroll-target="#ionization-temperature">Ionization temperature</a></li>
+  <li><a href="#ionization-efficiency" id="toc-ionization-efficiency" class="nav-link" data-scroll-target="#ionization-efficiency">Ionization efficiency</a></li>
+  <li><a href="#activators" id="toc-activators" class="nav-link" data-scroll-target="#activators">Activators</a></li>
+  <li><a href="#positive-vs.-negative-ionization" id="toc-positive-vs.-negative-ionization" class="nav-link" data-scroll-target="#positive-vs.-negative-ionization">Positive vs.&nbsp;negative ionization</a></li>
+  <li><a href="#spikes" id="toc-spikes" class="nav-link" data-scroll-target="#spikes">Spikes</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#ei" id="toc-ei" class="nav-link" data-scroll-target="#ei"><span class="header-section-number">10.2</span> EI</a>
+  <ul class="collapse">
+  <li><a href="#principles-1" id="toc-principles-1" class="nav-link" data-scroll-target="#principles-1"><span class="header-section-number">10.2.1</span> Principles</a></li>
+  <li><a href="#metrics-1" id="toc-metrics-1" class="nav-link" data-scroll-target="#metrics-1"><span class="header-section-number">10.2.2</span> Metrics</a></li>
+  <li><a href="#usesapplications-1" id="toc-usesapplications-1" class="nav-link" data-scroll-target="#usesapplications-1"><span class="header-section-number">10.2.3</span> Uses/applications</a></li>
+  <li><a href="#arcane-knowledgedecision-points-1" id="toc-arcane-knowledgedecision-points-1" class="nav-link" data-scroll-target="#arcane-knowledgedecision-points-1"><span class="header-section-number">10.2.4</span> Arcane knowledge/decision points</a>
+  <ul class="collapse">
+  <li><a href="#noble-gas" id="toc-noble-gas" class="nav-link" data-scroll-target="#noble-gas">Noble gas</a></li>
+  <li><a href="#stable-isotopes" id="toc-stable-isotopes" class="nav-link" data-scroll-target="#stable-isotopes">Stable isotopes</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#sims" id="toc-sims" class="nav-link" data-scroll-target="#sims"><span class="header-section-number">10.3</span> SIMS</a>
+  <ul class="collapse">
+  <li><a href="#principles-2" id="toc-principles-2" class="nav-link" data-scroll-target="#principles-2"><span class="header-section-number">10.3.1</span> Principles</a></li>
+  <li><a href="#metrics-2" id="toc-metrics-2" class="nav-link" data-scroll-target="#metrics-2"><span class="header-section-number">10.3.2</span> Metrics</a></li>
+  <li><a href="#usesapplications-2" id="toc-usesapplications-2" class="nav-link" data-scroll-target="#usesapplications-2"><span class="header-section-number">10.3.3</span> Uses/applications</a></li>
+  <li><a href="#arcane-knowledgedecision-points-2" id="toc-arcane-knowledgedecision-points-2" class="nav-link" data-scroll-target="#arcane-knowledgedecision-points-2"><span class="header-section-number">10.3.4</span> Arcane knowledge/decision points</a>
+  <ul class="collapse">
+  <li><a href="#primary-ion-beam-cs-vs-o" id="toc-primary-ion-beam-cs-vs-o" class="nav-link" data-scroll-target="#primary-ion-beam-cs-vs-o">Primary ion beam (Cs vs O)</a></li>
+  <li><a href="#beam-intensity" id="toc-beam-intensity" class="nav-link" data-scroll-target="#beam-intensity">Beam intensity</a></li>
+  <li><a href="#beam-size" id="toc-beam-size" class="nav-link" data-scroll-target="#beam-size">Beam size</a></li>
+  <li><a href="#beam-energy-density" id="toc-beam-energy-density" class="nav-link" data-scroll-target="#beam-energy-density">Beam energy density</a></li>
+  <li><a href="#ion-microprobe-vs-ion-microscope" id="toc-ion-microprobe-vs-ion-microscope" class="nav-link" data-scroll-target="#ion-microprobe-vs-ion-microscope">Ion microprobe vs ion microscope</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#icp" id="toc-icp" class="nav-link" data-scroll-target="#icp"><span class="header-section-number">10.4</span> ICP</a>
+  <ul class="collapse">
+  <li><a href="#principles-3" id="toc-principles-3" class="nav-link" data-scroll-target="#principles-3"><span class="header-section-number">10.4.1</span> Principles</a></li>
+  <li><a href="#metrics-3" id="toc-metrics-3" class="nav-link" data-scroll-target="#metrics-3"><span class="header-section-number">10.4.2</span> Metrics</a></li>
+  <li><a href="#usesapplications-3" id="toc-usesapplications-3" class="nav-link" data-scroll-target="#usesapplications-3"><span class="header-section-number">10.4.3</span> Uses/applications</a></li>
+  <li><a href="#arcane-knowledgedecision-points-3" id="toc-arcane-knowledgedecision-points-3" class="nav-link" data-scroll-target="#arcane-knowledgedecision-points-3"><span class="header-section-number">10.4.4</span> Arcane knowledge/decision points</a></li>
+  </ul></li>
+  <li><a href="#maldi" id="toc-maldi" class="nav-link" data-scroll-target="#maldi"><span class="header-section-number">10.5</span> MALDI</a>
+  <ul class="collapse">
+  <li><a href="#principles-4" id="toc-principles-4" class="nav-link" data-scroll-target="#principles-4"><span class="header-section-number">10.5.1</span> Principles</a></li>
+  <li><a href="#metrics-4" id="toc-metrics-4" class="nav-link" data-scroll-target="#metrics-4"><span class="header-section-number">10.5.2</span> Metrics</a></li>
+  <li><a href="#usesapplications-4" id="toc-usesapplications-4" class="nav-link" data-scroll-target="#usesapplications-4"><span class="header-section-number">10.5.3</span> Uses/applications</a></li>
+  <li><a href="#arcane-knowledgedecision-points-4" id="toc-arcane-knowledgedecision-points-4" class="nav-link" data-scroll-target="#arcane-knowledgedecision-points-4"><span class="header-section-number">10.5.4</span> Arcane knowledge/decision points</a></li>
+  </ul></li>
+  <li><a href="#esi" id="toc-esi" class="nav-link" data-scroll-target="#esi"><span class="header-section-number">10.6</span> ESI</a>
+  <ul class="collapse">
+  <li><a href="#principles-5" id="toc-principles-5" class="nav-link" data-scroll-target="#principles-5"><span class="header-section-number">10.6.1</span> Principles</a></li>
+  <li><a href="#metrics-5" id="toc-metrics-5" class="nav-link" data-scroll-target="#metrics-5"><span class="header-section-number">10.6.2</span> Metrics</a></li>
+  <li><a href="#usesapplications-5" id="toc-usesapplications-5" class="nav-link" data-scroll-target="#usesapplications-5"><span class="header-section-number">10.6.3</span> Uses/applications</a></li>
+  <li><a href="#arcane-knowledgedecision-points-5" id="toc-arcane-knowledgedecision-points-5" class="nav-link" data-scroll-target="#arcane-knowledgedecision-points-5"><span class="header-section-number">10.6.4</span> Arcane knowledge/decision points</a></li>
+  </ul></li>
+  <li><a href="#ci" id="toc-ci" class="nav-link" data-scroll-target="#ci"><span class="header-section-number">10.7</span> CI</a>
+  <ul class="collapse">
+  <li><a href="#principles-6" id="toc-principles-6" class="nav-link" data-scroll-target="#principles-6"><span class="header-section-number">10.7.1</span> Principles</a></li>
+  <li><a href="#metrics-6" id="toc-metrics-6" class="nav-link" data-scroll-target="#metrics-6"><span class="header-section-number">10.7.2</span> Metrics</a></li>
+  <li><a href="#usesapplications-6" id="toc-usesapplications-6" class="nav-link" data-scroll-target="#usesapplications-6"><span class="header-section-number">10.7.3</span> Uses/applications</a></li>
+  <li><a href="#arcane-knowledgedecision-points-6" id="toc-arcane-knowledgedecision-points-6" class="nav-link" data-scroll-target="#arcane-knowledgedecision-points-6"><span class="header-section-number">10.7.4</span> Arcane knowledge/decision points</a>
+  <ul class="collapse">
+  <li><a href="#type-of-chemical-ionization" id="toc-type-of-chemical-ionization" class="nav-link" data-scroll-target="#type-of-chemical-ionization">Type of chemical ionization</a></li>
+  </ul></li>
+  </ul></li>
+  </ul></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/EARTHTIME/MassSpecAcademy/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li><li><a href="https://github.com/EARTHTIME/MassSpecAcademy/edit/main/ion_source_design.qmd" class="toc-action"><i class="bi empty"></i>Edit this page</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -439,8 +520,247 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<section id="why-ionization" class="level1" data-number="8">
+<h1 data-number="8"><span class="header-section-number">8</span> Why ionization?</h1>
+</section>
+<section id="metrics-of-ionization-performance" class="level1" data-number="9">
+<h1 data-number="9"><span class="header-section-number">9</span> Metrics of ionization performance?</h1>
+<ul>
+<li>Efficiency (molecules/ion) -&gt; lower number better</li>
+<li>Selectivity: diversity of molecules that are ionized (tradeoff depends on application)</li>
+<li>Fragmentation: soft (molecular ions only) vs.&nbsp;hard (fragment ions produced) -&gt; tradeoffs depending on application</li>
+<li>Adducts/molecular interferences made: H+ (EI), Ar+, O+ (in ICP), Na+ (in ESI)</li>
+<li>Intensity (beam “brightness”. Brighter beams require physically larger instruments)</li>
+<li>Stability</li>
+<li>Collimation, energy distribution of ions</li>
+</ul>
+</section>
+<section id="types-of-ion-sources" class="level1" data-number="10">
+<h1 data-number="10"><span class="header-section-number">10</span> Types of ion sources</h1>
+<section id="tims" class="level2" data-number="10.1">
+<h2 data-number="10.1" class="anchored" data-anchor-id="tims"><span class="header-section-number">10.1</span> TIMS</h2>
+<section id="principles" class="level3" data-number="10.1.1">
+<h3 data-number="10.1.1" class="anchored" data-anchor-id="principles"><span class="header-section-number">10.1.1</span> Principles</h3>
+</section>
+<section id="metrics" class="level3" data-number="10.1.2">
+<h3 data-number="10.1.2" class="anchored" data-anchor-id="metrics"><span class="header-section-number">10.1.2</span> Metrics</h3>
+</section>
+<section id="usesapplications" class="level3" data-number="10.1.3">
+<h3 data-number="10.1.3" class="anchored" data-anchor-id="usesapplications"><span class="header-section-number">10.1.3</span> Uses/applications</h3>
+</section>
+<section id="arcane-knowledgedecision-points" class="level3" data-number="10.1.4">
+<h3 data-number="10.1.4" class="anchored" data-anchor-id="arcane-knowledgedecision-points"><span class="header-section-number">10.1.4</span> Arcane knowledge/decision points</h3>
+<section id="filament-choice" class="level4">
+<h4 class="anchored" data-anchor-id="filament-choice">Filament choice</h4>
+</section>
+<section id="ionization-temperature" class="level4">
+<h4 class="anchored" data-anchor-id="ionization-temperature">Ionization temperature</h4>
+</section>
+<section id="ionization-efficiency" class="level4">
+<h4 class="anchored" data-anchor-id="ionization-efficiency">Ionization efficiency</h4>
+</section>
+<section id="activators" class="level4">
+<h4 class="anchored" data-anchor-id="activators">Activators</h4>
+</section>
+<section id="positive-vs.-negative-ionization" class="level4">
+<h4 class="anchored" data-anchor-id="positive-vs.-negative-ionization">Positive vs.&nbsp;negative ionization</h4>
+</section>
+<section id="spikes" class="level4">
+<h4 class="anchored" data-anchor-id="spikes">Spikes</h4>
+</section>
+</section>
+</section>
+<section id="ei" class="level2" data-number="10.2">
+<h2 data-number="10.2" class="anchored" data-anchor-id="ei"><span class="header-section-number">10.2</span> EI</h2>
+<section id="principles-1" class="level3" data-number="10.2.1">
+<h3 data-number="10.2.1" class="anchored" data-anchor-id="principles-1"><span class="header-section-number">10.2.1</span> Principles</h3>
+</section>
+<section id="metrics-1" class="level3" data-number="10.2.2">
+<h3 data-number="10.2.2" class="anchored" data-anchor-id="metrics-1"><span class="header-section-number">10.2.2</span> Metrics</h3>
+</section>
+<section id="usesapplications-1" class="level3" data-number="10.2.3">
+<h3 data-number="10.2.3" class="anchored" data-anchor-id="usesapplications-1"><span class="header-section-number">10.2.3</span> Uses/applications</h3>
+</section>
+<section id="arcane-knowledgedecision-points-1" class="level3" data-number="10.2.4">
+<h3 data-number="10.2.4" class="anchored" data-anchor-id="arcane-knowledgedecision-points-1"><span class="header-section-number">10.2.4</span> Arcane knowledge/decision points</h3>
+<section id="noble-gas" class="level4">
+<h4 class="anchored" data-anchor-id="noble-gas">Noble gas</h4>
+<section id="time-zero" class="level5">
+<h5 class="anchored" data-anchor-id="time-zero">Time zero</h5>
+</section>
+<section id="trap-current" class="level5">
+<h5 class="anchored" data-anchor-id="trap-current">Trap current</h5>
+</section>
+<section id="accelerating-voltage" class="level5">
+<h5 class="anchored" data-anchor-id="accelerating-voltage">Accelerating voltage</h5>
+</section>
+<section id="electron-energy" class="level5">
+<h5 class="anchored" data-anchor-id="electron-energy">Electron energy</h5>
+</section>
+<section id="ion-repeller" class="level5">
+<h5 class="anchored" data-anchor-id="ion-repeller">Ion repeller</h5>
+</section>
+<section id="trap-voltage" class="level5">
+<h5 class="anchored" data-anchor-id="trap-voltage">Trap voltage</h5>
+</section>
+<section id="source-plates" class="level5">
+<h5 class="anchored" data-anchor-id="source-plates">Source plates</h5>
+<section id="half-plate" class="level6">
+<h6 class="anchored" data-anchor-id="half-plate">Half-plate</h6>
+</section>
+<section id="z-plate" class="level6">
+<h6 class="anchored" data-anchor-id="z-plate">Z-plate</h6>
+</section>
+<section id="octopoleflatopole" class="level6">
+<h6 class="anchored" data-anchor-id="octopoleflatopole">Octopole/flatopole</h6>
+</section>
+</section>
+</section>
+<section id="stable-isotopes" class="level4">
+<h4 class="anchored" data-anchor-id="stable-isotopes">Stable isotopes</h4>
+<section id="electron-energy-1" class="level5">
+<h5 class="anchored" data-anchor-id="electron-energy-1">Electron energy</h5>
+<p>Linearity vs.&nbsp;sensitivity</p>
+</section>
+<section id="trap" class="level5">
+<h5 class="anchored" data-anchor-id="trap">Trap</h5>
+<p>Beam tightness, fragmentation patterns</p>
+</section>
+<section id="extraction" class="level5">
+<h5 class="anchored" data-anchor-id="extraction">Extraction</h5>
+<p>Sensitivity vs.&nbsp;linearity/recombination/scrambling</p>
+</section>
+<section id="source-pressure" class="level5">
+<h5 class="anchored" data-anchor-id="source-pressure">Source pressure</h5>
+<p>Sensivity vs linearity/recombination</p>
+</section>
+<section id="bellows-pressure-capillary" class="level5">
+<h5 class="anchored" data-anchor-id="bellows-pressure-capillary">Bellows pressure / capillary</h5>
+<p>Bleedout rate</p>
+</section>
+<section id="r-plate" class="level5">
+<h5 class="anchored" data-anchor-id="r-plate">R-plate</h5>
+</section>
+</section>
+</section>
+</section>
+<section id="sims" class="level2" data-number="10.3">
+<h2 data-number="10.3" class="anchored" data-anchor-id="sims"><span class="header-section-number">10.3</span> SIMS</h2>
+<section id="principles-2" class="level3" data-number="10.3.1">
+<h3 data-number="10.3.1" class="anchored" data-anchor-id="principles-2"><span class="header-section-number">10.3.1</span> Principles</h3>
+</section>
+<section id="metrics-2" class="level3" data-number="10.3.2">
+<h3 data-number="10.3.2" class="anchored" data-anchor-id="metrics-2"><span class="header-section-number">10.3.2</span> Metrics</h3>
+</section>
+<section id="usesapplications-2" class="level3" data-number="10.3.3">
+<h3 data-number="10.3.3" class="anchored" data-anchor-id="usesapplications-2"><span class="header-section-number">10.3.3</span> Uses/applications</h3>
+</section>
+<section id="arcane-knowledgedecision-points-2" class="level3" data-number="10.3.4">
+<h3 data-number="10.3.4" class="anchored" data-anchor-id="arcane-knowledgedecision-points-2"><span class="header-section-number">10.3.4</span> Arcane knowledge/decision points</h3>
+<section id="primary-ion-beam-cs-vs-o" class="level4">
+<h4 class="anchored" data-anchor-id="primary-ion-beam-cs-vs-o">Primary ion beam (Cs vs O)</h4>
+<p>electronegratiivty.where you are on the periodic table</p>
+<section id="cs-reactionsimplantation" class="level5">
+<h5 class="anchored" data-anchor-id="cs-reactionsimplantation">Cs reactions/implantation</h5>
+</section>
+</section>
+<section id="beam-intensity" class="level4">
+<h4 class="anchored" data-anchor-id="beam-intensity">Beam intensity</h4>
+</section>
+<section id="beam-size" class="level4">
+<h4 class="anchored" data-anchor-id="beam-size">Beam size</h4>
+</section>
+<section id="beam-energy-density" class="level4">
+<h4 class="anchored" data-anchor-id="beam-energy-density">Beam energy density</h4>
+</section>
+<section id="ion-microprobe-vs-ion-microscope" class="level4">
+<h4 class="anchored" data-anchor-id="ion-microprobe-vs-ion-microscope">Ion microprobe vs ion microscope</h4>
+</section>
+</section>
+</section>
+<section id="icp" class="level2" data-number="10.4">
+<h2 data-number="10.4" class="anchored" data-anchor-id="icp"><span class="header-section-number">10.4</span> ICP</h2>
+<section id="principles-3" class="level3" data-number="10.4.1">
+<h3 data-number="10.4.1" class="anchored" data-anchor-id="principles-3"><span class="header-section-number">10.4.1</span> Principles</h3>
+</section>
+<section id="metrics-3" class="level3" data-number="10.4.2">
+<h3 data-number="10.4.2" class="anchored" data-anchor-id="metrics-3"><span class="header-section-number">10.4.2</span> Metrics</h3>
+</section>
+<section id="usesapplications-3" class="level3" data-number="10.4.3">
+<h3 data-number="10.4.3" class="anchored" data-anchor-id="usesapplications-3"><span class="header-section-number">10.4.3</span> Uses/applications</h3>
+</section>
+<section id="arcane-knowledgedecision-points-3" class="level3" data-number="10.4.4">
+<h3 data-number="10.4.4" class="anchored" data-anchor-id="arcane-knowledgedecision-points-3"><span class="header-section-number">10.4.4</span> Arcane knowledge/decision points</h3>
+</section>
+</section>
+<section id="maldi" class="level2" data-number="10.5">
+<h2 data-number="10.5" class="anchored" data-anchor-id="maldi"><span class="header-section-number">10.5</span> MALDI</h2>
+<section id="principles-4" class="level3" data-number="10.5.1">
+<h3 data-number="10.5.1" class="anchored" data-anchor-id="principles-4"><span class="header-section-number">10.5.1</span> Principles</h3>
+</section>
+<section id="metrics-4" class="level3" data-number="10.5.2">
+<h3 data-number="10.5.2" class="anchored" data-anchor-id="metrics-4"><span class="header-section-number">10.5.2</span> Metrics</h3>
+</section>
+<section id="usesapplications-4" class="level3" data-number="10.5.3">
+<h3 data-number="10.5.3" class="anchored" data-anchor-id="usesapplications-4"><span class="header-section-number">10.5.3</span> Uses/applications</h3>
+</section>
+<section id="arcane-knowledgedecision-points-4" class="level3" data-number="10.5.4">
+<h3 data-number="10.5.4" class="anchored" data-anchor-id="arcane-knowledgedecision-points-4"><span class="header-section-number">10.5.4</span> Arcane knowledge/decision points</h3>
+</section>
+</section>
+<section id="esi" class="level2" data-number="10.6">
+<h2 data-number="10.6" class="anchored" data-anchor-id="esi"><span class="header-section-number">10.6</span> ESI</h2>
+<section id="principles-5" class="level3" data-number="10.6.1">
+<h3 data-number="10.6.1" class="anchored" data-anchor-id="principles-5"><span class="header-section-number">10.6.1</span> Principles</h3>
+</section>
+<section id="metrics-5" class="level3" data-number="10.6.2">
+<h3 data-number="10.6.2" class="anchored" data-anchor-id="metrics-5"><span class="header-section-number">10.6.2</span> Metrics</h3>
+</section>
+<section id="usesapplications-5" class="level3" data-number="10.6.3">
+<h3 data-number="10.6.3" class="anchored" data-anchor-id="usesapplications-5"><span class="header-section-number">10.6.3</span> Uses/applications</h3>
+</section>
+<section id="arcane-knowledgedecision-points-5" class="level3" data-number="10.6.4">
+<h3 data-number="10.6.4" class="anchored" data-anchor-id="arcane-knowledgedecision-points-5"><span class="header-section-number">10.6.4</span> Arcane knowledge/decision points</h3>
+</section>
+</section>
+<section id="ci" class="level2" data-number="10.7">
+<h2 data-number="10.7" class="anchored" data-anchor-id="ci"><span class="header-section-number">10.7</span> CI</h2>
+<section id="principles-6" class="level3" data-number="10.7.1">
+<h3 data-number="10.7.1" class="anchored" data-anchor-id="principles-6"><span class="header-section-number">10.7.1</span> Principles</h3>
+</section>
+<section id="metrics-6" class="level3" data-number="10.7.2">
+<h3 data-number="10.7.2" class="anchored" data-anchor-id="metrics-6"><span class="header-section-number">10.7.2</span> Metrics</h3>
+</section>
+<section id="usesapplications-6" class="level3" data-number="10.7.3">
+<h3 data-number="10.7.3" class="anchored" data-anchor-id="usesapplications-6"><span class="header-section-number">10.7.3</span> Uses/applications</h3>
+</section>
+<section id="arcane-knowledgedecision-points-6" class="level3" data-number="10.7.4">
+<h3 data-number="10.7.4" class="anchored" data-anchor-id="arcane-knowledgedecision-points-6"><span class="header-section-number">10.7.4</span> Arcane knowledge/decision points</h3>
+<section id="type-of-chemical-ionization" class="level4">
+<h4 class="anchored" data-anchor-id="type-of-chemical-ionization">Type of chemical ionization</h4>
+<section id="flow-tube" class="level5">
+<h5 class="anchored" data-anchor-id="flow-tube">Flow-tube</h5>
+<p>(acetate, iodide, or water (PTR))</p>
+</section>
+<section id="atmospheric-pressure-drift-tube" class="level5">
+<h5 class="anchored" data-anchor-id="atmospheric-pressure-drift-tube">Atmospheric pressure drift tube</h5>
+</section>
+<section id="eesi" class="level5">
+<h5 class="anchored" data-anchor-id="eesi">EESI</h5>
+</section>
+<section id="temperature-stability" class="level5">
+<h5 class="anchored" data-anchor-id="temperature-stability">Temperature stability</h5>
+</section>
+<section id="ionization-pressure" class="level5">
+<h5 class="anchored" data-anchor-id="ionization-pressure">Ionization pressure</h5>
+<p>Fragmentation tradeoffs</p>
 
 
+</section>
+</section>
+</section>
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -866,4 +1186,4 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions"><ul><li><a href="https://github.com/EARTHTIME/MassSpecAcademy/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li><li><a href="https://github.com/EARTHTIME/MassSpecAcademy/edit/main/ion_source_design.qmd" class="toc-action"><i class="bi empty"></i>Edit this page</a></li></ul></div></div></div></footer></body></html>
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/EARTHTIME/MassSpecAcademy/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li><li><a href="https://github.com/EARTHTIME/MassSpecAcademy/edit/main/ion_source_design.qmd" class="toc-action"><i class="bi empty"></i>Edit this page</a></li></ul></div></div></div></footer></body></html>

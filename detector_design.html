@@ -236,7 +236,7 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./about/aboutme_tremblay.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Dr.&nbsp;Marissa Tremblay</span></a>
+ <span class="menu-text">Marissa Tremblay</span></a>
   </div>
 </li>
       </ul>
@@ -259,7 +259,7 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./mass_spec_design.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Mass spec design</span></span></a>
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Mass Spectrometer Components</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -414,8 +414,27 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active" data-toc-expanded="3">
+    <h2 id="toc-title">Contents</h2>
+   
+  <ul>
+  <li><a href="#sec-detectors-overview" id="toc-sec-detectors-overview" class="nav-link active" data-scroll-target="#sec-detectors-overview"><span class="header-section-number">9.1</span> Overview</a></li>
+  <li><a href="#sec-detectors-faradays" id="toc-sec-detectors-faradays" class="nav-link" data-scroll-target="#sec-detectors-faradays"><span class="header-section-number">9.2</span> Faraday Detectors</a>
+  <ul>
+  <li><a href="#sec-detectors-faradays-hardware" id="toc-sec-detectors-faradays-hardware" class="nav-link" data-scroll-target="#sec-detectors-faradays-hardware"><span class="header-section-number">9.2.1</span> Faraday Cup Hardware</a></li>
+  <li><a href="#sec-detectors-faradays-electronics" id="toc-sec-detectors-faradays-electronics" class="nav-link" data-scroll-target="#sec-detectors-faradays-electronics"><span class="header-section-number">9.2.2</span> Amplifier Electronics</a></li>
+  </ul></li>
+  <li><a href="#sec-detectors-em" id="toc-sec-detectors-em" class="nav-link" data-scroll-target="#sec-detectors-em"><span class="header-section-number">9.3</span> Electron Multipliers</a>
+  <ul>
+  <li><a href="#sec-detectors-em-electronics" id="toc-sec-detectors-em-electronics" class="nav-link" data-scroll-target="#sec-detectors-em-electronics"><span class="header-section-number">9.3.1</span> Operating Mode and Electronics</a></li>
+  <li><a href="#sec-detectors-em-dd" id="toc-sec-detectors-em-dd" class="nav-link" data-scroll-target="#sec-detectors-em-dd"><span class="header-section-number">9.3.2</span> Discrete Dynode Multipliers</a></li>
+  <li><a href="#sec-detectors-em-channeltrons" id="toc-sec-detectors-em-channeltrons" class="nav-link" data-scroll-target="#sec-detectors-em-channeltrons"><span class="header-section-number">9.3.3</span> Channeltrons</a></li>
+  <li><a href="#sec-detectors-em-daly" id="toc-sec-detectors-em-daly" class="nav-link" data-scroll-target="#sec-detectors-em-daly"><span class="header-section-number">9.3.4</span> Daly Detectors</a></li>
+  </ul></li>
+  <li><a href="#sec-detectors-other" id="toc-sec-detectors-other" class="nav-link" data-scroll-target="#sec-detectors-other"><span class="header-section-number">9.4</span> Other Exotic Detector Type</a></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/EARTHTIME/MassSpecAcademy/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li><li><a href="https://github.com/EARTHTIME/MassSpecAcademy/edit/main/detector_design.qmd" class="toc-action"><i class="bi empty"></i>Edit this page</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -439,8 +458,55 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<section id="sec-detectors-overview" class="level2" data-number="9.1">
+<h2 data-number="9.1" class="anchored" data-anchor-id="sec-detectors-overview"><span class="header-section-number">9.1</span> Overview</h2>
+<p>What are we detecting, and why?</p>
+<p>Why you would choose to use one detector over another?</p>
+<ul>
+<li><p>beam size</p></li>
+<li><p>statistics</p></li>
+<li><p>detector size</p></li>
+<li><p>other considerations (e.g., can’t use scintillators for NGMS)</p></li>
+</ul>
+</section>
+<section id="sec-detectors-faradays" class="level2" data-number="9.2">
+<h2 data-number="9.2" class="anchored" data-anchor-id="sec-detectors-faradays"><span class="header-section-number">9.2</span> Faraday Detectors</h2>
+<section id="sec-detectors-faradays-hardware" class="level3" data-number="9.2.1">
+<h3 data-number="9.2.1" class="anchored" data-anchor-id="sec-detectors-faradays-hardware"><span class="header-section-number">9.2.1</span> Faraday Cup Hardware</h3>
+</section>
+<section id="sec-detectors-faradays-electronics" class="level3" data-number="9.2.2">
+<h3 data-number="9.2.2" class="anchored" data-anchor-id="sec-detectors-faradays-electronics"><span class="header-section-number">9.2.2</span> Amplifier Electronics</h3>
+<ul>
+<li><p>RTIAs</p></li>
+<li><p>CTIAs</p></li>
+</ul>
+</section>
+</section>
+<section id="sec-detectors-em" class="level2" data-number="9.3">
+<h2 data-number="9.3" class="anchored" data-anchor-id="sec-detectors-em"><span class="header-section-number">9.3</span> Electron Multipliers</h2>
+<section id="sec-detectors-em-electronics" class="level3" data-number="9.3.1">
+<h3 data-number="9.3.1" class="anchored" data-anchor-id="sec-detectors-em-electronics"><span class="header-section-number">9.3.1</span> Operating Mode and Electronics</h3>
+<ul>
+<li><p>Ion Counting</p></li>
+<li><p>Analog</p></li>
+</ul>
+</section>
+<section id="sec-detectors-em-dd" class="level3" data-number="9.3.2">
+<h3 data-number="9.3.2" class="anchored" data-anchor-id="sec-detectors-em-dd"><span class="header-section-number">9.3.2</span> Discrete Dynode Multipliers</h3>
+</section>
+<section id="sec-detectors-em-channeltrons" class="level3" data-number="9.3.3">
+<h3 data-number="9.3.3" class="anchored" data-anchor-id="sec-detectors-em-channeltrons"><span class="header-section-number">9.3.3</span> Channeltrons</h3>
+</section>
+<section id="sec-detectors-em-daly" class="level3" data-number="9.3.4">
+<h3 data-number="9.3.4" class="anchored" data-anchor-id="sec-detectors-em-daly"><span class="header-section-number">9.3.4</span> Daly Detectors</h3>
+</section>
+</section>
+<section id="sec-detectors-other" class="level2" data-number="9.4">
+<h2 data-number="9.4" class="anchored" data-anchor-id="sec-detectors-other"><span class="header-section-number">9.4</span> Other Exotic Detector Type</h2>
+<p>CCDs Gas ionization detectors Other scintillation detectors</p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -866,4 +932,4 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions"><ul><li><a href="https://github.com/EARTHTIME/MassSpecAcademy/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li><li><a href="https://github.com/EARTHTIME/MassSpecAcademy/edit/main/detector_design.qmd" class="toc-action"><i class="bi empty"></i>Edit this page</a></li></ul></div></div></div></footer></body></html>
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/EARTHTIME/MassSpecAcademy/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li><li><a href="https://github.com/EARTHTIME/MassSpecAcademy/edit/main/detector_design.qmd" class="toc-action"><i class="bi empty"></i>Edit this page</a></li></ul></div></div></div></footer></body></html>

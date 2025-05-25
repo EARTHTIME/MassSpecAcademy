@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>5&nbsp; Mass spec design – Mass Spec Academy</title>
+<title>5&nbsp; Mass Spectrometer Components – Mass Spec Academy</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -71,6 +71,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="styles.css">
 </head>
@@ -111,7 +140,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./mass_spec_history.html">Mass Spectrometry Overview</a></li><li class="breadcrumb-item"><a href="./mass_spec_design.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Mass spec design</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./mass_spec_history.html">Mass Spectrometry Overview</a></li><li class="breadcrumb-item"><a href="./mass_spec_design.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Mass Spectrometer Components</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -236,7 +265,7 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./about/aboutme_tremblay.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Dr.&nbsp;Marissa Tremblay</span></a>
+ <span class="menu-text">Marissa Tremblay</span></a>
   </div>
 </li>
       </ul>
@@ -259,7 +288,7 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./mass_spec_design.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Mass spec design</span></span></a>
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Mass Spectrometer Components</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -414,15 +443,107 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active" data-toc-expanded="3">
+    <h2 id="toc-title">Contents</h2>
+   
+  <ul>
+  <li><a href="#sec-design-sample-introduction-systems" id="toc-sec-design-sample-introduction-systems" class="nav-link active" data-scroll-target="#sec-design-sample-introduction-systems"><span class="header-section-number">5.1</span> Sample introduction systems</a>
+  <ul>
+  <li><a href="#sec-design-what-makes-a-good-intro" id="toc-sec-design-what-makes-a-good-intro" class="nav-link" data-scroll-target="#sec-design-what-makes-a-good-intro"><span class="header-section-number">5.1.1</span> What makes a good sample introduction system?</a>
+  <ul class="collapse">
+  <li><a href="#sec-design-vacuum-constraint" id="toc-sec-design-vacuum-constraint" class="nav-link" data-scroll-target="#sec-design-vacuum-constraint">The vacuum constraint</a></li>
+  <li><a href="#sec-stability-constraint" id="toc-sec-stability-constraint" class="nav-link" data-scroll-target="#sec-stability-constraint">Stability constraint</a></li>
+  <li><a href="#identical-treatment" id="toc-identical-treatment" class="nav-link" data-scroll-target="#identical-treatment">Identical treatment</a></li>
+  </ul></li>
+  <li><a href="#gases" id="toc-gases" class="nav-link" data-scroll-target="#gases"><span class="header-section-number">5.1.2</span> Gases</a>
+  <ul class="collapse">
+  <li><a href="#viscous-leak-e.g.-dual-inlet" id="toc-viscous-leak-e.g.-dual-inlet" class="nav-link" data-scroll-target="#viscous-leak-e.g.-dual-inlet">Viscous leak (e.g., Dual-inlet)</a></li>
+  <li><a href="#capillary-leak-e.g.-continuous-flow" id="toc-capillary-leak-e.g.-continuous-flow" class="nav-link" data-scroll-target="#capillary-leak-e.g.-continuous-flow">Capillary leak (e.g., Continuous-flow)</a></li>
+  </ul></li>
+  <li><a href="#liquids" id="toc-liquids" class="nav-link" data-scroll-target="#liquids"><span class="header-section-number">5.1.3</span> Liquids</a>
+  <ul class="collapse">
+  <li><a href="#wet-plasma" id="toc-wet-plasma" class="nav-link" data-scroll-target="#wet-plasma">Wet plasma</a></li>
+  <li><a href="#desolvating-nebulizer" id="toc-desolvating-nebulizer" class="nav-link" data-scroll-target="#desolvating-nebulizer">Desolvating nebulizer</a></li>
+  <li><a href="#liquid-chromatograph" id="toc-liquid-chromatograph" class="nav-link" data-scroll-target="#liquid-chromatograph">Liquid chromatograph</a></li>
+  </ul></li>
+  <li><a href="#solids" id="toc-solids" class="nav-link" data-scroll-target="#solids"><span class="header-section-number">5.1.4</span> Solids</a>
+  <ul class="collapse">
+  <li><a href="#laser-ablation" id="toc-laser-ablation" class="nav-link" data-scroll-target="#laser-ablation">Laser ablation</a></li>
+  <li><a href="#ion-bonbardment-sims" id="toc-ion-bonbardment-sims" class="nav-link" data-scroll-target="#ion-bonbardment-sims">Ion bonbardment (SIMS?)</a></li>
+  </ul></li>
+  <li><a href="#other" id="toc-other" class="nav-link" data-scroll-target="#other"><span class="header-section-number">5.1.5</span> Other</a></li>
+  </ul></li>
+  <li><a href="#ion-sources" id="toc-ion-sources" class="nav-link" data-scroll-target="#ion-sources"><span class="header-section-number">5.2</span> Ion sources</a>
+  <ul>
+  <li><a href="#electron-impact" id="toc-electron-impact" class="nav-link" data-scroll-target="#electron-impact"><span class="header-section-number">5.2.1</span> Electron Impact</a></li>
+  <li><a href="#thermal-ionization" id="toc-thermal-ionization" class="nav-link" data-scroll-target="#thermal-ionization"><span class="header-section-number">5.2.2</span> Thermal ionization</a></li>
+  <li><a href="#inductively-coupled-plasma" id="toc-inductively-coupled-plasma" class="nav-link" data-scroll-target="#inductively-coupled-plasma"><span class="header-section-number">5.2.3</span> Inductively Coupled Plasma</a></li>
+  <li><a href="#secondary-ion-sources" id="toc-secondary-ion-sources" class="nav-link" data-scroll-target="#secondary-ion-sources"><span class="header-section-number">5.2.4</span> Secondary ion sources</a></li>
+  <li><a href="#other-ion-sources" id="toc-other-ion-sources" class="nav-link" data-scroll-target="#other-ion-sources"><span class="header-section-number">5.2.5</span> Other ion sources</a></li>
+  </ul></li>
+  <li><a href="#analyzers" id="toc-analyzers" class="nav-link" data-scroll-target="#analyzers"><span class="header-section-number">5.3</span> Analyzers</a>
+  <ul>
+  <li><a href="#magnetic-sectors" id="toc-magnetic-sectors" class="nav-link" data-scroll-target="#magnetic-sectors"><span class="header-section-number">5.3.1</span> Magnetic sectors</a></li>
+  <li><a href="#electrostatic-analyzers" id="toc-electrostatic-analyzers" class="nav-link" data-scroll-target="#electrostatic-analyzers"><span class="header-section-number">5.3.2</span> Electrostatic analyzers</a></li>
+  <li><a href="#sec-design-quadrupoles" id="toc-sec-design-quadrupoles" class="nav-link" data-scroll-target="#sec-design-quadrupoles"><span class="header-section-number">5.3.3</span> Quadrupoles</a></li>
+  <li><a href="#sec-design-crc" id="toc-sec-design-crc" class="nav-link" data-scroll-target="#sec-design-crc"><span class="header-section-number">5.3.4</span> Collision/Reaction cells (CRCs)</a></li>
+  <li><a href="#ams" id="toc-ams" class="nav-link" data-scroll-target="#ams"><span class="header-section-number">5.3.5</span> AMS</a></li>
+  <li><a href="#time-of-flight" id="toc-time-of-flight" class="nav-link" data-scroll-target="#time-of-flight"><span class="header-section-number">5.3.6</span> Time of Flight</a></li>
+  <li><a href="#orbitrap" id="toc-orbitrap" class="nav-link" data-scroll-target="#orbitrap"><span class="header-section-number">5.3.7</span> Orbitrap</a></li>
+  <li><a href="#others" id="toc-others" class="nav-link" data-scroll-target="#others"><span class="header-section-number">5.3.8</span> Others</a>
+  <ul class="collapse">
+  <li><a href="#amplifiers" id="toc-amplifiers" class="nav-link" data-scroll-target="#amplifiers">Amplifiers</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#detectors" id="toc-detectors" class="nav-link" data-scroll-target="#detectors"><span class="header-section-number">5.4</span> Detectors</a>
+  <ul>
+  <li><a href="#faraday-detector" id="toc-faraday-detector" class="nav-link" data-scroll-target="#faraday-detector"><span class="header-section-number">5.4.1</span> Faraday detector</a></li>
+  <li><a href="#sec-design-ion-counters" id="toc-sec-design-ion-counters" class="nav-link" data-scroll-target="#sec-design-ion-counters"><span class="header-section-number">5.4.2</span> Electron Multipliers and/or Ion Counters</a>
+  <ul class="collapse">
+  <li><a href="#secondary-electron-multipliers" id="toc-secondary-electron-multipliers" class="nav-link" data-scroll-target="#secondary-electron-multipliers">Secondary Electron Multipliers</a></li>
+  <li><a href="#channeltrons" id="toc-channeltrons" class="nav-link" data-scroll-target="#channeltrons">Channeltrons</a></li>
+  <li><a href="#daly-detectors" id="toc-daly-detectors" class="nav-link" data-scroll-target="#daly-detectors">Daly Detectors</a></li>
+  </ul></li>
+  <li><a href="#other-1" id="toc-other-1" class="nav-link" data-scroll-target="#other-1"><span class="header-section-number">5.4.3</span> Other</a></li>
+  </ul></li>
+  <li><a href="#ion-optics" id="toc-ion-optics" class="nav-link" data-scroll-target="#ion-optics"><span class="header-section-number">5.5</span> Ion optics</a>
+  <ul>
+  <li><a href="#ion-lensesdeflectors" id="toc-ion-lensesdeflectors" class="nav-link" data-scroll-target="#ion-lensesdeflectors"><span class="header-section-number">5.5.1</span> Ion lenses/deflectors</a></li>
+  <li><a href="#using-magnets-as-ion-optics" id="toc-using-magnets-as-ion-optics" class="nav-link" data-scroll-target="#using-magnets-as-ion-optics"><span class="header-section-number">5.5.2</span> Using magnets as ion optics</a></li>
+  <li><a href="#retardation-lenses" id="toc-retardation-lenses" class="nav-link" data-scroll-target="#retardation-lenses"><span class="header-section-number">5.5.3</span> Retardation lenses</a></li>
+  <li><a href="#zoomdispersion-lenses" id="toc-zoomdispersion-lenses" class="nav-link" data-scroll-target="#zoomdispersion-lenses"><span class="header-section-number">5.5.4</span> Zoom/dispersion lenses</a></li>
+  </ul></li>
+  <li><a href="#vacuum-systems" id="toc-vacuum-systems" class="nav-link" data-scroll-target="#vacuum-systems"><span class="header-section-number">5.6</span> Vacuum Systems</a>
+  <ul>
+  <li><a href="#gas-flow-at-low-pressure" id="toc-gas-flow-at-low-pressure" class="nav-link" data-scroll-target="#gas-flow-at-low-pressure"><span class="header-section-number">5.6.1</span> Gas flow at low pressure</a></li>
+  <li><a href="#vacuum-pumps" id="toc-vacuum-pumps" class="nav-link" data-scroll-target="#vacuum-pumps"><span class="header-section-number">5.6.2</span> Vacuum Pumps</a>
+  <ul class="collapse">
+  <li><a href="#roughing-pumps" id="toc-roughing-pumps" class="nav-link" data-scroll-target="#roughing-pumps">Roughing pumps</a></li>
+  <li><a href="#high-vacuum-pumps" id="toc-high-vacuum-pumps" class="nav-link" data-scroll-target="#high-vacuum-pumps">High vacuum pumps</a></li>
+  </ul></li>
+  <li><a href="#material-considerations" id="toc-material-considerations" class="nav-link" data-scroll-target="#material-considerations"><span class="header-section-number">5.6.3</span> Material considerations</a></li>
+  <li><a href="#flanges-gaskets-valves" id="toc-flanges-gaskets-valves" class="nav-link" data-scroll-target="#flanges-gaskets-valves"><span class="header-section-number">5.6.4</span> Flanges, gaskets, valves</a></li>
+  <li><a href="#vacuum-guages" id="toc-vacuum-guages" class="nav-link" data-scroll-target="#vacuum-guages"><span class="header-section-number">5.6.5</span> Vacuum guages</a></li>
+  </ul></li>
+  <li><a href="#power-components" id="toc-power-components" class="nav-link" data-scroll-target="#power-components"><span class="header-section-number">5.7</span> Power components</a>
+  <ul>
+  <li><a href="#high-voltages-and-considerations" id="toc-high-voltages-and-considerations" class="nav-link" data-scroll-target="#high-voltages-and-considerations"><span class="header-section-number">5.7.1</span> High voltages and considerations</a></li>
+  <li><a href="#mass-spec-power-systems" id="toc-mass-spec-power-systems" class="nav-link" data-scroll-target="#mass-spec-power-systems"><span class="header-section-number">5.7.2</span> Mass spec power systems</a></li>
+  </ul></li>
+  <li><a href="#computers" id="toc-computers" class="nav-link" data-scroll-target="#computers"><span class="header-section-number">5.8</span> Computers</a>
+  <ul>
+  <li><a href="#data-loops" id="toc-data-loops" class="nav-link" data-scroll-target="#data-loops"><span class="header-section-number">5.8.1</span> Data loops</a></li>
+  </ul></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/EARTHTIME/MassSpecAcademy/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li><li><a href="https://github.com/EARTHTIME/MassSpecAcademy/edit/main/mass_spec_design.qmd" class="toc-action"><i class="bi empty"></i>Edit this page</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./mass_spec_history.html">Mass Spectrometry Overview</a></li><li class="breadcrumb-item"><a href="./mass_spec_design.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Mass spec design</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./mass_spec_history.html">Mass Spectrometry Overview</a></li><li class="breadcrumb-item"><a href="./mass_spec_design.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Mass Spectrometer Components</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Mass spec design</span></h1>
+<h1 class="title"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Mass Spectrometer Components</span></h1>
 </div>
 
 
@@ -439,8 +560,277 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<p>General outline of a mass spectrometer</p>
+<p>Diagram with parts labeled. Ion optics will point to several different pieces.</p>
+<section id="sec-design-sample-introduction-systems" class="level2" data-number="5.1">
+<h2 data-number="5.1" class="anchored" data-anchor-id="sec-design-sample-introduction-systems"><span class="header-section-number">5.1</span> Sample introduction systems</h2>
+<p>Sample introduction systems can be organized by the physical form (phase) of the material it handles. Fundamentally different strategies are needed depending on whether the sample is a solid, liquid, or gas. The right introduction system for your specific application could also depend on your analytical goal. For example, you might need to add a tracer to help you quantify amounts of certain analytes, or use exploit chemical or physical processes to remove a problematic contaminant. Here, we’ll organize introduction systems by sample phase.</p>
+<section id="sec-design-what-makes-a-good-intro" class="level3" data-number="5.1.1">
+<h3 data-number="5.1.1" class="anchored" data-anchor-id="sec-design-what-makes-a-good-intro"><span class="header-section-number">5.1.1</span> What makes a good sample introduction system?</h3>
+<p>Regardless of the physical form of the sample, all sample introduction systems adhere to (or strive for) a few guiding principles: 1. Vacuum: Slow enough introduction rate that the instrument remains at vacuum 2. Stable: Introduction of material (and thus ion beams) are stable over time or change only gradually, ideally in a manner that does not fractionate the sample (or if it does fractionate, does so reproducibly) 3. Identical treatment: System strives to treat samples and standards identically, and switch between samples and standards easily without changing the state of the instrument.</p>
+<section id="sec-design-vacuum-constraint" class="level4">
+<h4 class="anchored" data-anchor-id="sec-design-vacuum-constraint">The vacuum constraint</h4>
+<p>Mass spectrometers require high or ultra-high vacuum to operate. If the ions that we’ve worked so hard to separate from each other hit other particles in the instrument, they’ll get knocked off course, lose energy, and show up in the wrong place. The technical term for this is the <strong>mean free path</strong>, which chiefly depends on pressure and quantifies how long the average particle can travel in a straight line before hitting another particle. See XXX for more details on the mean free path and how to calculate it. So, when working correctly, a mass spectrometer needs a low pressure and (thus) a long mean free path.</p>
+<p>However, analyzing a sample, by definition, adds stuff to the instrument and makes the vacuum worse. So, the way that and rate at which we can introduce a sample to the instrument is constrained by how many particles we can tolerate (before the mean free path is too short) and the rate and which the instrument can remove them. Larger samples create brighter ion beams, more counts, and thus higher precision. But the size of samples are fundamentally limited by how much added material a mass spectrometer can handle. Every sample introduction system is bounded by this constraint and must design around it.</p>
+<p>For example, suppose we need a mean free path of at least 100 m, so that nearly all ions avoid collisions along the ~1 m flight path of our mass analyzer and our mass resolving power doesn’t degrade. At room temperature, this requires a pressure no higher than about <span class="math inline">\(10^{-9}\)</span> bar for molecules the size of the main components of air. If vacuum is maintained using a turbomolecular pump with a pumping speed of 100 L/s (which is pretty standard), from <span class="math inline">\(Q = SP\)</span>, we can add sample at a rate no higher than <span class="math inline">\(100\ \text{L/S} \times 10^{-9}\ \text{bar} = 10^{-7} \text{L bar/s}\)</span>. For an ideal gas at room temperature, this corresponds to <span class="math inline">\(\frac{PV}{RT} = 10^{-7}/0.083/298 \approx 4\times10^{-9}\ \text{moles/s}\)</span>, or about 0.25 <span class="math inline">\(\mu\)</span>moles per minute. This constraint may be easily met in systems working on small amounts of material, but it still governs the design of the sample introduction system</p>
+<p>Beyond this fundamental constraint, two additional constraints related to vacuum that influence the design of sample introduction systems are: 1) if they were handled by humans, most samples are (or at some point were) at atmospheric pressure; and 2) many ion sources require (or operate more efficiently in) environments where the mean free path is much shorter than 100 m. Getting samples from atmospheric pressure to whatever pressure the ion source requires (anywhere from <span class="math inline">\(&lt;10^{-8}\)</span> to <span class="math inline">\(&gt;1\)</span> bar depending on the instrument), and then from the pressure in the ion source to the (often) lower pressures required by the mass analyzer at the slow rates required by the <span class="math inline">\(Q=SP\)</span> constraint above is a throughline that controls how mass spectrometers are designed. How different inlet systems solve these constraints depends on the phase in which the material is analyzed.</p>
+</section>
+<section id="sec-stability-constraint" class="level4">
+<h4 class="anchored" data-anchor-id="sec-stability-constraint">Stability constraint</h4>
+</section>
+<section id="identical-treatment" class="level4">
+<h4 class="anchored" data-anchor-id="identical-treatment">Identical treatment</h4>
+</section>
+</section>
+<section id="gases" class="level3" data-number="5.1.2">
+<h3 data-number="5.1.2" class="anchored" data-anchor-id="gases"><span class="header-section-number">5.1.2</span> Gases</h3>
+<p>Adding gases to a mass spectrometer is, in principle, easy because gases will act to equalize pressures across the space provided them. So, if the pressure in our ion source is lower than in the sample reservoir, gas will flow into our instrument at a rate that we can control based on the conductance at the interface. In practice,</p>
+<section id="viscous-leak-e.g.-dual-inlet" class="level4">
+<h4 class="anchored" data-anchor-id="viscous-leak-e.g.-dual-inlet">Viscous leak (e.g., Dual-inlet)</h4>
+</section>
+<section id="capillary-leak-e.g.-continuous-flow" class="level4">
+<h4 class="anchored" data-anchor-id="capillary-leak-e.g.-continuous-flow">Capillary leak (e.g., Continuous-flow)</h4>
+</section>
+</section>
+<section id="liquids" class="level3" data-number="5.1.3">
+<h3 data-number="5.1.3" class="anchored" data-anchor-id="liquids"><span class="header-section-number">5.1.3</span> Liquids</h3>
+<section id="wet-plasma" class="level4">
+<h4 class="anchored" data-anchor-id="wet-plasma">Wet plasma</h4>
+</section>
+<section id="desolvating-nebulizer" class="level4">
+<h4 class="anchored" data-anchor-id="desolvating-nebulizer">Desolvating nebulizer</h4>
+</section>
+<section id="liquid-chromatograph" class="level4">
+<h4 class="anchored" data-anchor-id="liquid-chromatograph">Liquid chromatograph</h4>
+</section>
+</section>
+<section id="solids" class="level3" data-number="5.1.4">
+<h3 data-number="5.1.4" class="anchored" data-anchor-id="solids"><span class="header-section-number">5.1.4</span> Solids</h3>
+<section id="laser-ablation" class="level4">
+<h4 class="anchored" data-anchor-id="laser-ablation">Laser ablation</h4>
+</section>
+<section id="ion-bonbardment-sims" class="level4">
+<h4 class="anchored" data-anchor-id="ion-bonbardment-sims">Ion bonbardment (SIMS?)</h4>
+</section>
+</section>
+<section id="other" class="level3" data-number="5.1.5">
+<h3 data-number="5.1.5" class="anchored" data-anchor-id="other"><span class="header-section-number">5.1.5</span> Other</h3>
+<p>Clean lab (a bunch of chemistry)</p>
+<p>Noble gas extraction line</p>
+</section>
+</section>
+<section id="ion-sources" class="level2" data-number="5.2">
+<h2 data-number="5.2" class="anchored" data-anchor-id="ion-sources"><span class="header-section-number">5.2</span> Ion sources</h2>
+<section id="electron-impact" class="level3" data-number="5.2.1">
+<h3 data-number="5.2.1" class="anchored" data-anchor-id="electron-impact"><span class="header-section-number">5.2.1</span> Electron Impact</h3>
+</section>
+<section id="thermal-ionization" class="level3" data-number="5.2.2">
+<h3 data-number="5.2.2" class="anchored" data-anchor-id="thermal-ionization"><span class="header-section-number">5.2.2</span> Thermal ionization</h3>
+</section>
+<section id="inductively-coupled-plasma" class="level3" data-number="5.2.3">
+<h3 data-number="5.2.3" class="anchored" data-anchor-id="inductively-coupled-plasma"><span class="header-section-number">5.2.3</span> Inductively Coupled Plasma</h3>
+</section>
+<section id="secondary-ion-sources" class="level3" data-number="5.2.4">
+<h3 data-number="5.2.4" class="anchored" data-anchor-id="secondary-ion-sources"><span class="header-section-number">5.2.4</span> Secondary ion sources</h3>
+</section>
+<section id="other-ion-sources" class="level3" data-number="5.2.5">
+<h3 data-number="5.2.5" class="anchored" data-anchor-id="other-ion-sources"><span class="header-section-number">5.2.5</span> Other ion sources</h3>
+<p>Glow discharge Electrospray MALDI Laser desorption RIMS</p>
+</section>
+</section>
+<section id="analyzers" class="level2" data-number="5.3">
+<h2 data-number="5.3" class="anchored" data-anchor-id="analyzers"><span class="header-section-number">5.3</span> Analyzers</h2>
+<section id="magnetic-sectors" class="level3" data-number="5.3.1">
+<h3 data-number="5.3.1" class="anchored" data-anchor-id="magnetic-sectors"><span class="header-section-number">5.3.1</span> Magnetic sectors</h3>
+</section>
+<section id="electrostatic-analyzers" class="level3" data-number="5.3.2">
+<h3 data-number="5.3.2" class="anchored" data-anchor-id="electrostatic-analyzers"><span class="header-section-number">5.3.2</span> Electrostatic analyzers</h3>
+</section>
+<section id="sec-design-quadrupoles" class="level3" data-number="5.3.3">
+<h3 data-number="5.3.3" class="anchored" data-anchor-id="sec-design-quadrupoles"><span class="header-section-number">5.3.3</span> Quadrupoles</h3>
+<p>Quadrupole mass analyzers generate electric fields through which only ions of certain mass to charge ratios are able to pass. As shown in the figure -need fig-, ions enter the quadrupole along it’s z-axis. Those with m/z within the selected range will maintain a stable trajectory along the z-axis and reach the spectrometer’s detector. The electric fields will destabilize the paths of ions with m/z outside the selected range, knocking them “off course” and preventing them from passing through the analyzer.</p>
+<p>Dynamic.</p>
+<p>Analyzer vs.&nbsp;filter? filtering vs.&nbsp;bending?</p>
+<p><strong>How does quadrupole mass filtering work?</strong></p>
+<p>Quadrupole mass analyzers use four parallel rods that are connected in cross-wise pairs. A potential of (U+Vcosωt) is applied to one pair, while a potential of -(U+ωt) applied to the second pair. Here, Vcosωt represents an alternating RF voltage and U represents a DC voltage (“DC offset”). The applied potentials create orthogonal electrical fields–one in the x-plane, and one in the y-plane–that interact differently with ions of different m/z.</p>
+<p>In the X-direction, low m/z ions generally follow the RF component of the field, gain energy, and oscillate with increasing amplitude until they collide with the rods. This creates a “high-pass” filter in the X-direction that allows only heavier ions to maintain their trajectory.</p>
+<p>In the Y-direction, the DC component of the field has a “de-focusing” or destabilizing effect, but the RF component can keep lighter ions on course by periodically correcting their paths. In this direction, the applied electric fields create a “low-pass” filter through which only lighter ions can maintain their trajectory. By manipulating the RF and DC components of the field, the high and low-pass filters can be set to resolve individual atomic masses.</p>
+<p><strong>Some math!</strong> or <strong>More details!</strong> or <strong>How are potentials calculated?</strong><br>
+- follow an ex: stability of ion of a single mass - mathieu equation and “stability triangle”</p>
+<p><strong>Advantages of quadrupoles</strong></p>
+</section>
+<section id="sec-design-crc" class="level3" data-number="5.3.4">
+<h3 data-number="5.3.4" class="anchored" data-anchor-id="sec-design-crc"><span class="header-section-number">5.3.4</span> Collision/Reaction cells (CRCs)</h3>
+<p>The purpose of a collision/reaction cell (CRC) is to use an added gas within the cell to mitigate spectral interferences, either via collision of interferents with gas molecules or reaction of interferents or interferred ions . CRCs are most typically used in conjuction with ICP-source instruments, and are placed before the mass analyzer to filter ions or interferences of interest.</p>
+<p>A CRC is typically housed within an RF multipole (either quadrupole, hexapole, or octopole), which serves to focus the ion beam. Some CRCs also induce an axial electrical field (along the length of the cell) in order to slow ions down or speed them up, depending on the type of reaction. The two primary CRC modes are collision mode and reaction mode.</p>
+<p>In collision mode, an inert gas such as He or H<span class="math inline">\(_2\)</span> is used to collide interferents. One general guiding principle of collisions is that the cross-sectional area of polyatomic ions is generally larger than the analyte of interest. This results in more collisions of polyatomics than single ions with the reaction gas.</p>
+<blockquote class="blockquote">
+<p>CID (Collision Induced Dissociation) - Generally, polyatomic ions produced in the plasma collide with neutral gas molucules in the collision cell, resulting in dissociation of the polyatomics.</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>KED (Kinetic Energy Descrimination) - Collisions occur between an ion and the collision cell gas. These collisions result in the transfer of kinetic energy from the ion (high kinetic energy) to the gas molecule (very low kinetic energy). By the time the ion exits the cell, it has considerably reduced kinetic energy and is easily filtered out by a kinetic energy barrier after the cell. See <a href="https://doi.org/10.1016/j.sab.2015.05.008">Yamada 2015</a> for an extended explanation of KED processes.</p>
+</blockquote>
+<p>In reaction mode, a gas is used to react with either the primary ion of interest or the interferent in order to mitigate the interference.</p>
+<blockquote class="blockquote">
+<p>Charge transfer reactions: A charge transfer reaction results in the transfer of the charge from one ion or molecule to another</p>
+</blockquote>
+<div class="callout callout-style-default callout-note callout-titled" title="Example">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Example
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Ammonia (NH<span class="math inline">\(_{3}\)</span>) gas can be used to neutralize Hg<span class="math inline">\(^{+}\)</span> to Hg<span class="math inline">\(^{0}\)</span>, thereby removing the Hg interference on Pb. This is a two step reaction that first neutralizes Hg<span class="math inline">\(^{+}\)</span> by transferring the charge to form NH<span class="math inline">\(_{3}^{+}\)</span>; NH<span class="math inline">\(_{3}^{+}\)</span> then reacts with NH<span class="math inline">\(_{3}\)</span> to form NH<span class="math inline">\(_{2}\)</span> and NH<span class="math inline">\(_{4}^{+}\)</span>:</p>
+<p><span class="math display">\[Hg^{+} + NH_{3} = Hg^{0} + NH_{3}^{+}\]</span> <span class="math display">\[NH_{3}^{+} + NH_{3} = NH_{2} + NH_{4}^{+}\]</span></p>
+</div>
+</div>
+<blockquote class="blockquote">
+<p>Atom transfer (mass shift): Atom transfer or mass shift reactions involve the creation of new molecules, effectively mass shifting an ion of interest to a new mass.</p>
+</blockquote>
+<div class="callout callout-style-default callout-note callout-titled" title="Example">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Example
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Polyatomic interference of <span class="math inline">\(^{87}\)</span>Sr on <span class="math inline">\(^{87}\)</span>Rb prevents their separation using traditional mass analyzer techniques. Within a reaction cell, the user can add SF<span class="math inline">\(_6\)</span> gas to react <span class="math inline">\(^{87}\)</span>Sr<span class="math inline">\(^+\)</span> to <span class="math inline">\(^{106}\)</span>SrF<span class="math inline">\({^+}\)</span>. Rb is non-reactive with SF<span class="math inline">\(_6\)</span>. Rb is now measured on-mass as <span class="math inline">\(^{87}\)</span>Rb, whereas Sr is now measured mass-shifted as <span class="math inline">\(^{106}\)</span>SrF<span class="math inline">\({^+}\)</span>.</p>
+</div>
+</div>
+<p>The likelihood of a reaction occurring depends upon the thermodynamics of the reaction, which is different for every element and gas. Some helpful resources for understanding reaction gas kinetics can be found below:</p>
+<p>Link to element reactivities for the periodic table from the research group of Dr.&nbsp;Diethard K. Bohme at the <a href="https://www.yorku.ca/dkbohme/research/selection_table.html">University of York</a>.</p>
+<p>Link to <a href="https://www.agilent.com/cs/library/technicaloverviews/public/5991-4585EN_TechNote8800_ICP-QQQ_reactiondata.pdf">Agilent reaction data table</a> based on sensitivity data for no gas, O<span class="math inline">\(_{2}\)</span>, NH<span class="math inline">\(_{3}\)</span>, and H<span class="math inline">\(_{2}\)</span>.</p>
+</section>
+<section id="ams" class="level3" data-number="5.3.5">
+<h3 data-number="5.3.5" class="anchored" data-anchor-id="ams"><span class="header-section-number">5.3.5</span> AMS</h3>
+</section>
+<section id="time-of-flight" class="level3" data-number="5.3.6">
+<h3 data-number="5.3.6" class="anchored" data-anchor-id="time-of-flight"><span class="header-section-number">5.3.6</span> Time of Flight</h3>
+</section>
+<section id="orbitrap" class="level3" data-number="5.3.7">
+<h3 data-number="5.3.7" class="anchored" data-anchor-id="orbitrap"><span class="header-section-number">5.3.7</span> Orbitrap</h3>
+</section>
+<section id="others" class="level3" data-number="5.3.8">
+<h3 data-number="5.3.8" class="anchored" data-anchor-id="others"><span class="header-section-number">5.3.8</span> Others</h3>
+<p>FT-ion cyclotron resonance</p>
+<section id="amplifiers" class="level4">
+<h4 class="anchored" data-anchor-id="amplifiers">Amplifiers</h4>
+<p>Capacitive</p>
+<p>Resistance-based</p>
+</section>
+</section>
+</section>
+<section id="detectors" class="level2" data-number="5.4">
+<h2 data-number="5.4" class="anchored" data-anchor-id="detectors"><span class="header-section-number">5.4</span> Detectors</h2>
+<p>There are several different types of detectors integrated into mass spectrometers. Three general capabilities of the ideal ion detector include: (1) acceptance of ions, (2) 100% efficiency, or no signal loss, and (3) no bias between detectors during simultaneous collection of multiple ion beams.</p>
+<p>Various types of detectors are described below:</p>
+<section id="faraday-detector" class="level3" data-number="5.4.1">
+<h3 data-number="5.4.1" class="anchored" data-anchor-id="faraday-detector"><span class="header-section-number">5.4.1</span> Faraday detector</h3>
+</section>
+<section id="sec-design-ion-counters" class="level3" data-number="5.4.2">
+<h3 data-number="5.4.2" class="anchored" data-anchor-id="sec-design-ion-counters"><span class="header-section-number">5.4.2</span> Electron Multipliers and/or Ion Counters</h3>
+<p>Ion counting and the use of electron multipliers have been incorporated into mass spectrometry to detect and measure every ion of low-intensity ion beams, typically less than 10^6 counts per second (CPS). The physical process that allows electron multipliers, or ion counters, to operate is secondary ion emission. The general principle of secondary electron emission is a particle, or ion, impacts a high-voltage surface, or dynode, causing the release of secondary electrons from the outer layers of atoms. The number of electrons produced by an impact is dependant on the type of particle hitting the surface (i.e.&nbsp;positive ion, negative ion, electron, etc.), the angle of contact between the particle and the surface, the mass and energy of the incoming particles and the condition of the surface. The electrons produced by this initial collision are directed down the detector by an electric potential gradient, generating even more secondary electrons each time a collision occurs between an electron and the dynode surface inside the detector until they reach an output device at the end of an ion counter, where a resultant pulse is produced that is electronically processed. Continuous-dynode electron multipliers, discrete-dynode electron multipliers, and Daly detectors are three types of ion counters used for the detection of low-intensity ion beams discussed below.</p>
+<section id="secondary-electron-multipliers" class="level4">
+<h4 class="anchored" data-anchor-id="secondary-electron-multipliers">Secondary Electron Multipliers</h4>
+<p>Discrete dynode electron multipliers are detectors that amplify electron signals through a series of individual electrodes called dynodes. When a primary electron strikes the first dynode, it releases multiple secondary electrons, which are accelerated to the next dynode by an applied voltage. This process repeats across several dynodes, resulting in exponential signal amplification. Discrete dynode designs offer high gain, fast response times, and are widely used due to their sensitivity and reliability.</p>
+<!-- insert figure for SEM or discrete-dynode electron multiplier here -->
+</section>
+<section id="channeltrons" class="level4">
+<h4 class="anchored" data-anchor-id="channeltrons">Channeltrons</h4>
+<p>Continuous dynode electron multipliers are curved lead-silicate glass tubes that have the ability to detect both positive and negative ions, electrons and photons. A potential between 2200 and 3200 V is applied to the top, or input end, of a continuous-dynode electron multiplier and decreases steadily to ground state at the output end of the detector. Secondary electrons generated at the input end of the detector are driven down the channel to a collector by the potential gradient generating even more secondary electrons each time the particles some in contact with the inner surface walls of the detector.</p>
+<!-- EXTRA TEXT: Electron gains, or the output current divided by the input current, are a function of the application, the voltage applied to the detector and the length of the dynode surface within the detector.  Typical gains for ion counters are between 10^4 and 10^8.  The voltage applied to each detector has an effect on the impact energy of ions arriving at the detector, which in turn influences the electron gain of the detector.  The gain of an ion counter is also mass dependant with ions of higher atomic masses typically producing lower gains.  In order to maintain normal gains, it is important to make sure the operational voltage of the ion counter is properly set.  Over time, the surface of the detector where electron multiplication takes place will begin to degrade due to contamination from the vacuum system and as a result of ion impacts.  The operational voltage of the detector will need to be increased in order to keep the impact energy of arriving particles constant and to maintain normal electron gains.  It is advantageous to keep count rates low in order to prolong the life-time of an ion counter. -->
+<!-- insert figure for Channeltron here -->
+</section>
+<section id="daly-detectors" class="level4">
+<h4 class="anchored" data-anchor-id="daly-detectors">Daly Detectors</h4>
+<p>Daly detectors are specialized ion detectors designed to reduce noise and extend detector life. In this system, ions strike a metal electrode (often called a conversion dynode), releasing secondary electrons. These electrons are then accelerated toward a scintillator, where they generate photons. The resulting photons are detected by a photomultiplier tube (PMT), which produces the final output signal. This indirect detection method minimizes direct ion contact with sensitive components, enhancing longevity and reducing background noise.</p>
+<!-- insert figure for Daly detector here -->
+</section>
+</section>
+<section id="other-1" class="level3" data-number="5.4.3">
+<h3 data-number="5.4.3" class="anchored" data-anchor-id="other-1"><span class="header-section-number">5.4.3</span> Other</h3>
+<p>AMS Detectors (ion counters with information on energy). Gas ionization detectors.</p>
+<p>Array detectors</p>
+</section>
+</section>
+<section id="ion-optics" class="level2" data-number="5.5">
+<h2 data-number="5.5" class="anchored" data-anchor-id="ion-optics"><span class="header-section-number">5.5</span> Ion optics</h2>
+<section id="ion-lensesdeflectors" class="level3" data-number="5.5.1">
+<h3 data-number="5.5.1" class="anchored" data-anchor-id="ion-lensesdeflectors"><span class="header-section-number">5.5.1</span> Ion lenses/deflectors</h3>
+</section>
+<section id="using-magnets-as-ion-optics" class="level3" data-number="5.5.2">
+<h3 data-number="5.5.2" class="anchored" data-anchor-id="using-magnets-as-ion-optics"><span class="header-section-number">5.5.2</span> Using magnets as ion optics</h3>
+</section>
+<section id="retardation-lenses" class="level3" data-number="5.5.3">
+<h3 data-number="5.5.3" class="anchored" data-anchor-id="retardation-lenses"><span class="header-section-number">5.5.3</span> Retardation lenses</h3>
+</section>
+<section id="zoomdispersion-lenses" class="level3" data-number="5.5.4">
+<h3 data-number="5.5.4" class="anchored" data-anchor-id="zoomdispersion-lenses"><span class="header-section-number">5.5.4</span> Zoom/dispersion lenses</h3>
+</section>
+</section>
+<section id="vacuum-systems" class="level2" data-number="5.6">
+<h2 data-number="5.6" class="anchored" data-anchor-id="vacuum-systems"><span class="header-section-number">5.6</span> Vacuum Systems</h2>
+<p>A large amount of the design and mechanical components of mass spectometers are dedicated to production and maintenance of regions with a very low density of gas - typically several order of magnitude lower gas concentration than atmosphere. The term “vacuum” is typically applied to gas pressures significantly below atmospheric. A “high vacuum” is “low pressure”. The SI unit for pressure is the pascal, with the symbol Pa and in SI base units are kg/m/s^2, although workers commonly continue to use non-SI units such as bar (or even more commonly, mbar) and torr, where 1 mbar = 0.750062 torr = 1 hPa. Conveniently, pressures are typically reported in orders of magnitude, so for the purposes of vacuum systems in mass spectrometers, mbar ~ torr ~ hPa.</p>
+<p>High vacuums are useful for several reasons, the importance of each depends on the type of mass spectrometer and analysis. When an ion beam moves through space, uncontrolled ion-gas interactions are typically deleterious because they induce ion scattering and energy loss. The mean-free-path of an ion - the average distance over which an ion cna travel without colliding with a gas particle - is a useful concept. At atmospheric pressure, the mean free path is only 10s of nanometers, whereas under pressures more typical of mass spectrometers, ca 10^-7 to 10^-10 hPa are 10s to 100s of kilometers, much longer than the typical drift length of ion beams in mass spectrometers.</p>
+<p>Ions are often accelerated using high-voltage components. Unfortunately, residual gas between two electrodes at differing electrical potential can cause arcing and high voltage discharge. This can damage sensitive components, disrupt measurements, and pose safety hazards. The breakdown distance in dry air, for example, for a potential difference of 8 kV, is ~5 cm. In contrast, at a pressure of only 10^-2 hPa, the breakdown distance decreases to 1 μm, permitting components at different potential differences to be closely spaced.</p>
+<p>For mass spectrometer measurements of gasses, the vacuum quality can also contribute to sample contamination. For example, Ar is 0.94% of dry air, so for geochronology measurements of radiogenic <span class="math inline">\(^{40}\)</span>Ar, the higher the vacuum, the better the sample-to-blank ratio.</p>
+<section id="gas-flow-at-low-pressure" class="level3" data-number="5.6.1">
+<h3 data-number="5.6.1" class="anchored" data-anchor-id="gas-flow-at-low-pressure"><span class="header-section-number">5.6.1</span> Gas flow at low pressure</h3>
+<p>At low pressures, the behavior of gas flow changes significantly compared to atmospheric conditions. There are 2.5 main regimes (two different flow regimes and a “transitional” one) of gas flow relevant to vacuum systems:</p>
+<ul>
+<li><strong>Viscous (or continuum) flow:</strong> At relatively high pressures (above ~1 mbar), collisions between residual gas molecules dominate the physical behavior. Flow is dominated by viscosity, and gases behave much like fluids. This flow regime matches our expectations of gas behavior in day-to-day lives in the atmosphere, where gasses rush to expand into free spaces.</li>
+<li><strong>Molecular (or free molecular) flow:</strong> At very low pressures (below ~10<span class="math inline">\(^{-3}\)</span> mbar), gas molecules rarely collide with each other and instead interact mainly with the walls of the vacuum chamber. In this regime, traditional fluid dynamics no longer apply, and gas transport is governed by the random motion of individual molecules. One important difference when in molecular flow is that residual gas molecules, because they are no longer pressed to fill empty space by collisions with other molecules, are much less likely to enter small orifaces (which is leveraged when differential pumping is required) or move around corners.</li>
+<li>(<strong>Transitional flow:</strong> In the intermediate pressure range (~1 mbar to 10^-3 mbar), both molecule-molecule and molecule-wall collisions are important. Flow characteristics are a mix of viscous and molecular behaviors.)</li>
+</ul>
+<p>The transition between these regimes is described by the Knudsen number (Kn), which is the ratio of the mean free path of a molecule to a characteristic dimension (such as the diameter of a pipe). High Knudsen numbers (Kn &gt; 1) indicate molecular flow, while low Knudsen numbers (Kn &lt; 0.01) indicate viscous flow.</p>
+</section>
+<section id="vacuum-pumps" class="level3" data-number="5.6.2">
+<h3 data-number="5.6.2" class="anchored" data-anchor-id="vacuum-pumps"><span class="header-section-number">5.6.2</span> Vacuum Pumps</h3>
+<p>Vacuum pumps are “roughly” divided into low-vacuum, or roughing pumps, that operate in a viscous flow regime and can pump directly from atmospheric pressure, and high-vacuum pumps that operate in the molecular flow regime and typically require a minimum vacuum to operate.</p>
+<section id="roughing-pumps" class="level4">
+<h4 class="anchored" data-anchor-id="roughing-pumps">Roughing pumps</h4>
+<p>Oil pumps Mercury diffusion pumps Scroll pumps Rotary vane pump Diaphragm pumps Roots pumps Getter pumps</p>
+</section>
+<section id="high-vacuum-pumps" class="level4">
+<h4 class="anchored" data-anchor-id="high-vacuum-pumps">High vacuum pumps</h4>
+<p>Turbos Ion pumps Cryo pumps</p>
+</section>
+</section>
+<section id="material-considerations" class="level3" data-number="5.6.3">
+<h3 data-number="5.6.3" class="anchored" data-anchor-id="material-considerations"><span class="header-section-number">5.6.3</span> Material considerations</h3>
+</section>
+<section id="flanges-gaskets-valves" class="level3" data-number="5.6.4">
+<h3 data-number="5.6.4" class="anchored" data-anchor-id="flanges-gaskets-valves"><span class="header-section-number">5.6.4</span> Flanges, gaskets, valves</h3>
+</section>
+<section id="vacuum-guages" class="level3" data-number="5.6.5">
+<h3 data-number="5.6.5" class="anchored" data-anchor-id="vacuum-guages"><span class="header-section-number">5.6.5</span> Vacuum guages</h3>
+</section>
+</section>
+<section id="power-components" class="level2" data-number="5.7">
+<h2 data-number="5.7" class="anchored" data-anchor-id="power-components"><span class="header-section-number">5.7</span> Power components</h2>
+<section id="high-voltages-and-considerations" class="level3" data-number="5.7.1">
+<h3 data-number="5.7.1" class="anchored" data-anchor-id="high-voltages-and-considerations"><span class="header-section-number">5.7.1</span> High voltages and considerations</h3>
+</section>
+<section id="mass-spec-power-systems" class="level3" data-number="5.7.2">
+<h3 data-number="5.7.2" class="anchored" data-anchor-id="mass-spec-power-systems"><span class="header-section-number">5.7.2</span> Mass spec power systems</h3>
+<p>UPS Transformer Power conditioner Chillers</p>
+</section>
+</section>
+<section id="computers" class="level2" data-number="5.8">
+<h2 data-number="5.8" class="anchored" data-anchor-id="computers"><span class="header-section-number">5.8</span> Computers</h2>
+<section id="data-loops" class="level3" data-number="5.8.1">
+<h3 data-number="5.8.1" class="anchored" data-anchor-id="data-loops"><span class="header-section-number">5.8.1</span> Data loops</h3>
 
 
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -866,4 +1256,4 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions"><ul><li><a href="https://github.com/EARTHTIME/MassSpecAcademy/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li><li><a href="https://github.com/EARTHTIME/MassSpecAcademy/edit/main/mass_spec_design.qmd" class="toc-action"><i class="bi empty"></i>Edit this page</a></li></ul></div></div></div></footer></body></html>
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/EARTHTIME/MassSpecAcademy/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li><li><a href="https://github.com/EARTHTIME/MassSpecAcademy/edit/main/mass_spec_design.qmd" class="toc-action"><i class="bi empty"></i>Edit this page</a></li></ul></div></div></div></footer></body></html>

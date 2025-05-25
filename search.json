@@ -167,7 +167,7 @@
     "href": "background.html#energy-electricity-and-magnetism",
     "title": "2  Physics and Chemistry Background",
     "section": "2.2 Energy, Electricity, and Magnetism",
-    "text": "2.2 Energy, Electricity, and Magnetism\nTo separate dissimilar objects like minerals or legos, one good strategy is to place them all together and then sort through and choose different elements from the pile. A chemical reaction might dissolve or precipitate one element and leave another behind. However, isotopes of the same element have nearly identical chemical behavior. Mass spectrometers don’t inspect and sort a stack of static individual atoms like sorting legos, and they can’t rely on chemical reactions to sort isotopes.\nInstead, mass spectrometers move the atoms by first ionizing them and then manipulating the ions with electrical and magnetic forces. The resulting kinetic changes in the isotopes’ motion depend on their atomic or molecular mass, which can be exploited to separate different isotopes. Once separated, the streams of ions in motion must be measured by sensitive electronic instruments. Here again, the ions’ electrical properties are important.\n\n2.2.1 Energy\n\\[\nKE = qV = \\dfrac{1}{2}mv^2\n\\tag{2.1}\\]\n\n\nCode\nimport numpy as np\nimport matplotlib.pyplot as plt\n\nkg_per_amu = 1.66e-27\nmass_amu = 238\nmass_kg = mass_amu * kg_per_amu\nvelocity_meters_per_second = np.linspace(0, 2, 100)\nkinetic_energy_joule = mass_kg * velocity_meters_per_second ** 2\n\nfig, ax = plt.subplots()\n\nax.plot(velocity_meters_per_second, kinetic_energy_joule)\n\nax.set_xlabel('Veclocity (m/s)')\nax.set_ylabel('Kinetic Energy (J)')\nax.set_title('Quadratic Function')\nfig.tight_layout\n\nplt.show()\n\n\n\n\n\n\n\n\nFigure 2.2: Kinetic energy as a function of velocity for \\(^{238}\\)U\n\n\n\n\n\n\n\nMagnetic force acts on a positively charged ion. Figure after Bill O.\n\n\n\nReferences\n\n\nWang, Meng, W. J. Huang, F. G. Kondev, G. Audi, and S. Naimi. 2021.\n“The AME 2020 Atomic Mass Evaluation (II). Tables, Graphs and\nReferences*.” Chinese Physics C 45 (3): 030003. https://doi.org/10.1088/1674-1137/abddaf.\n\n\nYergey, Alfred L., and A. Karl Yergey. 1997. “Preparative Scale\nMass Spectrometry: A Brief History of the Calutron.” Journal\nof the American Society for Mass Spectrometry 8 (9): 943–53.\nhttps://doi.org/https://doi.org/10.1016/S1044-0305(97)00123-2.",
+    "text": "2.2 Energy, Electricity, and Magnetism\nTo separate dissimilar objects like minerals or legos, one good strategy is to place them all together and then sort through and choose different elements from the pile. A chemical reaction might dissolve or precipitate one element and leave another behind. However, isotopes of the same element have nearly identical chemical behavior. Mass spectrometers don’t inspect and sort a stack of static individual atoms like sorting legos, and they can’t rely on chemical reactions to sort isotopes.\nInstead, mass spectrometers move the atoms by first ionizing them and then manipulating the ions with electrical and magnetic forces. The resulting kinetic changes in the isotopes’ motion depend on their atomic or molecular mass, which can be exploited to separate different isotopes. Once separated, the streams of ions in motion must be measured by sensitive electronic instruments. Here again, the ions’ electrical properties are important.\n\n2.2.1 Energy\n\\[\nKE = qV = \\dfrac{1}{2}mv^2\n\\tag{2.1}\\]\n\n\nCode\nimport numpy as np\nimport matplotlib.pyplot as plt\n\nkg_per_amu = 1.66e-27\nmass_amu = 238\nmass_kg = mass_amu * kg_per_amu\nvelocity_meters_per_second = np.linspace(0, 2, 100)\nkinetic_energy_joule = mass_kg * velocity_meters_per_second ** 2\n\nfig, ax = plt.subplots()\n\nax.plot(velocity_meters_per_second, kinetic_energy_joule)\n\nax.set_xlabel('Veclocity (m/s)')\nax.set_ylabel('Kinetic Energy (J)')\nax.set_title('Quadratic Function')\nfig.tight_layout\n\nplt.show()\n\n\n\n\n\n\n\n\nFigure 2.2: Kinetic energy as a function of velocity for \\(^{238}\\)U\n\n\n\n\n\n\n\nMagnetic force acts on a positively charged ion. Figure after Bill O.\n\n\n\nReferences\n\n\nBleakney, Walker. 1929. “A New Method of Positive Ray Analysis and\nIts Application to the Measurement of Ionization Potentials in Mercury\nVapor.” Physics Reviews 34 (157).\n\n\nDate, Alan R., and Alan L. Gray. 1981. “Plasma Source Mass\nSpectrometry Using an Inductively Coupled Plasma and a High Resolution\nQuadrupole Mass Filter.” Analyst 106: 1255–67. https://doi.org/10.1039/AN9810601255.\n\n\nDe Laeter, John, and Mark D. Kurz. 2006. “Alfred Nier and the\nSector Field Mass Spectrometer.” Journal of Mass\nSpectrometry 41: 847–54. https://doi.org/\n10.1002/jms.1057.\n\n\nDempster, J. 1918. “A New Method of Positive Ray Analysis.”\nPhysics Reviews 11 (316).\n\n\nFenn, John B, Matthias Mann, Chin Kai Meng, Shek Fu Wong, and Craig M\nWhitehouse. 1989. “Electrospray Ionization for Mass Spectrometry\nof Large Biomolecules.” Science 246 (4926): 64–71.\n\n\nFenn, John B, Matthias Mann, Chin Kai Meng, Shek Fu Wong, and Craige M\nWhitehouse. 1990. “Electrospray Ionization–Principles and\nPractice.” Mass Spectrometry Reviews 9 (1): 37–70.\n\n\nGray, Alan L. 1985. “Solid Sample Introduction by Laser Ablation\nfor Inductively Coupled Plasma Source Mass Spectrometry.”\nAnalyst 110: 551–56. https://doi.org/10.1039/AN9851000551.\n\n\nGriffiths, Jennifer. 2008. “A Brief History of Mass\nSpectrometry.” Analytical Chemistry 80 (15): 5678–83.\n\n\nHouk, Robert S, Velmer A Fassel, Gerald D Flesch, Harry J Svec, Alan L\nGray, and Charles E Taylor. 1980. “Inductively Coupled Argon\nPlasma as an Ion Source for Mass Spectrometric Determination of Trace\nElements.” Analytical Chemistry 52 (14): 2283–89.\n\n\nKaras, Michael, and Franz Hillenkamp. 1988. “Laser Desorption\nIonization of Proteins with Molecular Masses Exceeding 10,000\nDaltons.” Analytical Chemistry 60 (20): 2299–2301.\n\n\nNier, Alfred. 1947. “A Mass Spectrometer for Isotope and Gas\nAnalysis.” The Review of Scientific Instruments 18 (6).\n\n\nWang, Meng, W. J. Huang, F. G. Kondev, G. Audi, and S. Naimi. 2021.\n“The AME 2020 Atomic Mass Evaluation (II). Tables, Graphs and\nReferences*.” Chinese Physics C 45 (3): 030003. https://doi.org/10.1088/1674-1137/abddaf.\n\n\nYergey, Alfred L., and A. Karl Yergey. 1997. “Preparative Scale\nMass Spectrometry: A Brief History of the Calutron.” Journal\nof the American Society for Mass Spectrometry 8 (9): 943–53.\nhttps://doi.org/https://doi.org/10.1016/S1044-0305(97)00123-2.",
     "crumbs": [
       "Contribute",
       "Background",
@@ -227,7 +227,7 @@
     "href": "about/aboutme_cruz-uribe.html",
     "title": "Alicia (Cici) Cruz-Uribe",
     "section": "",
-    "text": "Dr. Alicia Marie Cruz-Uribe is the Edward Sturgis Grew Associate Professor of Petrology and Mineralogy at the University of Maine, USA. She is head of the MAGIC (MicroAnalytical Geochemistry and Isotope Characterization) Laboratory. Her research interests span the fields of solid Earth petrology, geochemistry, and geochronology, with a current focus on laser ablation coupled to tandem mass spectrometers. Dr. Cruz-Uribe is a current Distinguished Lecturer for the Association of Women Geoscientists, is a member of the Editorial Board of Geostandards and Geoanalytical Research, and serves on the Council for the International Association of Geoanalysts.",
+    "text": "Dr. Alicia Marie Cruz-Uribe is the Edward Sturgis Grew Associate Professor of Petrology and Mineralogy at the University of Maine, USA. She is head of the MAGIC Lab (MicroAnalytical Geochemistry and Isotope Characterization Laboratory). Her research interests span the fields of solid Earth petrology, geochemistry, and geochronology, with a current focus on laser ablation coupled to tandem mass spectrometers. Dr. Cruz-Uribe is a current Distinguished Lecturer for the Association of Women Geoscientists, is a member of the Editorial Board of Geostandards and Geoanalytical Research, and serves on the Council for the International Association of Geoanalysts.",
     "crumbs": [
       "Contribute",
       "Contributors",
@@ -287,7 +287,7 @@
     "href": "about/aboutme_piasecki.html",
     "title": "Alison Piasecki",
     "section": "",
-    "text": "email: apiasecki@usgs.gov\nI am a research geologist at the U. S. Geological Survey in Denver, CO. I develop new mass spectromectric methods for small samples, rare species, and new instruments and compare that to a theoretical quantum mechanical based framework. I have apply this to important topics such as critical minerals and mine waste as a resource, non-conventional oil and gas reserves, glaciation of Antarctica, and modern biogenic fluxes of methane to the atmosphere.\nKeywords:\n- mass spectrometry \n- instrumentation \n- isotope geochemistry\n- stable isotopes",
+    "text": "email: apiasecki@usgs.gov\nI am a research geologist at the U. S. Geological Survey in Denver, CO. I develop new mass spectromectric methods for small samples, rare species, and new instruments and compare that to a theoretical quantum mechanical based framework. I have applied this to topics such as critical minerals and mine waste as a resource, non-conventional oil and gas reserves, glaciation of Antarctica, and modern biogenic fluxes of methane to the atmosphere.\nKeywords:\n- mass spectrometry \n- instrumentation \n- isotope geochemistry\n- stable isotopes",
     "crumbs": [
       "Contribute",
       "Contributors",
@@ -321,13 +321,565 @@
   {
     "objectID": "about/aboutme_tremblay.html",
     "href": "about/aboutme_tremblay.html",
-    "title": "Dr. Marissa Tremblay",
+    "title": "Marissa Tremblay",
     "section": "",
-    "text": "Dr. Marissa Tremblay is an Assistant Professsor at Purdue University in the Department of Earth, Atmospheric, and Planetary Sciences. Marissa is the PI of the Thermochronology @ Purdue (T@P) research group, which includes a noble gas mass spectrometry facility focused on measurements of comsmogenic and radiogenic noble gases.",
+    "text": "Marissa Tremblay is an Assistant Professsor at Purdue University in the Department of Earth, Atmospheric, and Planetary Sciences. Marissa is the PI of the Thermochronology @ Purdue (T@P) research group, which includes a noble gas mass spectrometry facility focused on measurements of comsmogenic and radiogenic noble gases.",
     "crumbs": [
       "Contribute",
       "Contributors",
-      "Dr. Marissa Tremblay"
+      "Marissa Tremblay"
+    ]
+  },
+  {
+    "objectID": "mass_spec_history.html",
+    "href": "mass_spec_history.html",
+    "title": "4  Mass spec history",
+    "section": "",
+    "text": "4.1 1890s-1920s: Early developments",
+    "crumbs": [
+      "Contribute",
+      "Mass Spectrometry Overview",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Mass spec history</span>"
+    ]
+  },
+  {
+    "objectID": "mass_spec_history.html#sec-hist-EarlyHistory",
+    "href": "mass_spec_history.html#sec-hist-EarlyHistory",
+    "title": "4  Mass spec history",
+    "section": "",
+    "text": "4.1.1 Cathode ray tubes\nIn the 1890’s scientists worked to understand atomic structure. This exploration eventually lead to the discovery of cathode rays specifically to determine mass, which we now call electrons. In probing cathode rays he deflected them magnetically or electrically, and then compared the heat generated when they hit a thermal junction. The deflection allowed him to calculate mass and the heat generation allowed him to calculate energy. By discovering these subatomic electrically charged particles he won the nobel prize for this in 1906\nJJ Thomson continued this work with his research assistant FW Aston. They would deflect accelerated gases using a magnetic and electric field and measure that deflection using a photographic plate in the path of the ion beam (Figure 4.1). The physical dispersion was measured and due to the presence of two dispersion paths the two stable isotopes of neon were discovered in 1912, the first time stable isotopes were measured. The glass apparatus that the subatomic particles were accelerated through is a cathode ray tube, and is a predecessor to the modern day mass spectrometer. Aston continued the work combining magnetic and electronic separation increasing the mass resolving power of the instruments .\n\n\n\n\n\n\nFigure 4.1: Deflection of different isotopes of neon by JJ Thomson and FW Aston captured on photographic film\n\n\n\n\n\n4.1.2 Electron impact sources\nAlternatively, in 1917 AJ Dempster published a work on positive rays largely considered to be the first description of an electron ionization source (Dempster 1918). He directed a positively charged beam at a solid surface generating ions he could determine a mass to charge ratio. He continued this work and eventually determined the stable isotopes of lithium and magnesium using this technique. Furthering the techniques developed by Dempster, W Bleakly was able to generate a monoenergetic beam of electrons to ionize gases in 1929 (Bleakney 1929). The beam in this type of instrument traversed a 180 \\(^\\circ\\) magnetic field and was deflected in a circle to the detector.",
+    "crumbs": [
+      "Contribute",
+      "Mass Spectrometry Overview",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Mass spec history</span>"
+    ]
+  },
+  {
+    "objectID": "mass_spec_history.html#sec-hist-FirstSpecs",
+    "href": "mass_spec_history.html#sec-hist-FirstSpecs",
+    "title": "4  Mass spec history",
+    "section": "4.2 1930s: The first mass spectrometers",
+    "text": "4.2 1930s: The first mass spectrometers\nDue to the size and complexity of the 180 \\(^\\circ\\) magnetic field early spectrometers, they were difficult to build and maintain making them a relatively rare tool. In 1940 A Nier developed a mass spectrometer in which the ion source and the detectors were removed from the influence of the 60 \\(^\\circ\\) magnet. These sector field mass spectrometers greatly reduced the power consumption of the instruments, decreased complexity, and did not decrease the mass resolving power. With the knowledge that was gained during the war expansion, he published his seminal paper in 1947, describing the basis of most mass spectrometers that are still used today (Nier 1947). The Nier-Johnson or double focusing mass spectrometer combined the sector magnet with an energy filter allowing for pure separation by mass, a design that is still the norm for high mass resolution instruments.",
+    "crumbs": [
+      "Contribute",
+      "Mass Spectrometry Overview",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Mass spec history</span>"
+    ]
+  },
+  {
+    "objectID": "mass_spec_history.html#sec-hist-WWII",
+    "href": "mass_spec_history.html#sec-hist-WWII",
+    "title": "4  Mass spec history",
+    "section": "4.3 1940s-1950s: The Manhattan Project and World War II",
+    "text": "4.3 1940s-1950s: The Manhattan Project and World War II\n\nWorld War II greatly accelerated the pace of scientific development in physics and chemistry as world powers competed to develop new weapons, production techniques, and energy sources. While international collaboration and public dissemination of research ground to a halt during the war years, scientists continued working in secret on much of the same basic research—alongside a focus on applications to wartime policy goals, particularly nuclear weapons development. During the war, massive industrial operations like the Manhattan Project focused on isotope separation technology and the physics of nuclear decay and chain reactions. After the war, many of the scientists who worked on these projects returned to basic research, publishing a wave of new publications based on previously secret wartime research. These developments in the late 1940s and 1950s laid the groundwork for the modern field of isotope geochemistry by bringing the tools of nuclear war to bear on chronology and chemical processes in the geosciences.\n\n4.3.1 The Manhattan Project\nNuclear weapons require a sufficient mass of concentrated fissile material (known as a critical mass) to maintain a nuclear chain reaction. Obtaining a critical mass involves mining and chemical separation of uranium and subsequent isotope enrichment to obtain an enrichment of at least 5.4% uranium-235ref (usually much higher), which is the level required to sustain a chain reaction. The critical mass depends on the activity of the fissile species and its concentration or grade. For example, the critical mass of a sphere of metallic uranium-235 is around 50 kg, whereas for plutonium-239 it is only around 10kg ref. At 20% enrichment of uranium-235, the critical mass is well over 500 kg ref.\nIn addition to understanding the parameters of criticality and sourcing raw materials, the success of the Manhattan Project depended on achieving sufficient enrichment of fissile species. Natural uranium is about 0.7% uranium-235, and while enriching it to just over 5% provides the theoretical possibility of criticality, weapons charges with masses in excess of a ton are impractical. A standard definition of “highly-enriched uranium” is over 20% uranium-235 ref, but in practice weapons-grade uranium is usually over 90% uranium-235.\nUranium isotope enrichment can be performed in multiple ways, and most modern enrichment facilities use gaseous diffusion of UF\\(_6\\) in a chain of gas centrifuges to gradually separate the heavier and lighter natural isotopes of uranium ref. However, the first uranium bomb produced during the Manhattan Project (the “Little Boy” gun bomb) used uranium produced by the Calutrons in the Y-12 enrichment facility at Oak Ridge ref. The Calutrons, so named because they were developed by Ernest Lawrence at The University of California and used large magnets originally built for cyclotrons, were essentially enormous mass spectrometers in which UCl\\(_4\\) was ionized by hot filaments and then separated by travel through a magnetic field, the same way a mass spectrometer mass analyzer separates isotopes. However, rather than measuring nA and smaller ion beams using sensitive electronics, the Calutrons collected grams of enriched uranium from ion beams in the tens of mA in graphite collector cups that were later burned to allow recovery of the uranium metal ref.\n\n\n4.3.2 Postwar science\nAfter the conclusion of the war, the physicists and chemists who had worked on the chemistry of isotope enrichment and the physics of nuclear weapons returned to other realms of basic and applied science. The same physics understanding that allowed scientists and engineers to construct nuclear weapons contributed to an understanding of the decay of radioactive nuclides to produce enrichments in radiogenic daughter products in natural materials, which is the basis for radiogenic isotope geochemistry. The principles underlying the chemical separation of isotopes, whether through electromagnetic separation or gaseous diffusion, applied as well to the separation of isotopes through natural geochemical processes, which is the basis for stable isotope geochemistry.\n\n\nTechnological developments\nIn addition to the boosts that the underlying science of geochemistry received from the Manhattan Project, the early mass spectrometers pioneered by AO Nier and others benefited directly from the work on Calutrons and other scientific and industrial instruments during the war years. Rapid advances in vacuum systems and instrument design occured in this era. John Reynolds introduced the static vacuum noble gas mass spectrometer in 1956, dramatically improving the sensitivity of these instruments and paving the way for realistic measurement of noble gas samples from rocks and minerals ref. This in turn enabled the rapid growth of the K/Ar dating technique, which allowed geochemists to produce a quantitative Geologic Time Scale and which dominated the next several decades of geochronology before being largely displaced by the related \\(^{40}\\)Ar/\\(^{39}\\)Ar technique and U/Pb geochronology.",
+    "crumbs": [
+      "Contribute",
+      "Mass Spectrometry Overview",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Mass spec history</span>"
+    ]
+  },
+  {
+    "objectID": "mass_spec_history.html#sec-hist-1960-1979",
+    "href": "mass_spec_history.html#sec-hist-1960-1979",
+    "title": "4  Mass spec history",
+    "section": "4.4 1960s-1970s: Diversification of techniques",
+    "text": "4.4 1960s-1970s: Diversification of techniques",
+    "crumbs": [
+      "Contribute",
+      "Mass Spectrometry Overview",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Mass spec history</span>"
+    ]
+  },
+  {
+    "objectID": "mass_spec_history.html#sec-hist-1980-1999",
+    "href": "mass_spec_history.html#sec-hist-1980-1999",
+    "title": "4  Mass spec history",
+    "section": "4.5 1980s-1990s: Commercializaiton and plasma sources",
+    "text": "4.5 1980s-1990s: Commercializaiton and plasma sources\n\nHouk et al. (1980) and Date and Gray (1981) developed inductively coupled plasma mass spectrometry (ICP-MS). Gray (1985) coupled ICP-MS with laser ablation (LA) systems (as a sample introduction). Soon after their development ICP-MS (in 1983) and ICP-MS coupled with LA (1990) became comercially avaialble and experienced great improvements, which made them one of the most dominant techniques for trace, ultratrace and isotope analysis.\nThe development of matrix-assisted laser desorption/ionization mass spectrometry (MALDI-MS) and electrospray ionization mass spectrometry (ESI-MS) Tanaka et al. (1988) enabled soft ionization large biomolecules. Earliest succesful analyzes on biomolecular on macromolecules using soft ionization published in late 1980’s (Fenn et al. 1989, 1990). Fenn and Tanaka (together with Wüthrich) received the Nobel Prize for chemistry in 2002 ((https://www.nobelprize.org/prizes/chemistry/2002/popular-information?)/.). Nowadays, MALDI and ESI are soft ionization techniques that are combined with various mass analyzers to analyze proteins, peptides, syntheic polymers, small oligonucleotides, carbohydrates andlipids \nTHe rapid improvements and development were triggered by extensive application fields, which included investigation of the hazardeous waste disposal (approved by US Enviremental Protection Agency), space explorations ((https://science.nasa.gov/mission/galileo-jupiter-atmospheric-probe?)/) \n\n:",
+    "crumbs": [
+      "Contribute",
+      "Mass Spectrometry Overview",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Mass spec history</span>"
+    ]
+  },
+  {
+    "objectID": "mass_spec_history.html#s-modern-multicollection-and-modern-electronics-sec-hist-2000s",
+    "href": "mass_spec_history.html#s-modern-multicollection-and-modern-electronics-sec-hist-2000s",
+    "title": "4  Mass spec history",
+    "section": "4.6 2000s-modern: Multicollection and modern electronics {#sec-hist-2000s+}",
+    "text": "4.6 2000s-modern: Multicollection and modern electronics {#sec-hist-2000s+}",
+    "crumbs": [
+      "Contribute",
+      "Mass Spectrometry Overview",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Mass spec history</span>"
+    ]
+  },
+  {
+    "objectID": "mass_spec_history.html#further-reading",
+    "href": "mass_spec_history.html#further-reading",
+    "title": "4  Mass spec history",
+    "section": "4.7 Further Reading",
+    "text": "4.7 Further Reading\n(Griffiths 2008) (De Laeter and Kurz 2006)\n\n\n\n\nBleakney, Walker. 1929. “A New Method of Positive Ray Analysis and Its Application to the Measurement of Ionization Potentials in Mercury Vapor.” Physics Reviews 34 (157).\n\n\nDate, Alan R., and Alan L. Gray. 1981. “Plasma Source Mass Spectrometry Using an Inductively Coupled Plasma and a High Resolution Quadrupole Mass Filter.” Analyst 106: 1255–67. https://doi.org/10.1039/AN9810601255.\n\n\nDe Laeter, John, and Mark D. Kurz. 2006. “Alfred Nier and the Sector Field Mass Spectrometer.” Journal of Mass Spectrometry 41: 847–54. https://doi.org/ 10.1002/jms.1057.\n\n\nDempster, J. 1918. “A New Method of Positive Ray Analysis.” Physics Reviews 11 (316).\n\n\nFenn, John B, Matthias Mann, Chin Kai Meng, Shek Fu Wong, and Craig M Whitehouse. 1989. “Electrospray Ionization for Mass Spectrometry of Large Biomolecules.” Science 246 (4926): 64–71.\n\n\nFenn, John B, Matthias Mann, Chin Kai Meng, Shek Fu Wong, and Craige M Whitehouse. 1990. “Electrospray Ionization–Principles and Practice.” Mass Spectrometry Reviews 9 (1): 37–70.\n\n\nGray, Alan L. 1985. “Solid Sample Introduction by Laser Ablation for Inductively Coupled Plasma Source Mass Spectrometry.” Analyst 110: 551–56. https://doi.org/10.1039/AN9851000551.\n\n\nGriffiths, Jennifer. 2008. “A Brief History of Mass Spectrometry.” Analytical Chemistry 80 (15): 5678–83.\n\n\nHouk, Robert S, Velmer A Fassel, Gerald D Flesch, Harry J Svec, Alan L Gray, and Charles E Taylor. 1980. “Inductively Coupled Argon Plasma as an Ion Source for Mass Spectrometric Determination of Trace Elements.” Analytical Chemistry 52 (14): 2283–89.\n\n\nKaras, Michael, and Franz Hillenkamp. 1988. “Laser Desorption Ionization of Proteins with Molecular Masses Exceeding 10,000 Daltons.” Analytical Chemistry 60 (20): 2299–2301.\n\n\nNier, Alfred. 1947. “A Mass Spectrometer for Isotope and Gas Analysis.” The Review of Scientific Instruments 18 (6).\n\n\nTanaka, Koichi, Hiroaki Waki, Yutaka Ido, Satoshi Akita, Yoshikazu Yoshida, Tamio Yoshida, and TJRC Matsuo. 1988. “Protein and Polymer Analyses up to m/z 100 000 by Laser Ionization Time-of-Flight Mass Spectrometry.” Rapid Communications in Mass Spectrometry 2 (8): 151–53.",
+    "crumbs": [
+      "Contribute",
+      "Mass Spectrometry Overview",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Mass spec history</span>"
+    ]
+  },
+  {
+    "objectID": "mass_spec_design.html",
+    "href": "mass_spec_design.html",
+    "title": "5  Mass Spectrometer Components",
+    "section": "",
+    "text": "5.1 Sample introduction systems\nGeneral outline of a mass spectrometer\nDiagram with parts labeled. Ion optics will point to several different pieces.\nSample introduction systems can be organized by the physical form (phase) of the material it handles. Fundamentally different strategies are needed depending on whether the sample is a solid, liquid, or gas. The right introduction system for your specific application could also depend on your analytical goal. For example, you might need to add a tracer to help you quantify amounts of certain analytes, or use exploit chemical or physical processes to remove a problematic contaminant. Here, we’ll organize introduction systems by sample phase.",
+    "crumbs": [
+      "Contribute",
+      "Mass Spectrometry Overview",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Mass Spectrometer Components</span>"
+    ]
+  },
+  {
+    "objectID": "mass_spec_design.html#sec-design-sample-introduction-systems",
+    "href": "mass_spec_design.html#sec-design-sample-introduction-systems",
+    "title": "5  Mass Spectrometer Components",
+    "section": "",
+    "text": "5.1.1 What makes a good sample introduction system?\nRegardless of the physical form of the sample, all sample introduction systems adhere to (or strive for) a few guiding principles: 1. Vacuum: Slow enough introduction rate that the instrument remains at vacuum 2. Stable: Introduction of material (and thus ion beams) are stable over time or change only gradually, ideally in a manner that does not fractionate the sample (or if it does fractionate, does so reproducibly) 3. Identical treatment: System strives to treat samples and standards identically, and switch between samples and standards easily without changing the state of the instrument.\n\nThe vacuum constraint\nMass spectrometers require high or ultra-high vacuum to operate. If the ions that we’ve worked so hard to separate from each other hit other particles in the instrument, they’ll get knocked off course, lose energy, and show up in the wrong place. The technical term for this is the mean free path, which chiefly depends on pressure and quantifies how long the average particle can travel in a straight line before hitting another particle. See XXX for more details on the mean free path and how to calculate it. So, when working correctly, a mass spectrometer needs a low pressure and (thus) a long mean free path.\nHowever, analyzing a sample, by definition, adds stuff to the instrument and makes the vacuum worse. So, the way that and rate at which we can introduce a sample to the instrument is constrained by how many particles we can tolerate (before the mean free path is too short) and the rate and which the instrument can remove them. Larger samples create brighter ion beams, more counts, and thus higher precision. But the size of samples are fundamentally limited by how much added material a mass spectrometer can handle. Every sample introduction system is bounded by this constraint and must design around it.\nFor example, suppose we need a mean free path of at least 100 m, so that nearly all ions avoid collisions along the ~1 m flight path of our mass analyzer and our mass resolving power doesn’t degrade. At room temperature, this requires a pressure no higher than about \\(10^{-9}\\) bar for molecules the size of the main components of air. If vacuum is maintained using a turbomolecular pump with a pumping speed of 100 L/s (which is pretty standard), from \\(Q = SP\\), we can add sample at a rate no higher than \\(100\\ \\text{L/S} \\times 10^{-9}\\ \\text{bar} = 10^{-7} \\text{L bar/s}\\). For an ideal gas at room temperature, this corresponds to \\(\\frac{PV}{RT} = 10^{-7}/0.083/298 \\approx 4\\times10^{-9}\\ \\text{moles/s}\\), or about 0.25 \\(\\mu\\)moles per minute. This constraint may be easily met in systems working on small amounts of material, but it still governs the design of the sample introduction system\nBeyond this fundamental constraint, two additional constraints related to vacuum that influence the design of sample introduction systems are: 1) if they were handled by humans, most samples are (or at some point were) at atmospheric pressure; and 2) many ion sources require (or operate more efficiently in) environments where the mean free path is much shorter than 100 m. Getting samples from atmospheric pressure to whatever pressure the ion source requires (anywhere from \\(&lt;10^{-8}\\) to \\(&gt;1\\) bar depending on the instrument), and then from the pressure in the ion source to the (often) lower pressures required by the mass analyzer at the slow rates required by the \\(Q=SP\\) constraint above is a throughline that controls how mass spectrometers are designed. How different inlet systems solve these constraints depends on the phase in which the material is analyzed.\n\n\nStability constraint\n\n\nIdentical treatment\n\n\n\n5.1.2 Gases\nAdding gases to a mass spectrometer is, in principle, easy because gases will act to equalize pressures across the space provided them. So, if the pressure in our ion source is lower than in the sample reservoir, gas will flow into our instrument at a rate that we can control based on the conductance at the interface. In practice,\n\nViscous leak (e.g., Dual-inlet)\n\n\nCapillary leak (e.g., Continuous-flow)\n\n\n\n5.1.3 Liquids\n\nWet plasma\n\n\nDesolvating nebulizer\n\n\nLiquid chromatograph\n\n\n\n5.1.4 Solids\n\nLaser ablation\n\n\nIon bonbardment (SIMS?)\n\n\n\n5.1.5 Other\nClean lab (a bunch of chemistry)\nNoble gas extraction line",
+    "crumbs": [
+      "Contribute",
+      "Mass Spectrometry Overview",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Mass Spectrometer Components</span>"
+    ]
+  },
+  {
+    "objectID": "mass_spec_design.html#ion-sources",
+    "href": "mass_spec_design.html#ion-sources",
+    "title": "5  Mass Spectrometer Components",
+    "section": "5.2 Ion sources",
+    "text": "5.2 Ion sources\n\n5.2.1 Electron Impact\n\n\n5.2.2 Thermal ionization\n\n\n5.2.3 Inductively Coupled Plasma\n\n\n5.2.4 Secondary ion sources\n\n\n5.2.5 Other ion sources\nGlow discharge Electrospray MALDI Laser desorption RIMS",
+    "crumbs": [
+      "Contribute",
+      "Mass Spectrometry Overview",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Mass Spectrometer Components</span>"
+    ]
+  },
+  {
+    "objectID": "mass_spec_design.html#analyzers",
+    "href": "mass_spec_design.html#analyzers",
+    "title": "5  Mass Spectrometer Components",
+    "section": "5.3 Analyzers",
+    "text": "5.3 Analyzers\n\n5.3.1 Magnetic sectors\n\n\n5.3.2 Electrostatic analyzers\n\n\n5.3.3 Quadrupoles\nQuadrupole mass analyzers generate electric fields through which only ions of certain mass to charge ratios are able to pass. As shown in the figure -need fig-, ions enter the quadrupole along it’s z-axis. Those with m/z within the selected range will maintain a stable trajectory along the z-axis and reach the spectrometer’s detector. The electric fields will destabilize the paths of ions with m/z outside the selected range, knocking them “off course” and preventing them from passing through the analyzer.\nDynamic.\nAnalyzer vs. filter? filtering vs. bending?\nHow does quadrupole mass filtering work?\nQuadrupole mass analyzers use four parallel rods that are connected in cross-wise pairs. A potential of (U+Vcosωt) is applied to one pair, while a potential of -(U+ωt) applied to the second pair. Here, Vcosωt represents an alternating RF voltage and U represents a DC voltage (“DC offset”). The applied potentials create orthogonal electrical fields–one in the x-plane, and one in the y-plane–that interact differently with ions of different m/z.\nIn the X-direction, low m/z ions generally follow the RF component of the field, gain energy, and oscillate with increasing amplitude until they collide with the rods. This creates a “high-pass” filter in the X-direction that allows only heavier ions to maintain their trajectory.\nIn the Y-direction, the DC component of the field has a “de-focusing” or destabilizing effect, but the RF component can keep lighter ions on course by periodically correcting their paths. In this direction, the applied electric fields create a “low-pass” filter through which only lighter ions can maintain their trajectory. By manipulating the RF and DC components of the field, the high and low-pass filters can be set to resolve individual atomic masses.\nSome math! or More details! or How are potentials calculated?\n- follow an ex: stability of ion of a single mass - mathieu equation and “stability triangle”\nAdvantages of quadrupoles\n\n\n5.3.4 Collision/Reaction cells (CRCs)\nThe purpose of a collision/reaction cell (CRC) is to use an added gas within the cell to mitigate spectral interferences, either via collision of interferents with gas molecules or reaction of interferents or interferred ions . CRCs are most typically used in conjuction with ICP-source instruments, and are placed before the mass analyzer to filter ions or interferences of interest.\nA CRC is typically housed within an RF multipole (either quadrupole, hexapole, or octopole), which serves to focus the ion beam. Some CRCs also induce an axial electrical field (along the length of the cell) in order to slow ions down or speed them up, depending on the type of reaction. The two primary CRC modes are collision mode and reaction mode.\nIn collision mode, an inert gas such as He or H\\(_2\\) is used to collide interferents. One general guiding principle of collisions is that the cross-sectional area of polyatomic ions is generally larger than the analyte of interest. This results in more collisions of polyatomics than single ions with the reaction gas.\n\nCID (Collision Induced Dissociation) - Generally, polyatomic ions produced in the plasma collide with neutral gas molucules in the collision cell, resulting in dissociation of the polyatomics.\n\n\nKED (Kinetic Energy Descrimination) - Collisions occur between an ion and the collision cell gas. These collisions result in the transfer of kinetic energy from the ion (high kinetic energy) to the gas molecule (very low kinetic energy). By the time the ion exits the cell, it has considerably reduced kinetic energy and is easily filtered out by a kinetic energy barrier after the cell. See Yamada 2015 for an extended explanation of KED processes.\n\nIn reaction mode, a gas is used to react with either the primary ion of interest or the interferent in order to mitigate the interference.\n\nCharge transfer reactions: A charge transfer reaction results in the transfer of the charge from one ion or molecule to another\n\n\n\n\n\n\n\nExample\n\n\n\nAmmonia (NH\\(_{3}\\)) gas can be used to neutralize Hg\\(^{+}\\) to Hg\\(^{0}\\), thereby removing the Hg interference on Pb. This is a two step reaction that first neutralizes Hg\\(^{+}\\) by transferring the charge to form NH\\(_{3}^{+}\\); NH\\(_{3}^{+}\\) then reacts with NH\\(_{3}\\) to form NH\\(_{2}\\) and NH\\(_{4}^{+}\\):\n\\[Hg^{+} + NH_{3} = Hg^{0} + NH_{3}^{+}\\] \\[NH_{3}^{+} + NH_{3} = NH_{2} + NH_{4}^{+}\\]\n\n\n\nAtom transfer (mass shift): Atom transfer or mass shift reactions involve the creation of new molecules, effectively mass shifting an ion of interest to a new mass.\n\n\n\n\n\n\n\nExample\n\n\n\nPolyatomic interference of \\(^{87}\\)Sr on \\(^{87}\\)Rb prevents their separation using traditional mass analyzer techniques. Within a reaction cell, the user can add SF\\(_6\\) gas to react \\(^{87}\\)Sr\\(^+\\) to \\(^{106}\\)SrF\\({^+}\\). Rb is non-reactive with SF\\(_6\\). Rb is now measured on-mass as \\(^{87}\\)Rb, whereas Sr is now measured mass-shifted as \\(^{106}\\)SrF\\({^+}\\).\n\n\nThe likelihood of a reaction occurring depends upon the thermodynamics of the reaction, which is different for every element and gas. Some helpful resources for understanding reaction gas kinetics can be found below:\nLink to element reactivities for the periodic table from the research group of Dr. Diethard K. Bohme at the University of York.\nLink to Agilent reaction data table based on sensitivity data for no gas, O\\(_{2}\\), NH\\(_{3}\\), and H\\(_{2}\\).\n\n\n5.3.5 AMS\n\n\n5.3.6 Time of Flight\n\n\n5.3.7 Orbitrap\n\n\n5.3.8 Others\nFT-ion cyclotron resonance\n\nAmplifiers\nCapacitive\nResistance-based",
+    "crumbs": [
+      "Contribute",
+      "Mass Spectrometry Overview",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Mass Spectrometer Components</span>"
+    ]
+  },
+  {
+    "objectID": "mass_spec_design.html#detectors",
+    "href": "mass_spec_design.html#detectors",
+    "title": "5  Mass Spectrometer Components",
+    "section": "5.4 Detectors",
+    "text": "5.4 Detectors\nThere are several different types of detectors integrated into mass spectrometers. Three general capabilities of the ideal ion detector include: (1) acceptance of ions, (2) 100% efficiency, or no signal loss, and (3) no bias between detectors during simultaneous collection of multiple ion beams.\nVarious types of detectors are described below:\n\n5.4.1 Faraday detector\n\n\n5.4.2 Electron Multipliers and/or Ion Counters\nIon counting and the use of electron multipliers have been incorporated into mass spectrometry to detect and measure every ion of low-intensity ion beams, typically less than 10^6 counts per second (CPS). The physical process that allows electron multipliers, or ion counters, to operate is secondary ion emission. The general principle of secondary electron emission is a particle, or ion, impacts a high-voltage surface, or dynode, causing the release of secondary electrons from the outer layers of atoms. The number of electrons produced by an impact is dependant on the type of particle hitting the surface (i.e. positive ion, negative ion, electron, etc.), the angle of contact between the particle and the surface, the mass and energy of the incoming particles and the condition of the surface. The electrons produced by this initial collision are directed down the detector by an electric potential gradient, generating even more secondary electrons each time a collision occurs between an electron and the dynode surface inside the detector until they reach an output device at the end of an ion counter, where a resultant pulse is produced that is electronically processed. Continuous-dynode electron multipliers, discrete-dynode electron multipliers, and Daly detectors are three types of ion counters used for the detection of low-intensity ion beams discussed below.\n\nSecondary Electron Multipliers\nDiscrete dynode electron multipliers are detectors that amplify electron signals through a series of individual electrodes called dynodes. When a primary electron strikes the first dynode, it releases multiple secondary electrons, which are accelerated to the next dynode by an applied voltage. This process repeats across several dynodes, resulting in exponential signal amplification. Discrete dynode designs offer high gain, fast response times, and are widely used due to their sensitivity and reliability.\n\n\n\nChanneltrons\nContinuous dynode electron multipliers are curved lead-silicate glass tubes that have the ability to detect both positive and negative ions, electrons and photons. A potential between 2200 and 3200 V is applied to the top, or input end, of a continuous-dynode electron multiplier and decreases steadily to ground state at the output end of the detector. Secondary electrons generated at the input end of the detector are driven down the channel to a collector by the potential gradient generating even more secondary electrons each time the particles some in contact with the inner surface walls of the detector.\n\n\n\n\nDaly Detectors\nDaly detectors are specialized ion detectors designed to reduce noise and extend detector life. In this system, ions strike a metal electrode (often called a conversion dynode), releasing secondary electrons. These electrons are then accelerated toward a scintillator, where they generate photons. The resulting photons are detected by a photomultiplier tube (PMT), which produces the final output signal. This indirect detection method minimizes direct ion contact with sensitive components, enhancing longevity and reducing background noise.\n\n\n\n\n5.4.3 Other\nAMS Detectors (ion counters with information on energy). Gas ionization detectors.\nArray detectors",
+    "crumbs": [
+      "Contribute",
+      "Mass Spectrometry Overview",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Mass Spectrometer Components</span>"
+    ]
+  },
+  {
+    "objectID": "mass_spec_design.html#ion-optics",
+    "href": "mass_spec_design.html#ion-optics",
+    "title": "5  Mass Spectrometer Components",
+    "section": "5.5 Ion optics",
+    "text": "5.5 Ion optics\n\n5.5.1 Ion lenses/deflectors\n\n\n5.5.2 Using magnets as ion optics\n\n\n5.5.3 Retardation lenses\n\n\n5.5.4 Zoom/dispersion lenses",
+    "crumbs": [
+      "Contribute",
+      "Mass Spectrometry Overview",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Mass Spectrometer Components</span>"
+    ]
+  },
+  {
+    "objectID": "mass_spec_design.html#vacuum-systems",
+    "href": "mass_spec_design.html#vacuum-systems",
+    "title": "5  Mass Spectrometer Components",
+    "section": "5.6 Vacuum Systems",
+    "text": "5.6 Vacuum Systems\nA large amount of the design and mechanical components of mass spectometers are dedicated to production and maintenance of regions with a very low density of gas - typically several order of magnitude lower gas concentration than atmosphere. The term “vacuum” is typically applied to gas pressures significantly below atmospheric. A “high vacuum” is “low pressure”. The SI unit for pressure is the pascal, with the symbol Pa and in SI base units are kg/m/s^2, although workers commonly continue to use non-SI units such as bar (or even more commonly, mbar) and torr, where 1 mbar = 0.750062 torr = 1 hPa. Conveniently, pressures are typically reported in orders of magnitude, so for the purposes of vacuum systems in mass spectrometers, mbar ~ torr ~ hPa.\nHigh vacuums are useful for several reasons, the importance of each depends on the type of mass spectrometer and analysis. When an ion beam moves through space, uncontrolled ion-gas interactions are typically deleterious because they induce ion scattering and energy loss. The mean-free-path of an ion - the average distance over which an ion cna travel without colliding with a gas particle - is a useful concept. At atmospheric pressure, the mean free path is only 10s of nanometers, whereas under pressures more typical of mass spectrometers, ca 10^-7 to 10^-10 hPa are 10s to 100s of kilometers, much longer than the typical drift length of ion beams in mass spectrometers.\nIons are often accelerated using high-voltage components. Unfortunately, residual gas between two electrodes at differing electrical potential can cause arcing and high voltage discharge. This can damage sensitive components, disrupt measurements, and pose safety hazards. The breakdown distance in dry air, for example, for a potential difference of 8 kV, is ~5 cm. In contrast, at a pressure of only 10^-2 hPa, the breakdown distance decreases to 1 μm, permitting components at different potential differences to be closely spaced.\nFor mass spectrometer measurements of gasses, the vacuum quality can also contribute to sample contamination. For example, Ar is 0.94% of dry air, so for geochronology measurements of radiogenic \\(^{40}\\)Ar, the higher the vacuum, the better the sample-to-blank ratio.\n\n5.6.1 Gas flow at low pressure\nAt low pressures, the behavior of gas flow changes significantly compared to atmospheric conditions. There are 2.5 main regimes (two different flow regimes and a “transitional” one) of gas flow relevant to vacuum systems:\n\nViscous (or continuum) flow: At relatively high pressures (above ~1 mbar), collisions between residual gas molecules dominate the physical behavior. Flow is dominated by viscosity, and gases behave much like fluids. This flow regime matches our expectations of gas behavior in day-to-day lives in the atmosphere, where gasses rush to expand into free spaces.\nMolecular (or free molecular) flow: At very low pressures (below ~10\\(^{-3}\\) mbar), gas molecules rarely collide with each other and instead interact mainly with the walls of the vacuum chamber. In this regime, traditional fluid dynamics no longer apply, and gas transport is governed by the random motion of individual molecules. One important difference when in molecular flow is that residual gas molecules, because they are no longer pressed to fill empty space by collisions with other molecules, are much less likely to enter small orifaces (which is leveraged when differential pumping is required) or move around corners.\n(Transitional flow: In the intermediate pressure range (~1 mbar to 10^-3 mbar), both molecule-molecule and molecule-wall collisions are important. Flow characteristics are a mix of viscous and molecular behaviors.)\n\nThe transition between these regimes is described by the Knudsen number (Kn), which is the ratio of the mean free path of a molecule to a characteristic dimension (such as the diameter of a pipe). High Knudsen numbers (Kn &gt; 1) indicate molecular flow, while low Knudsen numbers (Kn &lt; 0.01) indicate viscous flow.\n\n\n5.6.2 Vacuum Pumps\nVacuum pumps are “roughly” divided into low-vacuum, or roughing pumps, that operate in a viscous flow regime and can pump directly from atmospheric pressure, and high-vacuum pumps that operate in the molecular flow regime and typically require a minimum vacuum to operate.\n\nRoughing pumps\nOil pumps Mercury diffusion pumps Scroll pumps Rotary vane pump Diaphragm pumps Roots pumps Getter pumps\n\n\nHigh vacuum pumps\nTurbos Ion pumps Cryo pumps\n\n\n\n5.6.3 Material considerations\n\n\n5.6.4 Flanges, gaskets, valves\n\n\n5.6.5 Vacuum guages",
+    "crumbs": [
+      "Contribute",
+      "Mass Spectrometry Overview",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Mass Spectrometer Components</span>"
+    ]
+  },
+  {
+    "objectID": "mass_spec_design.html#power-components",
+    "href": "mass_spec_design.html#power-components",
+    "title": "5  Mass Spectrometer Components",
+    "section": "5.7 Power components",
+    "text": "5.7 Power components\n\n5.7.1 High voltages and considerations\n\n\n5.7.2 Mass spec power systems\nUPS Transformer Power conditioner Chillers",
+    "crumbs": [
+      "Contribute",
+      "Mass Spectrometry Overview",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Mass Spectrometer Components</span>"
+    ]
+  },
+  {
+    "objectID": "mass_spec_design.html#computers",
+    "href": "mass_spec_design.html#computers",
+    "title": "5  Mass Spectrometer Components",
+    "section": "5.8 Computers",
+    "text": "5.8 Computers\n\n5.8.1 Data loops",
+    "crumbs": [
+      "Contribute",
+      "Mass Spectrometry Overview",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Mass Spectrometer Components</span>"
+    ]
+  },
+  {
+    "objectID": "mass_spec_types.html",
+    "href": "mass_spec_types.html",
+    "title": "6  Types of mass spectrometer",
+    "section": "",
+    "text": "6.1 Overview\nA variety of different types of mass spectrometers exist. In detail, the type of mass spectrometer is defined by the combination of an ion source, one more type of mass analyzer, and one or more type of detector.\nDifferent combinations of these three components will give you a different type of mass spectrometer. Since each type of mass spectrometer typically only has one type of ion source, we have organized this section at a high level by ion source, and then by type of mass analyzer or analyzers. We do not delve into detector arrays at this stage; while in practice the detector configuration matters for specific mass spectrometer applications, in terms of defining mass spectrometer ‘types’ this is the least important characteristic.",
+    "crumbs": [
+      "Contribute",
+      "Mass Spectrometry Overview",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Types of mass spectrometer</span>"
+    ]
+  },
+  {
+    "objectID": "mass_spec_types.html#sec-types-overview",
+    "href": "mass_spec_types.html#sec-types-overview",
+    "title": "6  Types of mass spectrometer",
+    "section": "",
+    "text": "The combinations of ion sources, mass analyzers, and detector types/configurations are endless. ENDLESS.",
+    "crumbs": [
+      "Contribute",
+      "Mass Spectrometry Overview",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Types of mass spectrometer</span>"
+    ]
+  },
+  {
+    "objectID": "mass_spec_types.html#sec-typesTIMS",
+    "href": "mass_spec_types.html#sec-typesTIMS",
+    "title": "6  Types of mass spectrometer",
+    "section": "6.2 Thermal Ionization (TIMS)",
+    "text": "6.2 Thermal Ionization (TIMS)\nThermal ionization sources are basically only used in one type of mass spectrometer: a Thermal Ionization Mass Spectrometer, or TIMS. It’s pretty straightforward: the ions are generated by thermal ionization, and then the ions are accelerated through a magnetic sector to achieve momentum to charge separation. Boom! It’s that easy. The beautiful simplicity of the TIMS is why this was the first mass spectrometer to come into existence. In the geosciences, TIMS is most commonly used for high-precision and high-temperature geochronology (e.g., zircon U-Pb geochronology) and geochemistry (e.g., W isotopes). Before the advent of ICP-MS technology, TIMS was also commonly used for trace element analyses.",
+    "crumbs": [
+      "Contribute",
+      "Mass Spectrometry Overview",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Types of mass spectrometer</span>"
+    ]
+  },
+  {
+    "objectID": "mass_spec_types.html#sec-types-electronimpact",
+    "href": "mass_spec_types.html#sec-types-electronimpact",
+    "title": "6  Types of mass spectrometer",
+    "section": "6.3 Electron Impact Source",
+    "text": "6.3 Electron Impact Source\nMass spectrometers with electron impact sources are used to analyze materials or samples that, upon being let into the mass spectrometer, are already in a gaseous state. The type of mass spectrometer that has an electron impact source is then defined by the type (or types) of mass analyzer the gaseous ions encounter after being accelerated away from the ion source.\n\n6.3.1 Sector Field Mass Spectrometers\n\nStatic Volume Mass Spectrometers, Including Noble Gas Mass Spectrometers (NGMS)\nStatic volume mass spectrometers consist of an electron impact source and a magnetic sector mass analyzer. Importantly, with these mass spectrometers measurements are made ‘statically’, i.e., the volume of the mass spectrometer is not being pumped on by vacuum pumps during the analysis. Static volume mass spectrometers are very commonly utilized to analyze noble gas isotopes and other gases (e.g., N isotopes) extracted from solid materials where there is a finite, comparably small amount of gas that would be consumed too quickly if the mass spectrometer volume was being pumped on during the analysis. This type of instrument is commonly used for geochronology using noble gas systems (e.g., \\(^{40}\\)Ar\\(^{39}\\)Ar).\n\n\nIsotope Ratio Mass Spectrometers (IRMS)\n\n\n\n\n6.3.2 Quadrupoles\n\nResidual Gas Analyzers (RGAs)\nResidual gas analyzers, or RGAs, are actually used in a variety of mass spectrometry laboratories for leak checking/testing: if atmosphere is somehow getting into your instrument via a leak somewhere in the vacuum system, RGAs can be used to detect it. However, RGAs can also be used for geochemical analyses involving gases when high sensitivity, precision, and mass resolution are not required. For example, this type of instrument is commonly used by the (U-Th)/He community to measure radiogenic \\(^{4}\\)He analyses by isotope dilution.\n\n\nGas Chromatograph Mass Spectrometer\n\n\n\n6.3.3 Electric Field Sector Instruments\n\nIon Traps\n\n\nOrbitraps",
+    "crumbs": [
+      "Contribute",
+      "Mass Spectrometry Overview",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Types of mass spectrometer</span>"
+    ]
+  },
+  {
+    "objectID": "mass_spec_types.html#secondary-impact-source",
+    "href": "mass_spec_types.html#secondary-impact-source",
+    "title": "6  Types of mass spectrometer",
+    "section": "6.4 Secondary Impact Source",
+    "text": "6.4 Secondary Impact Source\n\n6.4.1 Secodnary Ion Mass Spectrometers (SIMS and NanoSIMS)\n\n\n6.4.2 TOF-SIMS",
+    "crumbs": [
+      "Contribute",
+      "Mass Spectrometry Overview",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Types of mass spectrometer</span>"
+    ]
+  },
+  {
+    "objectID": "mass_spec_types.html#accelerator-mass-spectrometers-ams",
+    "href": "mass_spec_types.html#accelerator-mass-spectrometers-ams",
+    "title": "6  Types of mass spectrometer",
+    "section": "6.5 Accelerator Mass Spectrometers (AMS)",
+    "text": "6.5 Accelerator Mass Spectrometers (AMS)\nAccelerator mass spectrometers, or AMS, are undoubtedly the most complex type of mass spectrometers utilized in the geosciences. They can have secondary ion sources or laser ionization sources that ionize either solid or gaseous materials, and can have numerous magnetic sectors, quadrupoles, and electrostatic analyzers in various positions along the path through which ions traverse. The key or defining feature of an AMS, however, is the electrostatic tandem accelerator, which is a large (sometimes very large!) particle accelerator consisting of two stages.\n\nThe first stage of a tandem accelerator has a huge potential voltage across it that accelerates ions to very, very high kinetic energies. These high kinetic energy ions pass through a stripping material (e.g., gas or foil) that destroys molecules and also transforms the ions from negatively charged ions that originate from the source into positive ions, typically with high charge states. This is one if (if not the) most sensitive mass spectrometry techniques for measuring very rare isotopes, particularly when there is a major isotope of the same element that is many, many orders of magnitude more abundant. In the geosciences, AMS is most commonly used to measure cosmogenic radionuclides, which are isotopes generated in the atmosphere or in solid minerals by interactions with cosmic rays, such as \\(^{14}\\)C, \\(^{10}\\)Be, and \\(^{26}\\)Al.",
+    "crumbs": [
+      "Contribute",
+      "Mass Spectrometry Overview",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Types of mass spectrometer</span>"
+    ]
+  },
+  {
+    "objectID": "mass_spec_types.html#inductively-copuled-plasma-source",
+    "href": "mass_spec_types.html#inductively-copuled-plasma-source",
+    "title": "6  Types of mass spectrometer",
+    "section": "6.6 Inductively Copuled Plasma Source",
+    "text": "6.6 Inductively Copuled Plasma Source\n\n6.6.1 Quadrupole ICPs\n\nICP-Q-MS\n\n\nICP-TOF\n\n\nICP-SF-MS (often just referred to as ICP-MS)\n\n\n\n6.6.2 Tandem mass spectrometers (ICP-MS/MS)\n\nTwo mass analyzers + collision reaction cell",
+    "crumbs": [
+      "Contribute",
+      "Mass Spectrometry Overview",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Types of mass spectrometer</span>"
+    ]
+  },
+  {
+    "objectID": "mass_spec_types.html#electrospray-ionization",
+    "href": "mass_spec_types.html#electrospray-ionization",
+    "title": "6  Types of mass spectrometer",
+    "section": "6.7 Electrospray Ionization",
+    "text": "6.7 Electrospray Ionization\n\n6.7.1 Orbitrap\n\n\n6.7.2 Quadrupole\n\n\n6.7.3 TOF",
+    "crumbs": [
+      "Contribute",
+      "Mass Spectrometry Overview",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Types of mass spectrometer</span>"
+    ]
+  },
+  {
+    "objectID": "ion_source_design.html",
+    "href": "ion_source_design.html",
+    "title": "7  Ion source design",
+    "section": "",
+    "text": "8 Why ionization?",
+    "crumbs": [
+      "Contribute",
+      "Mass Spectrometer Design",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Ion source design</span>"
+    ]
+  },
+  {
+    "objectID": "ion_source_design.html#tims",
+    "href": "ion_source_design.html#tims",
+    "title": "7  Ion source design",
+    "section": "10.1 TIMS",
+    "text": "10.1 TIMS\n\n10.1.1 Principles\n\n\n10.1.2 Metrics\n\n\n10.1.3 Uses/applications\n\n\n10.1.4 Arcane knowledge/decision points\n\nFilament choice\n\n\nIonization temperature\n\n\nIonization efficiency\n\n\nActivators\n\n\nPositive vs. negative ionization\n\n\nSpikes",
+    "crumbs": [
+      "Contribute",
+      "Mass Spectrometer Design",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Ion source design</span>"
+    ]
+  },
+  {
+    "objectID": "ion_source_design.html#ei",
+    "href": "ion_source_design.html#ei",
+    "title": "7  Ion source design",
+    "section": "10.2 EI",
+    "text": "10.2 EI\n\n10.2.1 Principles\n\n\n10.2.2 Metrics\n\n\n10.2.3 Uses/applications\n\n\n10.2.4 Arcane knowledge/decision points\n\nNoble gas\n\nTime zero\n\n\nTrap current\n\n\nAccelerating voltage\n\n\nElectron energy\n\n\nIon repeller\n\n\nTrap voltage\n\n\nSource plates\n\nHalf-plate\n\n\nZ-plate\n\n\nOctopole/flatopole\n\n\n\n\nStable isotopes\n\nElectron energy\nLinearity vs. sensitivity\n\n\nTrap\nBeam tightness, fragmentation patterns\n\n\nExtraction\nSensitivity vs. linearity/recombination/scrambling\n\n\nSource pressure\nSensivity vs linearity/recombination\n\n\nBellows pressure / capillary\nBleedout rate\n\n\nR-plate",
+    "crumbs": [
+      "Contribute",
+      "Mass Spectrometer Design",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Ion source design</span>"
+    ]
+  },
+  {
+    "objectID": "ion_source_design.html#sims",
+    "href": "ion_source_design.html#sims",
+    "title": "7  Ion source design",
+    "section": "10.3 SIMS",
+    "text": "10.3 SIMS\n\n10.3.1 Principles\n\n\n10.3.2 Metrics\n\n\n10.3.3 Uses/applications\n\n\n10.3.4 Arcane knowledge/decision points\n\nPrimary ion beam (Cs vs O)\nelectronegratiivty.where you are on the periodic table\n\nCs reactions/implantation\n\n\n\nBeam intensity\n\n\nBeam size\n\n\nBeam energy density\n\n\nIon microprobe vs ion microscope",
+    "crumbs": [
+      "Contribute",
+      "Mass Spectrometer Design",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Ion source design</span>"
+    ]
+  },
+  {
+    "objectID": "ion_source_design.html#icp",
+    "href": "ion_source_design.html#icp",
+    "title": "7  Ion source design",
+    "section": "10.4 ICP",
+    "text": "10.4 ICP\n\n10.4.1 Principles\n\n\n10.4.2 Metrics\n\n\n10.4.3 Uses/applications\n\n\n10.4.4 Arcane knowledge/decision points",
+    "crumbs": [
+      "Contribute",
+      "Mass Spectrometer Design",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Ion source design</span>"
+    ]
+  },
+  {
+    "objectID": "ion_source_design.html#maldi",
+    "href": "ion_source_design.html#maldi",
+    "title": "7  Ion source design",
+    "section": "10.5 MALDI",
+    "text": "10.5 MALDI\n\n10.5.1 Principles\n\n\n10.5.2 Metrics\n\n\n10.5.3 Uses/applications\n\n\n10.5.4 Arcane knowledge/decision points",
+    "crumbs": [
+      "Contribute",
+      "Mass Spectrometer Design",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Ion source design</span>"
+    ]
+  },
+  {
+    "objectID": "ion_source_design.html#esi",
+    "href": "ion_source_design.html#esi",
+    "title": "7  Ion source design",
+    "section": "10.6 ESI",
+    "text": "10.6 ESI\n\n10.6.1 Principles\n\n\n10.6.2 Metrics\n\n\n10.6.3 Uses/applications\n\n\n10.6.4 Arcane knowledge/decision points",
+    "crumbs": [
+      "Contribute",
+      "Mass Spectrometer Design",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Ion source design</span>"
+    ]
+  },
+  {
+    "objectID": "ion_source_design.html#ci",
+    "href": "ion_source_design.html#ci",
+    "title": "7  Ion source design",
+    "section": "10.7 CI",
+    "text": "10.7 CI\n\n10.7.1 Principles\n\n\n10.7.2 Metrics\n\n\n10.7.3 Uses/applications\n\n\n10.7.4 Arcane knowledge/decision points\n\nType of chemical ionization\n\nFlow-tube\n(acetate, iodide, or water (PTR))\n\n\nAtmospheric pressure drift tube\n\n\nEESI\n\n\nTemperature stability\n\n\nIonization pressure\nFragmentation tradeoffs",
+    "crumbs": [
+      "Contribute",
+      "Mass Spectrometer Design",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Ion source design</span>"
+    ]
+  },
+  {
+    "objectID": "mass_analyzer_design.html",
+    "href": "mass_analyzer_design.html",
+    "title": "8  Mass analyzer design",
+    "section": "",
+    "text": "8.1 Magnetic sectors\nWhat’s the difference between an analyzer and a filter? We don’t know.\nShort description of advantages and disadvantages of each type.\nQuick recap of why we need magnets and the dispersion equation. Lorentz force.",
+    "crumbs": [
+      "Contribute",
+      "Mass Spectrometer Design",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Mass analyzer design</span>"
+    ]
+  },
+  {
+    "objectID": "mass_analyzer_design.html#sec-analyzer-magnetic-sector",
+    "href": "mass_analyzer_design.html#sec-analyzer-magnetic-sector",
+    "title": "8  Mass analyzer design",
+    "section": "",
+    "text": "8.1.1 History of magnetic sector geometries\nDempster, sector field, extended geometry. Focal planes.\n\n\n8.1.2 Extended geometry magnetic sector in practice\nDispersion, focal plane geometry.",
+    "crumbs": [
+      "Contribute",
+      "Mass Spectrometer Design",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Mass analyzer design</span>"
+    ]
+  },
+  {
+    "objectID": "mass_analyzer_design.html#sec-analyzer-electrostatic",
+    "href": "mass_analyzer_design.html#sec-analyzer-electrostatic",
+    "title": "8  Mass analyzer design",
+    "section": "8.2 Electrostatic Analyzers (ESA)",
+    "text": "8.2 Electrostatic Analyzers (ESA)\nWhy use an ESA instead of a magnet? Before or after magnet? Why is it so often seen on ICPs and less often (or even not at all!) on a TIMS. Reference Coulomb force, a figure of an ion traversing a ESA.\nAdvantage is that you can change a voltage quickly (nanoseconds), for instance to deflect a beam.",
+    "crumbs": [
+      "Contribute",
+      "Mass Spectrometer Design",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Mass analyzer design</span>"
+    ]
+  },
+  {
+    "objectID": "mass_analyzer_design.html#sec-analzer-quadrupoles",
+    "href": "mass_analyzer_design.html#sec-analzer-quadrupoles",
+    "title": "8  Mass analyzer design",
+    "section": "8.3 Quadrupole Mass Analyzers",
+    "text": "8.3 Quadrupole Mass Analyzers\nQuadrupoles are a dynamic mass analyzer. Quickly changing voltages. Radio frequency.\nHexapoles and Octopoles. RF multipoles in general.\nRod shapes and resulting EM field lines. Compromises with number and shape of rods.\nAdvantages: no moving parts, very fast, reliable, inexpensive (see also, vacuum systems and requirements). Disadvantages: One m/z out the back end at a time. Throughput can be low.\nStability triangle figure.\nLots of math with funny symbols.",
+    "crumbs": [
+      "Contribute",
+      "Mass Spectrometer Design",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Mass analyzer design</span>"
+    ]
+  },
+  {
+    "objectID": "mass_analyzer_design.html#sec-analyzer-TOF",
+    "href": "mass_analyzer_design.html#sec-analyzer-TOF",
+    "title": "8  Mass analyzer design",
+    "section": "8.4 Time of flight mass analyzer (TOF)",
+    "text": "8.4 Time of flight mass analyzer (TOF)\nSome history. Space applications. Nanoparticle and environmental applications.\nGeometries: reflection plates or not.\nNotch filters. If you have oxygen, you have to notch it because it overwhelms everything else.\nSimultaneous collection of all ionized species regardless of mass.\nDisadvantages: Much less sensitive for low-z species. Lower sensitivity than quadrupole, also more expensive. Advantages: really fast, very small (fits on a benchtop), suited for imaging applications, portable applications, and extraterrestrial applications.",
+    "crumbs": [
+      "Contribute",
+      "Mass Spectrometer Design",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Mass analyzer design</span>"
+    ]
+  },
+  {
+    "objectID": "mass_analyzer_design.html#sec-design-AMS",
+    "href": "mass_analyzer_design.html#sec-design-AMS",
+    "title": "8  Mass analyzer design",
+    "section": "8.5 Accelerator Mass Spectrometer (AMS)",
+    "text": "8.5 Accelerator Mass Spectrometer (AMS)\nLarge, expensive instruments, very high voltages. Contains several of the mass analyzers mentioned above, plus more components.",
+    "crumbs": [
+      "Contribute",
+      "Mass Spectrometer Design",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Mass analyzer design</span>"
+    ]
+  },
+  {
+    "objectID": "mass_analyzer_design.html#sec-design-Orbitrap",
+    "href": "mass_analyzer_design.html#sec-design-Orbitrap",
+    "title": "8  Mass analyzer design",
+    "section": "8.6 Orbitrap mass analyzer",
+    "text": "8.6 Orbitrap mass analyzer\nMax can clean this up later. Thanks Max!",
+    "crumbs": [
+      "Contribute",
+      "Mass Spectrometer Design",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Mass analyzer design</span>"
+    ]
+  },
+  {
+    "objectID": "mass_analyzer_design.html#sec-design-ion-traps",
+    "href": "mass_analyzer_design.html#sec-design-ion-traps",
+    "title": "8  Mass analyzer design",
+    "section": "8.7 Ion trap mass analyzer",
+    "text": "8.7 Ion trap mass analyzer\nStephen can discuss advantages and disadvantages here.",
+    "crumbs": [
+      "Contribute",
+      "Mass Spectrometer Design",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Mass analyzer design</span>"
+    ]
+  },
+  {
+    "objectID": "detector_design.html",
+    "href": "detector_design.html",
+    "title": "9  Detector design",
+    "section": "",
+    "text": "9.1 Overview\nWhat are we detecting, and why?\nWhy you would choose to use one detector over another?",
+    "crumbs": [
+      "Contribute",
+      "Mass Spectrometer Design",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Detector design</span>"
+    ]
+  },
+  {
+    "objectID": "detector_design.html#sec-detectors-overview",
+    "href": "detector_design.html#sec-detectors-overview",
+    "title": "9  Detector design",
+    "section": "",
+    "text": "beam size\nstatistics\ndetector size\nother considerations (e.g., can’t use scintillators for NGMS)",
+    "crumbs": [
+      "Contribute",
+      "Mass Spectrometer Design",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Detector design</span>"
+    ]
+  },
+  {
+    "objectID": "detector_design.html#sec-detectors-faradays",
+    "href": "detector_design.html#sec-detectors-faradays",
+    "title": "9  Detector design",
+    "section": "9.2 Faraday Detectors",
+    "text": "9.2 Faraday Detectors\n\n9.2.1 Faraday Cup Hardware\n\n\n9.2.2 Amplifier Electronics\n\nRTIAs\nCTIAs",
+    "crumbs": [
+      "Contribute",
+      "Mass Spectrometer Design",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Detector design</span>"
+    ]
+  },
+  {
+    "objectID": "detector_design.html#sec-detectors-em",
+    "href": "detector_design.html#sec-detectors-em",
+    "title": "9  Detector design",
+    "section": "9.3 Electron Multipliers",
+    "text": "9.3 Electron Multipliers\n\n9.3.1 Operating Mode and Electronics\n\nIon Counting\nAnalog\n\n\n\n9.3.2 Discrete Dynode Multipliers\n\n\n9.3.3 Channeltrons\n\n\n9.3.4 Daly Detectors",
+    "crumbs": [
+      "Contribute",
+      "Mass Spectrometer Design",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Detector design</span>"
+    ]
+  },
+  {
+    "objectID": "detector_design.html#sec-detectors-other",
+    "href": "detector_design.html#sec-detectors-other",
+    "title": "9  Detector design",
+    "section": "9.4 Other Exotic Detector Type",
+    "text": "9.4 Other Exotic Detector Type\nCCDs Gas ionization detectors Other scintillation detectors",
+    "crumbs": [
+      "Contribute",
+      "Mass Spectrometer Design",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Detector design</span>"
     ]
   },
   {

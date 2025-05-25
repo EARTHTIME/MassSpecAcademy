@@ -20,7 +20,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -71,6 +91,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="styles.css">
 </head>
@@ -236,7 +285,7 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./about/aboutme_tremblay.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Dr.&nbsp;Marissa Tremblay</span></a>
+ <span class="menu-text">Marissa Tremblay</span></a>
   </div>
 </li>
       </ul>
@@ -259,7 +308,7 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./mass_spec_design.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Mass spec design</span></span></a>
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Mass Spectrometer Components</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -414,8 +463,31 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active" data-toc-expanded="3">
+    <h2 id="toc-title">Contents</h2>
+   
+  <ul>
+  <li><a href="#sec-hist-EarlyHistory" id="toc-sec-hist-EarlyHistory" class="nav-link active" data-scroll-target="#sec-hist-EarlyHistory"><span class="header-section-number">4.1</span> 1890s-1920s: Early developments</a>
+  <ul>
+  <li><a href="#sec-CRTs" id="toc-sec-CRTs" class="nav-link" data-scroll-target="#sec-CRTs"><span class="header-section-number">4.1.1</span> Cathode ray tubes</a></li>
+  <li><a href="#sec-hist-EIsources" id="toc-sec-hist-EIsources" class="nav-link" data-scroll-target="#sec-hist-EIsources"><span class="header-section-number">4.1.2</span> Electron impact sources</a></li>
+  </ul></li>
+  <li><a href="#sec-hist-FirstSpecs" id="toc-sec-hist-FirstSpecs" class="nav-link" data-scroll-target="#sec-hist-FirstSpecs"><span class="header-section-number">4.2</span> 1930s: The first mass spectrometers</a></li>
+  <li><a href="#sec-hist-WWII" id="toc-sec-hist-WWII" class="nav-link" data-scroll-target="#sec-hist-WWII"><span class="header-section-number">4.3</span> 1940s-1950s: The Manhattan Project and World War II</a>
+  <ul>
+  <li><a href="#sec-hist-ManhattanProject" id="toc-sec-hist-ManhattanProject" class="nav-link" data-scroll-target="#sec-hist-ManhattanProject"><span class="header-section-number">4.3.1</span> The Manhattan Project</a></li>
+  <li><a href="#sec-hist-PostwarSci" id="toc-sec-hist-PostwarSci" class="nav-link" data-scroll-target="#sec-hist-PostwarSci"><span class="header-section-number">4.3.2</span> Postwar science</a>
+  <ul class="collapse">
+  <li><a href="#sec-hist-TechDev" id="toc-sec-hist-TechDev" class="nav-link" data-scroll-target="#sec-hist-TechDev">Technological developments</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#sec-hist-1960-1979" id="toc-sec-hist-1960-1979" class="nav-link" data-scroll-target="#sec-hist-1960-1979"><span class="header-section-number">4.4</span> 1960s-1970s: Diversification of techniques</a></li>
+  <li><a href="#sec-hist-1980-1999" id="toc-sec-hist-1980-1999" class="nav-link" data-scroll-target="#sec-hist-1980-1999"><span class="header-section-number">4.5</span> 1980s-1990s: Commercializaiton and plasma sources</a></li>
+  <li><a href="#s-modern-multicollection-and-modern-electronics-sec-hist-2000s" id="toc-s-modern-multicollection-and-modern-electronics-sec-hist-2000s" class="nav-link" data-scroll-target="#s-modern-multicollection-and-modern-electronics-sec-hist-2000s"><span class="header-section-number">4.6</span> 2000s-modern: Multicollection and modern electronics {#sec-hist-2000s+}</a></li>
+  <li><a href="#further-reading" id="toc-further-reading" class="nav-link" data-scroll-target="#further-reading"><span class="header-section-number">4.7</span> Further Reading</a></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/EARTHTIME/MassSpecAcademy/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li><li><a href="https://github.com/EARTHTIME/MassSpecAcademy/edit/main/mass_spec_history.qmd" class="toc-action"><i class="bi empty"></i>Edit this page</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -439,8 +511,144 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<section id="sec-hist-EarlyHistory" class="level2" data-number="4.1">
+<h2 data-number="4.1" class="anchored" data-anchor-id="sec-hist-EarlyHistory"><span class="header-section-number">4.1</span> 1890s-1920s: Early developments</h2>
+<section id="sec-CRTs" class="level3" data-number="4.1.1">
+<h3 data-number="4.1.1" class="anchored" data-anchor-id="sec-CRTs"><span class="header-section-number">4.1.1</span> Cathode ray tubes</h3>
+<p>In the 1890’s scientists worked to understand atomic structure. This exploration eventually lead to the discovery of cathode rays specifically to determine mass, which we now call electrons. In probing cathode rays he deflected them magnetically or electrically, and then compared the heat generated when they hit a thermal junction. The deflection allowed him to calculate mass and the heat generation allowed him to calculate energy. By discovering these subatomic electrically charged particles he won the nobel prize for this in 1906</p>
+<p>JJ Thomson continued this work with his research assistant FW Aston. They would deflect accelerated gases using a magnetic and electric field and measure that deflection using a photographic plate in the path of the ion beam (<a href="#fig-history-neon" class="quarto-xref">Figure&nbsp;<span>4.1</span></a>). The physical dispersion was measured and due to the presence of two dispersion paths the two stable isotopes of neon were discovered in 1912, the first time stable isotopes were measured. The glass apparatus that the subatomic particles were accelerated through is a cathode ray tube, and is a predecessor to the modern day mass spectrometer. Aston continued the work combining magnetic and electronic separation increasing the mass resolving power of the instruments .</p>
+<div id="fig-history-neon" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Neon First Contact">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-history-neon-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="figs/Discovery_of_neon_isotopes.jpeg" class="img-fluid figure-img" style="width:30.0%" alt="Neon First Contact">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-history-neon-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;4.1: Deflection of different isotopes of neon by JJ Thomson and FW Aston captured on photographic film
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="sec-hist-EIsources" class="level3" data-number="4.1.2">
+<h3 data-number="4.1.2" class="anchored" data-anchor-id="sec-hist-EIsources"><span class="header-section-number">4.1.2</span> Electron impact sources</h3>
+<p>Alternatively, in 1917 AJ Dempster published a work on positive rays largely considered to be the first description of an electron ionization source <span class="citation" data-cites="Dempster_1918">(<a href="background.html#ref-Dempster_1918" role="doc-biblioref">Dempster 1918</a>)</span>. He directed a positively charged beam at a solid surface generating ions he could determine a mass to charge ratio. He continued this work and eventually determined the stable isotopes of lithium and magnesium using this technique. Furthering the techniques developed by Dempster, W Bleakly was able to generate a monoenergetic beam of electrons to ionize gases in 1929 <span class="citation" data-cites="Bleakney_1929">(<a href="background.html#ref-Bleakney_1929" role="doc-biblioref">Bleakney 1929</a>)</span>. The beam in this type of instrument traversed a 180 <span class="math inline">\(^\circ\)</span> magnetic field and was deflected in a circle to the detector. <!-- Cathode rays, JJ Thomson, F Aston, AJ Dempster W Bleakney, 1906 Nobel Prize --></p>
+</section>
+</section>
+<section id="sec-hist-FirstSpecs" class="level2" data-number="4.2">
+<h2 data-number="4.2" class="anchored" data-anchor-id="sec-hist-FirstSpecs"><span class="header-section-number">4.2</span> 1930s: The first mass spectrometers</h2>
+<p>Due to the size and complexity of the 180 <span class="math inline">\(^\circ\)</span> magnetic field early spectrometers, they were difficult to build and maintain making them a relatively rare tool. In 1940 A Nier developed a mass spectrometer in which the ion source and the detectors were removed from the influence of the 60 <span class="math inline">\(^\circ\)</span> magnet. These sector field mass spectrometers greatly reduced the power consumption of the instruments, decreased complexity, and did not decrease the mass resolving power. With the knowledge that was gained during the war expansion, he published his seminal paper in 1947, describing the basis of most mass spectrometers that are still used today <span class="citation" data-cites="Nier_1947">(<a href="background.html#ref-Nier_1947" role="doc-biblioref">Nier 1947</a>)</span>. The Nier-Johnson or double focusing mass spectrometer combined the sector magnet with an energy filter allowing for pure separation by mass, a design that is still the norm for high mass resolution instruments. <!-- A Nier, E Johnson,  --> <!-- https://pubs.acs.org/doi/10.1021/ac8013065 --></p>
+</section>
+<section id="sec-hist-WWII" class="level2" data-number="4.3">
+<h2 data-number="4.3" class="anchored" data-anchor-id="sec-hist-WWII"><span class="header-section-number">4.3</span> 1940s-1950s: The Manhattan Project and World War II</h2>
+<!-- H Urey, W Paul, Calutrons, growth of isotope geochemistry, first TOF in late 40s -->
+<p>World War II greatly accelerated the pace of scientific development in physics and chemistry as world powers competed to develop new weapons, production techniques, and energy sources. While international collaboration and public dissemination of research ground to a halt during the war years, scientists continued working in secret on much of the same basic research—alongside a focus on applications to wartime policy goals, particularly nuclear weapons development. During the war, massive industrial operations like the Manhattan Project focused on isotope separation technology and the physics of nuclear decay and chain reactions. After the war, many of the scientists who worked on these projects returned to basic research, publishing a wave of new publications based on previously secret wartime research. These developments in the late 1940s and 1950s laid the groundwork for the modern field of isotope geochemistry by bringing the tools of nuclear war to bear on chronology and chemical processes in the geosciences.</p>
+<section id="sec-hist-ManhattanProject" class="level3" data-number="4.3.1">
+<h3 data-number="4.3.1" class="anchored" data-anchor-id="sec-hist-ManhattanProject"><span class="header-section-number">4.3.1</span> The Manhattan Project</h3>
+<p>Nuclear weapons require a sufficient mass of concentrated fissile material (known as a <em>critical mass</em>) to maintain a nuclear chain reaction. Obtaining a critical mass involves mining and chemical separation of uranium and subsequent isotope enrichment to obtain an enrichment of at least 5.4% uranium-235<a href="https://web.archive.org/web/20131102011417/http://web.ornl.gov/info/reports/1998/3445606060721.pdf">ref</a> (usually much higher), which is the level required to sustain a chain reaction. The critical mass depends on the activity of the fissile species and its concentration or grade. For example, the critical mass of a sphere of metallic uranium-235 is around 50 kg, whereas for plutonium-239 it is only around 10kg <a href="https://www.euronuclear.org/glossary/critical-mass/">ref</a>. At 20% enrichment of uranium-235, the critical mass is well over 500 kg <a href="https://web.archive.org/web/20131102011417/http://web.ornl.gov/info/reports/1998/3445606060721.pdf">ref</a>.</p>
+<p>In addition to understanding the parameters of criticality and sourcing raw materials, the success of the Manhattan Project depended on achieving sufficient enrichment of fissile species. Natural uranium is about 0.7% uranium-235, and while enriching it to just over 5% provides the theoretical possibility of criticality, weapons charges with masses in excess of a ton are impractical. A standard definition of “highly-enriched uranium” is over 20% uranium-235 <a href="https://www.iaea.org/newscenter/news/what-is-uranium">ref</a>, but in practice weapons-grade uranium is usually over 90% uranium-235.</p>
+<p>Uranium isotope enrichment can be performed in multiple ways, and most modern enrichment facilities use gaseous diffusion of UF<span class="math inline">\(_6\)</span> in a chain of gas centrifuges to gradually separate the heavier and lighter natural isotopes of uranium <a href="https://www.acs.org/education/whatischemistry/landmarks/uranium-isotopes.html">ref</a>. However, the first uranium bomb produced during the Manhattan Project (the “Little Boy” gun bomb) used uranium produced by the Calutrons in the Y-12 enrichment facility at Oak Ridge <a href="https://www.nps.gov/articles/000/oak-ridge-y-12-pilot-plant-building-9731-panoramic-tour.htm">ref</a>. The Calutrons, so named because they were developed by Ernest Lawrence at The University of California and used large magnets originally built for cyclotrons, were essentially enormous mass spectrometers in which UCl<span class="math inline">\(_4\)</span> was ionized by hot filaments and then separated by travel through a magnetic field, the same way a mass spectrometer mass analyzer separates isotopes. However, rather than measuring nA and smaller ion beams using sensitive electronics, the Calutrons collected grams of enriched uranium from ion beams in the tens of mA in graphite collector cups that were later burned to allow recovery of the uranium metal <a href="https://www.sciencedirect.com/science/article/pii/S1044030597001232">ref</a>.</p>
+</section>
+<section id="sec-hist-PostwarSci" class="level3" data-number="4.3.2">
+<h3 data-number="4.3.2" class="anchored" data-anchor-id="sec-hist-PostwarSci"><span class="header-section-number">4.3.2</span> Postwar science</h3>
+<p>After the conclusion of the war, the physicists and chemists who had worked on the chemistry of isotope enrichment and the physics of nuclear weapons returned to other realms of basic and applied science. The same physics understanding that allowed scientists and engineers to construct nuclear weapons contributed to an understanding of the decay of radioactive nuclides to produce enrichments in radiogenic daughter products in natural materials, which is the basis for radiogenic isotope geochemistry. The principles underlying the chemical separation of isotopes, whether through electromagnetic separation or gaseous diffusion, applied as well to the separation of isotopes through natural geochemical processes, which is the basis for stable isotope geochemistry.</p>
+<!-- #### Radiogenic isotope geochemistry
 
 
+
+#### Stable isotope geochemistry
+
+##### The Urey Equation
+
+The chemistry underlying modern stable isotope geochemistry can be seen in the Urey–Bigeleisen–Mayer equation (frequently referred to simply as the Urey Equation), which describes the equilibrium isotope fractionation that occurs during isotope exchange reactions. The relationship was published by Urey in 1945 and then by Bigeleisen and Mayer in a more accessible form in 1947. In that publication, they also acknowledged that an equivalent relationship was published by German physicist Ludwig Waldmann in 1943 based on simultaneous secret work conducted as part of the isotope separation efforts of the German nuclear program.
+
+$$
+\alpha = \prod_{i=1}^{3N-6} \left( \frac{u_i^*}{u_i} \cdot \frac{1 - e^{-u_i}}{1 - e^{-u_i^*}} \right)
+$$
+
+::: {.callout-caution appearance="minimal" collapse="true"}
+## Where:
+
+* $\alpha$ is the equilibrium isotope fractionation factor.
+* $u_i = \frac{h \nu_i}{k T}$ is the dimensionless vibrational frequency of the light isotopologue.
+* $u_i^* = \frac{h \nu_i^*}{k T}$ is the dimensionless vibrational frequency of the heavy isotopologue.
+* $h$ is Planck's constant.
+* $\nu_i$ and $\nu_i^*$ are the vibrational frequencies (in Hz) of the $i$-th normal mode for the light and heavy isotopologues, respectively.
+* $k$ is Boltzmann's constant.
+* $T$ is the absolute temperature in Kelvin.
+* The product is taken over all vibrational modes: $3N - 6$ for nonlinear molecules, or $3N - 5$ for linear molecules, where $N$ is the number of atoms in the molecule.
+
+:::
+
+While this equation may look complicated, it is actually a simplified model that allows scientists to calculate the equilibrium fraction of isotopes at different temperatures. Its application allows small differences in isotope ratio to be interpreted as indicators of different physical conditions during the formation or modification of different geological materials. -->
+<section id="sec-hist-TechDev" class="level4">
+<h4 class="anchored" data-anchor-id="sec-hist-TechDev">Technological developments</h4>
+<p>In addition to the boosts that the underlying science of geochemistry received from the Manhattan Project, the early mass spectrometers pioneered by AO Nier and others benefited directly from the work on Calutrons and other scientific and industrial instruments during the war years. Rapid advances in vacuum systems and instrument design occured in this era. John Reynolds introduced the static vacuum noble gas mass spectrometer in 1956, dramatically improving the sensitivity of these instruments and paving the way for realistic measurement of noble gas samples from rocks and minerals <a href="https://doi.org/10.1063/1.1715415">ref</a>. This in turn enabled the rapid growth of the K/Ar dating technique, which allowed geochemists to produce a quantitative Geologic Time Scale and which dominated the next several decades of geochronology before being largely displaced by the related <span class="math inline">\(^{40}\)</span>Ar/<span class="math inline">\(^{39}\)</span>Ar technique and U/Pb geochronology.</p>
+</section>
+</section>
+</section>
+<section id="sec-hist-1960-1979" class="level2" data-number="4.4">
+<h2 data-number="4.4" class="anchored" data-anchor-id="sec-hist-1960-1979"><span class="header-section-number">4.4</span> 1960s-1970s: Diversification of techniques</h2>
+<!-- SIMS, glow discharge, Viking mass spectrometers, AMS, commercial TOF, commercial QMS -->
+</section>
+<section id="sec-hist-1980-1999" class="level2" data-number="4.5">
+<h2 data-number="4.5" class="anchored" data-anchor-id="sec-hist-1980-1999"><span class="header-section-number">4.5</span> 1980s-1990s: Commercializaiton and plasma sources</h2>
+<!-- Early ICP, very first laser ablation in 1980s -->
+<p><span class="citation" data-cites="Houketal1980">Houk et al. (<a href="background.html#ref-Houketal1980" role="doc-biblioref">1980</a>)</span> and <span class="citation" data-cites="Date&amp;Gray1981">Date and Gray (<a href="background.html#ref-Date&amp;Gray1981" role="doc-biblioref">1981</a>)</span> developed inductively coupled plasma mass spectrometry (ICP-MS). <span class="citation" data-cites="Gray1985">Gray (<a href="background.html#ref-Gray1985" role="doc-biblioref">1985</a>)</span> coupled ICP-MS with laser ablation (LA) systems (as a sample introduction). Soon after their development ICP-MS (in 1983) and ICP-MS coupled with LA (1990) became comercially avaialble and experienced great improvements, which made them one of the most dominant techniques for trace, ultratrace and isotope analysis.</p>
+<p>The development of matrix-assisted laser desorption/ionization mass spectrometry (MALDI-MS) and electrospray ionization mass spectrometry (ESI-MS) <span class="citation" data-cites="karas&amp;Hillenkamp1988">Tanaka et al. (<a href="background.html#ref-tanaka1988protein" role="doc-biblioref">1988</a>)</span> enabled soft ionization large biomolecules. Earliest succesful analyzes on biomolecular on macromolecules using soft ionization published in late 1980’s <span class="citation" data-cites="fenn1989electrospray fenn1990electrospray">(<a href="background.html#ref-fenn1989electrospray" role="doc-biblioref">Fenn et al. 1989</a>, <a href="background.html#ref-fenn1990electrospray" role="doc-biblioref">1990</a>)</span>. Fenn and Tanaka (together with Wüthrich) received the Nobel Prize for chemistry in 2002 (<span class="citation" data-cites="https://www.nobelprize.org/prizes/chemistry/2002/popular-information">(<a href="background.html#ref-https://www.nobelprize.org/prizes/chemistry/2002/popular-information" role="doc-biblioref"><strong>https://www.nobelprize.org/prizes/chemistry/2002/popular-information?</strong></a>)</span>/.). Nowadays, MALDI and ESI are soft ionization techniques that are combined with various <a href="@label4massanalyzers">mass analyzers</a> to analyze proteins, peptides, syntheic polymers, small oligonucleotides, carbohydrates andlipids <!-- reewrite --></p>
+<p>THe rapid improvements and development were triggered by extensive application fields, which included investigation of the hazardeous waste disposal (approved by US Enviremental Protection Agency), space explorations (<span class="citation" data-cites="https://science.nasa.gov/mission/galileo-jupiter-atmospheric-probe">(<a href="background.html#ref-https://science.nasa.gov/mission/galileo-jupiter-atmospheric-probe" role="doc-biblioref"><strong>https://science.nasa.gov/mission/galileo-jupiter-atmospheric-probe?</strong></a>)</span>/) <!-- continue --></p>
+<!-- Maybe write about___developments  in Fourier transform ion cyclotron resonance mass spectrometry? --- Wanczek, K. P., & Kanawati, B. (2019). Historical developments in Fourier transform ion cyclotron resonance mass spectrometry. Fundamentals and Applications of Fourier Transform Mass Spectrometry, 3-33. -->
+<p>:</p>
+<!-- https://www.isotopx.com/whats-the-story-behind-isotopx -->
+<!-- https://www.asms.org/docs/default-source/history-posters/vendor_tfs-history-asms-poster_mss_jeps_48-for-jane.pdf?sfvrsn=313576c3_0 -->
+<!-- Laser ablation's explosive growth in 90s, Galileo MS -->
+</section>
+<section id="s-modern-multicollection-and-modern-electronics-sec-hist-2000s" class="level2" data-number="4.6">
+<h2 data-number="4.6" class="anchored" data-anchor-id="s-modern-multicollection-and-modern-electronics-sec-hist-2000s"><span class="header-section-number">4.6</span> 2000s-modern: Multicollection and modern electronics {#sec-hist-2000s+}</h2>
+<!-- Multicollector dominance, Mars rover -->
+</section>
+<section id="further-reading" class="level2" data-number="4.7">
+<h2 data-number="4.7" class="anchored" data-anchor-id="further-reading"><span class="header-section-number">4.7</span> Further Reading</h2>
+<p><span class="citation" data-cites="Griffiths_2008">(<a href="background.html#ref-Griffiths_2008" role="doc-biblioref">Griffiths 2008</a>)</span> <span class="citation" data-cites="DeLaeter_2006">(<a href="background.html#ref-DeLaeter_2006" role="doc-biblioref">De Laeter and Kurz 2006</a>)</span></p>
+
+
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
+<div id="ref-Bleakney_1929" class="csl-entry" role="listitem">
+Bleakney, Walker. 1929. <span>“A New Method of Positive Ray Analysis and Its Application to the Measurement of Ionization Potentials in Mercury Vapor.”</span> <em>Physics Reviews</em> 34 (157).
+</div>
+<div id="ref-Date&amp;Gray1981" class="csl-entry" role="listitem">
+Date, Alan R., and Alan L. Gray. 1981. <span>“Plasma Source Mass Spectrometry Using an Inductively Coupled Plasma and a High Resolution Quadrupole Mass Filter.”</span> <em>Analyst</em> 106: 1255–67. <a href="https://doi.org/10.1039/AN9810601255">https://doi.org/10.1039/AN9810601255</a>.
+</div>
+<div id="ref-DeLaeter_2006" class="csl-entry" role="listitem">
+De Laeter, John, and Mark D. Kurz. 2006. <span>“Alfred Nier and the Sector Field Mass Spectrometer.”</span> <em>Journal of Mass Spectrometry</em> 41: 847–54. <a href="https://doi.org/ 10.1002/jms.1057">https://doi.org/ 10.1002/jms.1057</a>.
+</div>
+<div id="ref-Dempster_1918" class="csl-entry" role="listitem">
+Dempster, J. 1918. <span>“A New Method of Positive Ray Analysis.”</span> <em>Physics Reviews</em> 11 (316).
+</div>
+<div id="ref-fenn1989electrospray" class="csl-entry" role="listitem">
+Fenn, John B, Matthias Mann, Chin Kai Meng, Shek Fu Wong, and Craig M Whitehouse. 1989. <span>“Electrospray Ionization for Mass Spectrometry of Large Biomolecules.”</span> <em>Science</em> 246 (4926): 64–71.
+</div>
+<div id="ref-fenn1990electrospray" class="csl-entry" role="listitem">
+Fenn, John B, Matthias Mann, Chin Kai Meng, Shek Fu Wong, and Craige M Whitehouse. 1990. <span>“Electrospray Ionization–Principles and Practice.”</span> <em>Mass Spectrometry Reviews</em> 9 (1): 37–70.
+</div>
+<div id="ref-Gray1985" class="csl-entry" role="listitem">
+Gray, Alan L. 1985. <span>“Solid Sample Introduction by Laser Ablation for Inductively Coupled Plasma Source Mass Spectrometry.”</span> <em>Analyst</em> 110: 551–56. <a href="https://doi.org/10.1039/AN9851000551">https://doi.org/10.1039/AN9851000551</a>.
+</div>
+<div id="ref-Griffiths_2008" class="csl-entry" role="listitem">
+Griffiths, Jennifer. 2008. <span>“A Brief History of Mass Spectrometry.”</span> <em>Analytical Chemistry</em> 80 (15): 5678–83.
+</div>
+<div id="ref-Houketal1980" class="csl-entry" role="listitem">
+Houk, Robert S, Velmer A Fassel, Gerald D Flesch, Harry J Svec, Alan L Gray, and Charles E Taylor. 1980. <span>“Inductively Coupled Argon Plasma as an Ion Source for Mass Spectrometric Determination of Trace Elements.”</span> <em>Analytical Chemistry</em> 52 (14): 2283–89.
+</div>
+<div id="ref-karas&amp;Hillenkamp1988" class="csl-entry" role="listitem">
+Karas, Michael, and Franz Hillenkamp. 1988. <span>“Laser Desorption Ionization of Proteins with Molecular Masses Exceeding 10,000 Daltons.”</span> <em>Analytical Chemistry</em> 60 (20): 2299–2301.
+</div>
+<div id="ref-Nier_1947" class="csl-entry" role="listitem">
+Nier, Alfred. 1947. <span>“A Mass Spectrometer for Isotope and Gas Analysis.”</span> <em>The Review of Scientific Instruments</em> 18 (6).
+</div>
+<div id="ref-tanaka1988protein" class="csl-entry" role="listitem">
+Tanaka, Koichi, Hiroaki Waki, Yutaka Ido, Satoshi Akita, Yoshikazu Yoshida, Tamio Yoshida, and TJRC Matsuo. 1988. <span>“Protein and Polymer Analyses up to m/z 100 000 by Laser Ionization Time-of-Flight Mass Spectrometry.”</span> <em>Rapid Communications in Mass Spectrometry</em> 2 (8): 151–53.
+</div>
+</div>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -851,13 +1059,13 @@ ul.task-list li input[type="checkbox"] {
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./about/aboutme_tremblay.html" class="pagination-link" aria-label="Dr. Marissa Tremblay">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Dr.&nbsp;Marissa Tremblay</span>
+      <a href="./about/aboutme_tremblay.html" class="pagination-link" aria-label="Marissa Tremblay">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Marissa Tremblay</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./mass_spec_design.html" class="pagination-link" aria-label="Mass spec design">
-        <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Mass spec design</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./mass_spec_design.html" class="pagination-link" aria-label="Mass Spectrometer Components">
+        <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Mass Spectrometer Components</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
@@ -866,4 +1074,4 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions"><ul><li><a href="https://github.com/EARTHTIME/MassSpecAcademy/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li><li><a href="https://github.com/EARTHTIME/MassSpecAcademy/edit/main/mass_spec_history.qmd" class="toc-action"><i class="bi empty"></i>Edit this page</a></li></ul></div></div></div></footer></body></html>
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/EARTHTIME/MassSpecAcademy/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li><li><a href="https://github.com/EARTHTIME/MassSpecAcademy/edit/main/mass_spec_history.qmd" class="toc-action"><i class="bi empty"></i>Edit this page</a></li></ul></div></div></div></footer></body></html>
