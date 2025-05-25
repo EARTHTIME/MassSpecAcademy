@@ -1,0 +1,23 @@
+# U-Th
+
+## Applications {#sec-UTh-Applications}
+
+Very brief list of different applications of U-Th dating - carbonates, volcanics, etc.
+
+## History {#sec-UTh-History}
+
+Alpha-counting 1950s; TIMS 1980s; ICP-MS 1990s incl. Q-MS, ICP-SF-MS, MC-ICP-MS; LA-ICP-MS 2000s?
+
+Permil level precision w TIMS and ICP-MS; epsilon-level precision with Faraday cup protocols using larger samples and different resistors
+
+## Challenges {#sec-UTh-Challenges}
+
+Simultaneous measurement of multiple isotopes with a combination of very high and low abundance; peak-tailing from 238U and also from 232Th for samples with 'high' 232; quantifying fractionation; standards
+
+## Instrumentation Choice and Analytical Approach {#sec-UTh-AnalyticalChoices}
+
+Considerations for choice of instrumentation and analytical method
+e.g., Advantages and disadvantages for TIMS vs MC ICPMS
+FAR-FAR vs. ion counter
+types of ion counters
+

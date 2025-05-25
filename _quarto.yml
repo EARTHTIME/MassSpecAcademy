@@ -63,6 +63,7 @@ book:
       - U_Pb.qmd
       - U_Th_He.qmd
       - Re-Os.qmd
+      - U-Th.qmd
     - part: "Interpreting Data"
       chapters:
       - basic_stats_refresher.qmd
