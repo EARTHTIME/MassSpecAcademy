@@ -26,11 +26,7 @@ Static volume mass spectrometers consist of an electron impact source and a magn
 
 #### Isotope Ratio Mass Spectrometers (IRMS) {#sec-types-IRMS}
 
-```{=html}
-<!---
-Someone who knows more about IRMS than me should write this yay!!
---->
-```
+Gas source isotope ratio mass spectrometers consist of an electron impact ionization source, a magnetic sector mass analyzer, and detectors (commonly faraday, very occasionally multipliers). Some of the larger instruments used for higher mass resolution applications can have an ESA as well, although it is relatively rare. The unique aspect of these types of mass spectrometers is the presence of bellows allowing an adjustable volume for both sample and a reference gas. The bellows are adjusted so that the source pressure of both the sample and the reference gas are same. The sample is introduced through the bellows to the source using capillaries in a laminar flow regime. Typically the sample and reference gas are alternately measured approximately every 15 seconds allowing for high precision measurements. Alternative methods include continuous flow, and microvolume techniques that allow for integrated sample preparation tools or accommodation for smaller sample mass. 
 
 ### Quadrupoles
 

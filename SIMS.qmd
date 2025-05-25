@@ -1,10 +1,16 @@
 # Secondary Ionization Mass Spectrometry (SIMS)
 
+"A $^{16}$O$^-$ ion traveling at 350 km/s smashes into a wall; 10$^{-10}$ s later it's all over!" - Trevor Ireland, 1995
+
+A SIMS instrument is a mass spectrometer that uses a tightly focussed beam of high energy primary ions to generate secondary ions from a solid target sample.  The benefit of these two characteristics - a focussed beam and a solid sample -  is that the technique can be used to make highly spatially resolved analyses of elemental and isotopic abundances in situ.
+
+The most unique feature of SIMS is the ion source. SIMS leverages the physical process called **sputtering**, where a focused primary ion beam bombards the surface of a solid sample. This impact causes atoms and molecules from the sample surface to be ejected (sputtered), some of which are ionized in the process. These secondary ions are then extracted and analyzed by the mass spectrometer.  The choice of primary ion affects the generation of secondary ions.  For geological applications, the most common choices of primary ions are negatively charged oxygen, and positively charge cesium, because they are strongly electronegative and electropositive (respectively) and have poorly understood chemical effects at the sample surface that enhance ionization.
+
+Most SIMS instruments use a primary ion beam that impacts the sample surface at an oblique angle.  Due to the primary beam traversing the extration potential (designed for the secondary ions) at an angle, abberations limit 
+
 ## What makes it unique
 
 ### Insitu Analysis
-
-### Differences with AMS
 
 ### SIMS vs Nano SIMS
 
