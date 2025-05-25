@@ -41,7 +41,7 @@ title: "Ion source design"
 #### Spikes
 
 
-## EI
+## EI {@sec-source-EI}
 
 ### Principles
 

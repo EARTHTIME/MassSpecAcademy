@@ -39,9 +39,11 @@ There's a list of ingredients in the components chapters. Here is the general re
 
 ## Detectors {#sec-TIMS-detectors}
 
-- Can have just one collector, but usually multicollector setup.
-- Faradays often large, 1 mm opening slit, movable, equipped with suppressors and porous graphite insert. 
+A TIMS instrument can have a single collector, or more commonly a multi-collector setup (MC-TIMS) with multiple Faraday cups or ion detectors to make simultaneous, precise isotope ratio measurements. There are MC-TIMS instruments commercially available with one or multiple SEMs or Dalys to measure lower intensity beams. While early TIMS instruments had detectors in fixed positions, the development of movable detectors has enabled increased flexibility to analyze a variety of different isotope systems. 
+
+- Faradays often large, 1 mm opening slit, movable, equipped with suppressors and porous graphite insert. [note from AD: not sure if this detail is needed here or if already covered in detector section]
 - Electron multipliers (one or many), analog or ion counting
+
 
 ### Amplification systems {#sec-TIMS-amplifiers}
 
@@ -66,6 +68,13 @@ There's a list of ingredients in the components chapters. Here is the general re
 
 - retardation lens useful for peak tailing problems
 - zoom optics makes for multidynamic measurements without peak top position compromise
+
+## Advantages and Disadvantages of TIMS {#sec-TIMS-Adv-Disadv}
+
+TIMS has several advantages relative to some of the other types of mass spectrometers.  High precision isotope ratio measurements can be generative with abundance sensitivity in the ppb range because it produces ions with a limited range of energies. TIMS also confers nearly 100% transmission of ions from the source to the collector. The ability to ionize samples at different temperatues allow for multiple isotope systems to be measured from a single filament in sequence, e.g., U and Th or U and Pb, and that this process can be easily automated. In contrast to some other sources such as a plasma source instrument, the ionization source is very stable; hence mass fractionation is more stable so that standard-sample bracketing is not necessary to capture drift. Both positive and negative ions can be produced, conferring flexibility to measure a wider range of isotope systems. Additionally, with TIMS there is no interference introduced from the source such as with Ar plasma sources where reactions between the plasma gas and the sample can produce a range of products in the high-temperature plasma environment, despite the general non-reactivity of this noble gas.  From a practical perspective, MC-TIMS instruments are less costly to run than MC-ICP-MS instruments, which consume large quantities of Ar gas that add up quickly for an instrument that sees a lot of use and they generally require more electricity than TIMS instruments due to the RF generator. The learning curve for MC-ICP-MS instruments is generally steeper than for TIMS, which is both earlier to use and maintain, and is technically less complex.
+
+Some disadvantages of using TIMS is the time-intensive nature of the entire process, including filament loading through to stepwise heating and analysis. In comparison, MC-ICP-MS offers greater flexibility and speed. For TIMS, ionization efficiency is generally < 1% and some elements have ionization efficiencies that are so low that they are not well-suited to TIMS.
+
 
 ## Troubleshooting TIMS 
 
