@@ -1,4 +1,4 @@
-# Isotope Ratio Mass Spectrometry (IRMS) {@sec-IRMS}
+# Isotope Ratio Mass Spectrometry (IRMS) {#sec-IRMS}
 
 The main principle of gas source IRMS that sets it apart from many of the other techniques is that while the measurement itself might fractionate the sample, you are doing the same thing to the sample as you are doing to the standard, very close to at the same time. For example, in the most common practice a sample is stored in a sample bellows and is introduced into the source via a capillary such that the measurement is always done at a comparable voltage. A standard reference gas exists in a another set of bellows also attached to the source via capillary. During the measurement, the sample and standard gas are analyzed alternatively such that direct comparison between the two can be made, and the measurement can be normalized. 
 
@@ -67,8 +67,12 @@ Typically the apparatus is purchased from a commercial source for most current u
 
 #### Acid Digestion
 
-Acid digestion is typically used to create CO$_2$ gas from carbonate material so the carbon and oxygen isotopes (and potentially clumped) can be measured. A powdered carbonate sample is dropped into phosphoric acid under vacuum and dissolved. Typically calcite is dissolved at 20 $^\{circ}$ overnight or 90 $^\{circ}$ for a shorter (on the order of minutes) time.
+Acid digestion is typically used to create CO$_2$ gas from carbonate material so the carbon and oxygen isotopes (and potentially clumped) can be measured. A powdered carbonate sample is dropped into phosphoric acid under vacuum and dissolved. Typically calcite is dissolved at 20$^{\circ}$ overnight or 90$^{\circ}$ for a shorter (on the order of minutes) time.
 
 #### Flourination
 
+In order to measure oxygen isotopes trapped in silicates, the Si-O bond must be broken and O$_2$ is released. This can also be applied to liberate sulfur for triple sulfur applications. To do this for gas source measurements a flourinating agent (typically BrF$_5$ sometimes F$_2$) is used. After the gas is liberated, it is cryogenically cleaned of other coevolving gases before being introduced into the bellows or microvolume. 
+
 #### Gas Chromatography
+
+Even without a combustion user interface, some species are passed through a gas chromatography before being introduced into the mass spectrometer via continuous flow. This is helpful if your analyte is mixed with other gas species. The drawbacks are frequently there is insufficient gas in a single throughput of a GC to make a dual inlet measurement. 

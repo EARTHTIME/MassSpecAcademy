@@ -76,7 +76,7 @@ window.Quarto = {
 
 
 
-<section id="isotope-ratio-mass-spectrometry-irms" class="level1">
+<section id="sec-IRMS" class="level1">
 <h1>Isotope Ratio Mass Spectrometry (IRMS)</h1>
 <p>The main principle of gas source IRMS that sets it apart from many of the other techniques is that while the measurement itself might fractionate the sample, you are doing the same thing to the sample as you are doing to the standard, very close to at the same time. For example, in the most common practice a sample is stored in a sample bellows and is introduced into the source via a capillary such that the measurement is always done at a comparable voltage. A standard reference gas exists in a another set of bellows also attached to the source via capillary. During the measurement, the sample and standard gas are analyzed alternatively such that direct comparison between the two can be made, and the measurement can be normalized.</p>
 <section id="why-would-you-use-irms" class="level2">
@@ -87,6 +87,10 @@ window.Quarto = {
 <section id="dual-inlet" class="level4">
 <h4 class="anchored" data-anchor-id="dual-inlet">Dual Inlet</h4>
 <p>This is the most common version of the instrumentation. The main advantage is that you can measure the gas over a long period of time so that if you have a relatively rare isotopologue you can count sufficiently to reach your desired error (see counting statistics). The only constraint is if you have too much noise from electronics, ionization, or other factors) .</p>
+</section>
+<section id="continuous-flow" class="level4">
+<h4 class="anchored" data-anchor-id="continuous-flow">Continuous Flow</h4>
+<p>This is used with specific sample introduction apparatus. Typically, after the preferred analyte gas is generated and cleaned of other species it is ‘carried’ into the mass spec with a co gas (typically He). This transient peak is integrated under in order to calculate the isotopic concentration of the sample. Standards are injected as pulses into the source, and have the typical flat peak shape that is more traditional of gas source IRMS.</p>
 </section>
 <section id="long-integration-dual-inlet-and-related-methods" class="level4">
 <h4 class="anchored" data-anchor-id="long-integration-dual-inlet-and-related-methods">Long Integration Dual Inlet and related methods</h4>
@@ -111,7 +115,7 @@ window.Quarto = {
 </section>
 <section id="double-focusing" class="level4">
 <h4 class="anchored" data-anchor-id="double-focusing">Double Focusing</h4>
-<p>The newest traditional instruments are double focusing normal geometry sector instruements. This allows for greater than 1 amu mass resolution below ~50 amu allowing for many isotopologues at the same nominal mass to be measured (i.e.&nbsp;<span class="math inline">\(^{13}\)</span>CH<span class="math inline">\(_4\)</span> and <span class="math inline">\(^{12}\)</span>CH<span class="math inline">\(_3\)</span>D).</p>
+<p>The newest traditional instruments are double focusing normal geometry sector instruments. This allows for greater than 1 amu mass resolution below ~50 amu allowing for many isotopologues at the same nominal mass to be measured (i.e.&nbsp;<span class="math inline">\(^{13}\)</span>CH<span class="math inline">\(_4\)</span> and <span class="math inline">\(^{12}\)</span>CH<span class="math inline">\(_3\)</span>D).</p>
 </section>
 </section>
 <section id="bellows" class="level3">
@@ -124,6 +128,7 @@ window.Quarto = {
 </section>
 <section id="sec-IRMS-Microvolume" class="level3">
 <h3 class="anchored" data-anchor-id="sec-IRMS-Microvolume">Microvolume</h3>
+<p>A microvolume is a small volume that exists just before a capillary. It can be between the bellows and the capillary or between a sample introduction system and a capillary. It is used when there is insufficient gas for a traditional dual inlet measurement. Typically, the sample is cryofocused into the microvolume, and then released into the capillary for immediate measurement. There can be some issues in the first moments after the cryofocusing ceases where the measured ratio is not representative of the entire sample. The reference gas ideally should also be in a microvolume to mimic the decline in detector voltage throughout the measurement.</p>
 </section>
 <section id="detectors" class="level3">
 <h3 class="anchored" data-anchor-id="detectors">Detectors</h3>
@@ -135,17 +140,21 @@ window.Quarto = {
 <p>Unlike many other versions of mass spectrometry discussed here, the sample is modified from its solid or liquid phase into a gas before it is introduced into the mass spectrometer. In the first iterations this was done manually offline one sample at a time. There are now many modern homemade and commercially available preparatory systems to ease, speed, and increase reproducibility of this process.</p>
 <section id="examples-of-sample-common-sample-introduction-techniques" class="level3">
 <h3 class="anchored" data-anchor-id="examples-of-sample-common-sample-introduction-techniques">Examples of sample common sample introduction techniques</h3>
-<section id="combustion" class="level4">
-<h4 class="anchored" data-anchor-id="combustion">Combustion</h4>
+<section id="combustion-pyrolysis" class="level4">
+<h4 class="anchored" data-anchor-id="combustion-pyrolysis">Combustion / Pyrolysis</h4>
+<p>Typically the apparatus is purchased from a commercial source for most current users of this technique. This is used for solid samples that can be converted into constituent gases (i.e.&nbsp;CO<span class="math inline">\(_2\)</span> for carbon isotopes, N<span class="math inline">\(_2\)</span> for nitrogen isotopes, SO<span class="math inline">\(_2\)</span> for sulfur isotopes). For example it can be used for sulfates, nitrates, and organic material but not for silicates that are too recalcitrant. There are two main modes, anoxic and oxic. The sample is dropped into a packed column in a furnace. It is then passed over a series of substrates to ensure lack of oxygen if applicable as well as removing other species that would interfere with the mass spectrometry. The last step is typically being passed through a gas chromatograph (GC) column with a carrier gas, and measured using continuous flow.</p>
 </section>
 <section id="acid-digestion" class="level4">
 <h4 class="anchored" data-anchor-id="acid-digestion">Acid Digestion</h4>
+<p>Acid digestion is typically used to create CO<span class="math inline">\(_2\)</span> gas from carbonate material so the carbon and oxygen isotopes (and potentially clumped) can be measured. A powdered carbonate sample is dropped into phosphoric acid under vacuum and dissolved. Typically calcite is dissolved at 20<span class="math inline">\(^{\circ}\)</span> overnight or 90<span class="math inline">\(^{\circ}\)</span> for a shorter (on the order of minutes) time.</p>
 </section>
 <section id="flourination" class="level4">
 <h4 class="anchored" data-anchor-id="flourination">Flourination</h4>
+<p>In order to measure oxygen isotopes trapped in silicates, the Si-O bond must be broken and O<span class="math inline">\(_2\)</span> is released. This can also be applied to liberate sulfur for triple sulfur applications. To do this for gas source measurements a flourinating agent (typically BrF<span class="math inline">\(_5\)</span> sometimes F<span class="math inline">\(_2\)</span>) is used. After the gas is liberated, it is cryogenically cleaned of other coevolving gases before being introduced into the bellows or microvolume.</p>
 </section>
 <section id="gas-chromatography" class="level4">
 <h4 class="anchored" data-anchor-id="gas-chromatography">Gas Chromatography</h4>
+<p>Even without a combustion user interface, some species are passed through a gas chromatography before being introduced into the mass spectrometer via continuous flow. This is helpful if your analyte is mixed with other gas species. The drawbacks are frequently there is insufficient gas in a single throughput of a GC to make a dual inlet measurement.</p>
 </section>
 </section>
 </section>
