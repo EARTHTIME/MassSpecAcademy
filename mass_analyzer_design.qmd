@@ -1,6 +1,6 @@
 # Mass analyzer design {#sec-analyzer-design}
 
-What's the difference between an analyzer and a filter? We don't know.
+What's the difference between an analyzer and a filter? Mass analyzers separate ions according to their mass to charge ratio but by design the separated ion beams all retained. Mass filters exclude or filter out some ions according to their mass to charge ratio, letting other ion beams through.
 
 Short description of advantages and disadvantages of each type.
 
@@ -12,7 +12,7 @@ Quick recap of why we need magnets and the dispersion equation. Lorentz force.
 
 Dempster, sector field, extended geometry. Focal planes.
 
-### Extended geometry magnetic sector in practice {#sec-analyzer-extended-geometry}
+### Magnetic sectors in practice {#sec-analyzer-magnetic-sectors}
 
 Dispersion, focal plane geometry.
 

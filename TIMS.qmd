@@ -20,7 +20,7 @@ There's a list of ingredients in the components chapters. Here is the general re
 - What determines which of these schemes gets used? Work function, first ionization potential, other concerns (electrochemistry of glasses). Dark arts and magic.
 - Langmuir and Langmuir-Saha equation, filament temperature, controls on ionization efficiency vs. ionization rate. Note we should ignore Carlson here.
 - positive and negative ions (osmium and boron?)
-- Warmup, stepwise heating, evaporation and fractionation of sample. Considerations in how to load and adjust the temperature.
+- Warmup, stepwise heating, evaporation and fractionation of sample. Considerations in how to load and adjust the temperature. Total evaporation methods.
 - Periodic table with positive vs. negative ions, another with first ionization potentials. 
 - Cavity sources
 
@@ -32,7 +32,13 @@ There's a list of ingredients in the components chapters. Here is the general re
 
 ## Analyzers {#sec-TIMS-analyzers}
 
-- Magnetic sector, usually with extended geometry. 
+### Magnetic sectors {#sec-TIMS-magnetic-sectors}
+
+Thermal ionization mass spectrometers used in the earth sciences are universally equipped with magnetic sector mass analyzers, which act as the primary mass analyzer for the system. The effective radius of the magnet varies, as does the magnification. Of the three TIMS instruments currently available commercially, the Phoenix (Isotopx) and the Triton (Thermo) both have an extended geometry magnetic sector design with 2x magnification. The Nu TIMS has a smaller 30 cm radius magnet with unity magnification.  The size of the magnet and its design control the geometry and spacing of the detectors along the focal plane [see @sec-analyzer-magnetic-sector].
+
+Magnetic sectors used on TIMS are 
+
+- Magnetic sector, sometimes with extended geometry. 
 - Laminated vs. wrapped electromagnet. Speed vs. cooling.
 - ESF sometimes (OG S54)
 - More magnets are possible, not often used outside nuclear operations
