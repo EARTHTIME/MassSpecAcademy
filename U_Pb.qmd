@@ -1,1 +1,55 @@
-# U/Pb
+# U-Th/Pb {#sec-application-UPb}
+
+A reasonably useful system.
+
+Decay system, dual decay, U isotope list, Pb isotope list, RIP Th-Pb. Conc
+
+## Overview 
+
+- ICPMS
+    - MC-ICPMS
+    - Laser
+    - Solution
+    - Quad
+    - TOF
+- TIMS
+- SIMS
+- Atom probe
+- Historical perspectives
+
+## MS selection
+
+- precision
+- spatial resolution
+- throughput
+- type of sample
+- volume
+- expected age
+- budget
+
+## Role of U-Pb in Mass Spec History
+
+SIMS enabled high-n detrital zircons, LA-ICPMS made it cheaper and faster.
+
+## Zircon
+
+- review papers citations (MSA volume has good historical perspective)
+- recap of how to do by TIMS and LA-ICPMS and SIMS with references
+- The reason we keep TIMSs around.
+- Dating young zircons is hard.
+
+## Current limitations and future directions
+
+Specific to instrument development. Ryan's going to break the 10% ionization efficiency barrier soon by TIMS. Caveat for SIMS.
+
+## Other examples: a non-exhaustive list
+
+Apatite (±bio)
+Cassiterite
+Carbonates
+monazite
+titanite
+rutile
+perovskite
+zirconolite
+baddleyite
