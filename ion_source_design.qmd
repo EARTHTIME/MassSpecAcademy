@@ -2,3 +2,184 @@
 title: "Ion source design"
 ---
 
+
+# Why ionization?
+
+
+
+# Metrics of ionization performance?
+- Efficiency (molecules/ion) -> lower number better
+- Selectivity: diversity of molecules that are ionized (tradeoff depends on application)
+- Fragmentation: soft (molecular ions only) vs. hard (fragment ions produced) -> tradeoffs depending on application
+- Adducts/molecular interferences made: H+ (EI), Ar+, O+ (in ICP), Na+ (in ESI) 
+- Intensity (beam “brightness”. Brighter beams require physically larger instruments)
+- Stability
+- Collimation, energy distribution of ions 
+
+# Types of ion sources
+
+## TIMS
+
+### Principles
+
+### Metrics
+
+### Uses/applications
+
+### Arcane knowledge/decision points
+
+#### Filament choice
+
+#### Ionization temperature
+
+#### Ionization efficiency
+
+#### Activators
+
+#### Positive vs. negative ionization
+
+#### Spikes
+
+
+## EI
+
+### Principles
+
+
+### Metrics
+
+### Uses/applications
+
+### Arcane knowledge/decision points
+
+#### Noble gas
+
+##### Time zero
+
+##### Trap current
+
+##### Accelerating voltage
+
+##### Electron energy
+
+##### Ion repeller
+
+##### Trap voltage
+
+##### Source plates
+
+###### Half-plate
+
+###### Z-plate
+
+###### Octopole/flatopole
+
+#### Stable isotopes
+
+##### Electron energy
+
+Linearity vs. sensitivity
+
+##### Trap
+Beam tightness, fragmentation patterns
+
+##### Extraction
+
+Sensitivity vs. linearity/recombination/scrambling
+
+##### Source pressure
+
+Sensivity vs linearity/recombination
+
+
+##### Bellows pressure / capillary
+
+Bleedout rate
+
+##### R-plate
+
+## SIMS
+
+### Principles
+
+
+### Metrics
+
+### Uses/applications
+
+### Arcane knowledge/decision points
+
+#### Primary ion beam (Cs vs O)
+
+electronegratiivty.where you are on the periodic table
+
+##### Cs reactions/implantation
+
+#### Beam intensity
+
+
+#### Beam size
+
+#### Beam energy density
+
+#### Ion microprobe vs ion microscope
+
+## ICP
+
+### Principles
+
+### Metrics
+
+### Uses/applications
+
+### Arcane knowledge/decision points
+
+
+## MALDI
+
+### Principles
+
+### Metrics
+
+### Uses/applications
+
+### Arcane knowledge/decision points
+
+## ESI
+
+### Principles
+
+### Metrics
+
+### Uses/applications
+
+### Arcane knowledge/decision points
+
+## CI
+
+### Principles
+
+
+### Metrics
+
+### Uses/applications
+
+### Arcane knowledge/decision points
+
+#### Type of chemical ionization
+
+##### Flow-tube
+(acetate, iodide, or water (PTR))
+
+##### Atmospheric pressure drift tube
+
+##### EESI
+
+##### Temperature stability
+
+##### Ionization pressure
+
+Fragmentation tradeoffs
+
+
+

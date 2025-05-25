@@ -3,7 +3,7 @@
 
 email: apiasecki@usgs.gov
 
-I am a research geologist at the U. S. Geological Survey in Denver, CO. I develop new mass spectromectric methods for small samples, rare species, and new instruments and compare that to a theoretical quantum mechanical based framework. I have apply this to important topics such as critical minerals and mine waste as a resource, non-conventional oil and gas reserves, glaciation of Antarctica, and modern biogenic fluxes of methane to the atmosphere.
+I am a research geologist at the U. S. Geological Survey in Denver, CO. I develop new mass spectromectric methods for small samples, rare species, and new instruments and compare that to a theoretical quantum mechanical based framework. I have applied this to topics such as critical minerals and mine waste as a resource, non-conventional oil and gas reserves, glaciation of Antarctica, and modern biogenic fluxes of methane to the atmosphere.
 
 Keywords:
 

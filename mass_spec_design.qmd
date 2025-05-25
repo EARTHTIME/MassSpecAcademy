@@ -5,15 +5,62 @@ General outline of a mass spectrometer
 Diagram with parts labeled. Ion optics will point to several different pieces.
 
 
-## Sample introduction system
+## Sample introduction systems {#sec-design-sample-introduction-systems}
+Sample introduction systems can be organized by the physical form (phase) of the material it handles. Fundamentally different strategies are needed depending on whether the sample is a solid, liquid, or gas. The right introduction system for your specific application could also depend on your analytical goal. For example, you might need to add a tracer to help you quantify amounts of certain analytes, or use exploit chemical or physical processes to remove a problematic contaminant. Here, we'll organize introduction systems by sample phase.
 
-### Wet plasma
+### What makes a good sample introduction system? {#sec-design-what-makes-a-good-intro}
 
-### Desolvating nebulizer
+Regardless of the physical form of the sample, all sample introduction systems adhere to (or strive for) a few guiding principles:
+1. Vacuum: Slow enough introduction rate that the instrument remains at vacuum
+2. Stable: Introduction of material (and thus ion beams) are stable over time or change only gradually, ideally in a manner that does not fractionate the sample (or if it does fractionate, does so reproducibly)
+3. Identical treatment: System strives to treat samples and standards identically, and switch between samples and standards easily without changing the state of the instrument.
 
-### Laser ablation
+#### The vacuum constraint {#sec-design-vacuum-constraint}
 
-### Other
+Mass spectrometers require high or ultra-high vacuum to operate. If the ions that we've worked so hard to separate from each other hit other particles in the instrument, they'll get knocked off course, lose energy, and show up in the wrong place. The technical term for this is the **mean free path**, which chiefly depends on pressure and quantifies how long the average particle can travel in a straight line before hitting another particle. See XXX for more details on the mean free path and how to calculate it. So, when working correctly, a mass spectrometer needs a low pressure and (thus) a long mean free path.
+
+However, analyzing a sample, by definition, adds stuff to the instrument and makes the vacuum worse. So, the way that and rate at which we can introduce a sample to the instrument is constrained by how many particles we can tolerate (before the mean free path is too short) and the rate and which the instrument can remove them. Larger samples create brighter ion beams, more counts, and thus higher precision. But the size of samples are fundamentally limited by how much added material a mass spectrometer can handle. Every sample introduction system is bounded by this constraint and must design around it.
+
+For example, suppose we need a mean free path of at least 100 m, so that nearly all ions avoid collisions along the ~1 m flight path of our mass analyzer and our mass resolving power doesn't degrade. At room temperature, this requires a pressure no higher than about $10^{-9}$ bar for molecules the size of the main components of air. If vacuum is maintained using a turbomolecular pump with a pumping speed of 100 L/s (which is pretty standard), from $Q = SP$, we can add sample at a rate no higher than $100\ \text{L/S} \times 10^{-9}\ \text{bar} = 10^{-7} \text{L bar/s}$. For an ideal gas at room temperature, this corresponds to $\frac{PV}{RT} = 10^{-7}/0.083/298 \approx 4\times10^{-9}\ \text{moles/s}$, or about 0.25 $\mu$moles per minute. This constraint may be easily met in systems working on small amounts of material, but it still governs the design of the sample introduction system
+
+
+Beyond this fundamental constraint, two additional constraints related to vacuum that influence the design of sample introduction systems are: 1) if they were handled by humans, most samples are (or at some point were) at atmospheric pressure; and 2) many ion sources require (or operate more efficiently in) environments where the mean free path is much shorter than 100 m. Getting samples from atmospheric pressure to whatever pressure the ion source requires (anywhere from $<10^{-8}$ to $>1$ bar depending on the instrument), and then from the pressure in the ion source to the (often) lower pressures required by the mass analyzer at the slow rates required by the $Q=SP$ constraint above is a throughline that controls how mass spectrometers are designed. How different inlet systems solve these constraints depends on the phase in which the material is analyzed.
+
+#### Stability constraint {#sec-stability-constraint}
+
+
+
+
+
+
+#### Identical treatment
+
+
+
+### Gases
+
+Adding gases to a mass spectrometer is, in principle, easy because gases will act to equalize pressures across the space provided them. So, if the pressure in our ion source is lower than in the sample reservoir, gas will flow into our instrument at a rate that we can control based on the conductance at the interface. In practice,  
+
+
+#### Viscous leak (e.g., Dual-inlet)
+
+#### Capillary leak (e.g., Continuous-flow)
+
+### Liquids
+
+#### Wet plasma
+
+#### Desolvating nebulizer
+
+#### Liquid chromatograph
+
+### Solids
+
+#### Laser ablation
+
+#### Ion bonbardment (SIMS?)
+
+### Other 
 
 Clean lab (a bunch of chemistry)
 
@@ -43,9 +90,63 @@ RIMS
 
 ### Electrostatic analyzers
 
-### Quadrupoles
+### Quadrupoles {#sec-design-quadrupoles}
+ 
+Quadrupole mass analyzers generate electric fields through which only ions of certain mass to charge ratios are able to pass. As shown in the figure -need fig-, ions enter the quadrupole along it's z-axis. Those with m/z within the selected range will maintain a stable trajectory along the z-axis and reach the spectrometer's detector. The electric fields will destabilize the paths of ions with m/z outside the selected range, knocking them "off course" and preventing them from passing through the analyzer. 
 
-### Collision cells
+Dynamic.
+
+Analyzer vs. filter? filtering vs. bending?
+
+**How does quadrupole mass filtering work?**
+
+Quadrupole mass analyzers use four parallel rods that are connected in cross-wise pairs. A potential of (U+Vcosωt) is applied to one pair, while a potential of -(U+ωt) applied to the second pair. Here, Vcosωt represents an alternating RF voltage and U represents a DC voltage ("DC offset"). The applied potentials create orthogonal electrical fields--one in the x-plane, and one in the y-plane--that interact differently with ions of different m/z. 
+
+In the X-direction, low m/z ions generally follow the RF component of the field, gain energy, and oscillate with increasing amplitude until they collide with the rods. This creates a "high-pass" filter in the X-direction that allows only heavier ions to maintain their trajectory. 
+
+In the Y-direction, the DC component of the field has a "de-focusing" or destabilizing effect, but the RF component can keep lighter ions on course by periodically correcting their paths. In this direction, the applied electric fields create a "low-pass" filter through which only lighter ions can maintain their trajectory. By manipulating the RF and DC components of the field, the high and low-pass filters can be set to resolve individual atomic masses. 
+
+**Some math!** or **More details!** or **How are potentials calculated?**  
+- follow an ex: stability of ion of a single mass 
+-       mathieu equation and "stability triangle" 
+
+**Advantages of quadrupoles**
+
+
+### Collision/Reaction cells (CRCs){#sec-design-crc}
+
+The purpose of a collision/reaction cell (CRC) is to use an added gas within the cell to mitigate spectral interferences, either via collision of interferents with gas molecules or reaction of interferents or interferred ions . CRCs are most typically used in conjuction with ICP-source instruments, and are placed before the mass analyzer to filter ions or interferences of interest. 
+
+A CRC is typically housed within an RF multipole (either quadrupole, hexapole, or octopole), which serves to focus the ion beam. Some CRCs also induce an axial electrical field (along the length of the cell) in order to slow ions down or speed them up, depending on the type of reaction. The two primary CRC modes are collision mode and reaction mode. 
+
+In collision mode, an inert gas such as He or H$_2$ is used to collide interferents. One general guiding principle of collisions is that the cross-sectional area of polyatomic ions is generally larger than the analyte of interest. This results in more collisions of polyatomics than single ions with the reaction gas. 
+
+> CID (Collision Induced Dissociation) - Generally, polyatomic ions produced in the plasma collide with neutral gas molucules in the collision cell, resulting in dissociation of the polyatomics. 
+
+> KED (Kinetic Energy Descrimination) - Collisions occur between an ion and the collision cell gas. These collisions result in the transfer of kinetic energy from the ion (high kinetic energy) to the gas molecule (very low kinetic energy). By the time the ion exits the cell, it has considerably reduced kinetic energy and is easily filtered out by a kinetic energy barrier after the cell. See [Yamada 2015](https://doi.org/10.1016/j.sab.2015.05.008) for an extended explanation of KED processes. 
+
+In reaction mode, a gas is used to react with either the primary ion of interest or the interferent in order to mitigate the interference. 
+
+> Charge transfer reactions: A charge transfer reaction results in the transfer of the charge from one ion or molecule to another
+
+::: {.callout-note title=Example}
+Ammonia (NH$_{3}$) gas can be used to neutralize Hg$^{+}$ to Hg$^{0}$, thereby removing the Hg interference on Pb. This is a two step reaction that first neutralizes Hg$^{+}$ by transferring the charge to form NH$_{3}^{+}$; NH$_{3}^{+}$ then reacts with NH$_{3}$ to form NH$_{2}$ and NH$_{4}^{+}$:
+
+$$Hg^{+} + NH_{3} = Hg^{0} + NH_{3}^{+}$$
+$$NH_{3}^{+} + NH_{3} = NH_{2} + NH_{4}^{+}$$
+::: 
+
+> Atom transfer (mass shift): Atom transfer or mass shift reactions involve the creation of new molecules, effectively mass shifting an ion of interest to a new mass.
+
+::: {.callout-note title=Example}
+Polyatomic interference of $^{87}$Sr on $^{87}$Rb prevents their separation using traditional mass analyzer techniques. Within a reaction cell, the user can add SF$_6$ gas to react $^{87}$Sr$^+$ to $^{106}$SrF${^+}$. Rb is non-reactive with SF$_6$. Rb is now measured on-mass as $^{87}$Rb, whereas Sr is now measured mass-shifted as $^{106}$SrF${^+}$.
+:::
+
+The likelihood of a reaction occurring depends upon the thermodynamics of the reaction, which is different for every element and gas. Some helpful resources for understanding reaction gas kinetics can be found below:
+
+Link to element reactivities for the periodic table from the research group of Dr. Diethard K. Bohme at the [University of York](https://www.yorku.ca/dkbohme/research/selection_table.html).
+
+Link to [Agilent reaction data table](https://www.agilent.com/cs/library/technicaloverviews/public/5991-4585EN_TechNote8800_ICP-QQQ_reactiondata.pdf) based on sensitivity data for no gas, O$_{2}$, NH$_{3}$, and H$_{2}$.
 
 ### AMS
 
@@ -58,23 +159,45 @@ RIMS
 FT-ion cyclotron resonance
 
 
-## Detectors
-
-### Faraday detector
-
 #### Amplifiers
 
 Capacitive
 
 Resistance-based
 
-### Electron Multipliers and/or Ion Counters
+## Detectors
+
+There are several different types of detectors integrated into mass spectrometers. Three general capabilities of the ideal ion detector include: (1) acceptance of ions, (2) 100% efficiency, or no signal loss, and (3) no bias between detectors during simultaneous collection of multiple ion beams.
+
+Various types of detectors are described below:
+
+### Faraday detector
+
+
+### Electron Multipliers and/or Ion Counters {#sec-design-ion-counters}
+
+Ion counting and the use of electron multipliers have been incorporated into mass spectrometry to detect and measure every ion of low-intensity ion beams, typically less than 10^6 counts per second (CPS). The physical process that allows electron multipliers, or ion counters, to operate is secondary ion emission.  The general principle of secondary electron emission is a particle, or ion, impacts a high-voltage surface, or dynode, causing the release of secondary electrons from the outer layers of atoms.  The number of electrons produced by an impact is dependant on the type of particle hitting the surface (i.e. positive ion, negative ion, electron, etc.), the angle of contact between the particle and the surface, the mass and energy of the incoming particles and the condition of the surface.  The electrons produced by this initial collision are directed down the detector by an electric potential gradient, generating even more secondary electrons each time a collision occurs between an electron and the dynode surface inside the detector until they reach an output device at the end of an ion counter, where a resultant pulse is produced that is electronically processed. Continuous-dynode electron multipliers, discrete-dynode electron multipliers, and Daly detectors are three types of ion counters used for the detection of low-intensity ion beams discussed below.  
 
 #### Secondary Electron Multipliers
 
-#### Daly Detectors
+Discrete dynode electron multipliers are detectors that amplify electron signals through a series of individual electrodes called dynodes. When a primary electron strikes the first dynode, it releases multiple secondary electrons, which are accelerated to the next dynode by an applied voltage. This process repeats across several dynodes, resulting in exponential signal amplification. Discrete dynode designs offer high gain, fast response times, and are widely used due to their sensitivity and reliability.
+
+<!-- insert figure for SEM or discrete-dynode electron multiplier here -->
 
 #### Channeltrons
+
+Continuous dynode electron multipliers are curved lead-silicate glass tubes that have the ability to detect both positive and negative ions, electrons and photons.  A potential between 2200 and 3200 V is applied to the top, or input end, of a continuous-dynode electron multiplier and decreases steadily to ground state at the output end of the detector.  Secondary electrons generated at the input end of the detector are driven down the channel to a collector by the potential gradient generating even more secondary electrons each time the particles some in contact with the inner surface walls of the detector.  
+
+<!-- EXTRA TEXT: Electron gains, or the output current divided by the input current, are a function of the application, the voltage applied to the detector and the length of the dynode surface within the detector.  Typical gains for ion counters are between 10^4 and 10^8.  The voltage applied to each detector has an effect on the impact energy of ions arriving at the detector, which in turn influences the electron gain of the detector.  The gain of an ion counter is also mass dependant with ions of higher atomic masses typically producing lower gains.  In order to maintain normal gains, it is important to make sure the operational voltage of the ion counter is properly set.  Over time, the surface of the detector where electron multiplication takes place will begin to degrade due to contamination from the vacuum system and as a result of ion impacts.  The operational voltage of the detector will need to be increased in order to keep the impact energy of arriving particles constant and to maintain normal electron gains.  It is advantageous to keep count rates low in order to prolong the life-time of an ion counter. -->
+
+<!-- insert figure for Channeltron here -->
+
+#### Daly Detectors
+
+Daly detectors are specialized ion detectors designed to reduce noise and extend detector life. In this system, ions strike a metal electrode (often called a conversion dynode), releasing secondary electrons. These electrons are then accelerated toward a scintillator, where they generate photons. The resulting photons are detected by a photomultiplier tube (PMT), which produces the final output signal. This indirect detection method minimizes direct ion contact with sensitive components, enhancing longevity and reducing background noise.
+
+<!-- insert figure for Daly detector here -->   
+
 
 ### Other
 
@@ -93,8 +216,28 @@ Array detectors
 ### Zoom/dispersion lenses
 
 ## Vacuum Systems
+A large amount of the design and mechanical components of mass spectometers are dedicated to production and maintenance of regions with a very low density of gas - typically several order of magnitude lower gas concentration than atmosphere.  The term "vacuum" is typically applied to gas pressures significantly below atmospheric.  A "high vacuum" is "low pressure".  The SI unit for pressure is the pascal, with the symbol Pa and in SI base units are kg/m/s^2, although workers commonly continue to use non-SI units such as bar (or even more commonly, mbar) and torr, where 1 mbar = 0.750062 torr = 1 hPa.  Conveniently, pressures are typically reported in orders of magnitude, so for the purposes of vacuum systems in mass spectrometers, mbar ~ torr ~ hPa.
 
-### Low vacuum pumps
+High vacuums are useful for several reasons, the importance of each depends on the type of mass spectrometer and analysis.  When an ion beam moves through space, uncontrolled ion-gas interactions are typically deleterious because they induce ion scattering and energy loss.  The mean-free-path of an ion - the average distance over which an ion cna travel without colliding with a gas particle - is a useful concept.  At atmospheric pressure, the mean free path is only 10s of nanometers, whereas under pressures more typical of mass spectrometers, ca 10^-7 to 10^-10 hPa are 10s to 100s of kilometers, much longer than the typical drift length of ion beams in mass spectrometers.
+
+Ions are often accelerated using high-voltage components. Unfortunately, residual gas between two electrodes at differing electrical potential can cause arcing and high voltage discharge. This can damage sensitive components, disrupt measurements, and pose safety hazards.  The breakdown distance in dry air, for example, for a potential difference of 8 kV, is ~5 cm.  In contrast, at a pressure of only 10^-2 hPa, the breakdown distance decreases to 1 μm, permitting components at different potential differences to be closely spaced.
+
+For mass spectrometer measurements of gasses, the vacuum quality can also contribute to sample contamination.  For example, Ar is 0.94% of dry air, so for geochronology measurements of radiogenic $^{40}$Ar, the higher the vacuum, the better the sample-to-blank ratio.
+
+### Gas flow at low pressure
+At low pressures, the behavior of gas flow changes significantly compared to atmospheric conditions. There are 2.5 main regimes (two different flow regimes and a "transitional" one) of gas flow relevant to vacuum systems:
+
+- **Viscous (or continuum) flow:** At relatively high pressures (above ~1 mbar), collisions between residual gas molecules dominate the physical behavior. Flow is dominated by viscosity, and gases behave much like fluids.  This flow regime matches our expectations of gas behavior in day-to-day lives in the atmosphere, where gasses rush to expand into free spaces.
+- **Molecular (or free molecular) flow:** At very low pressures (below ~10$^{-3}$ mbar), gas molecules rarely collide with each other and instead interact mainly with the walls of the vacuum chamber. In this regime, traditional fluid dynamics no longer apply, and gas transport is governed by the random motion of individual molecules.  One important difference when in molecular flow is that residual gas molecules, because they are no longer pressed to fill empty space by collisions with other molecules, are much less likely to enter small orifaces (which is leveraged when differential pumping is required) or move around corners. 
+- (**Transitional flow:** In the intermediate pressure range (~1 mbar to 10^-3 mbar), both molecule-molecule and molecule-wall collisions are important. Flow characteristics are a mix of viscous and molecular behaviors.)
+
+The transition between these regimes is described by the Knudsen number (Kn), which is the ratio of the mean free path of a molecule to a characteristic dimension (such as the diameter of a pipe). High Knudsen numbers (Kn > 1) indicate molecular flow, while low Knudsen numbers (Kn < 0.01) indicate viscous flow.
+
+### Vacuum Pumps
+
+Vacuum pumps are "roughly" divided into low-vacuum, or roughing pumps, that operate in a viscous flow regime and can pump directly from atmospheric pressure, and high-vacuum pumps that operate in the molecular flow regime and typically require a minimum vacuum to operate.
+
+#### Roughing pumps 
 
 Oil pumps
 Mercury diffusion pumps
@@ -104,7 +247,7 @@ Diaphragm pumps
 Roots pumps
 Getter pumps
 
-### High vacuum components
+#### High vacuum pumps
 
 Turbos
 Ion pumps

@@ -1,4 +1,61 @@
----
-title: "Mass analyzer design"
----
+# Mass analyzer design {#sec-analyzer-design}
 
+What's the difference between an analyzer and a filter? We don't know.
+
+Short description of advantages and disadvantages of each type.
+
+## Magnetic sectors {#sec-analyzer-magnetic-sector}
+
+Quick recap of why we need magnets and the dispersion equation. Lorentz force.
+
+### History of magnetic sector geometries {#sec-analyzer-magnetic-sector-geometry}
+
+Dempster, sector field, extended geometry. Focal planes.
+
+### Extended geometry magnetic sector in practice {#sec-analyzer-extended-geometry}
+
+Dispersion, focal plane geometry.
+
+## Electrostatic Analyzers (ESA) {#sec-analyzer-electrostatic}
+
+Why use an ESA instead of a magnet? Before or after magnet? Why is it so often seen on ICPs and less often (or even not at all!) on a TIMS. Reference Coulomb force, a figure of an ion traversing a ESA. 
+
+Advantage is that you can change a voltage quickly (nanoseconds), for instance to deflect a beam.
+
+## Quadrupole Mass Analyzers {#sec-analzer-quadrupoles}
+
+Quadrupoles are a dynamic mass analyzer. Quickly changing voltages. Radio frequency.
+
+Hexapoles and Octopoles. RF multipoles in general.
+
+Rod shapes and resulting EM field lines. Compromises with number and shape of rods.
+
+Advantages: no moving parts, very fast, reliable, inexpensive (see also, vacuum systems and requirements). Disadvantages: One m/z out the back end at a time. Throughput can be low. 
+
+Stability triangle figure.
+
+Lots of math with funny symbols.
+
+## Time of flight mass analyzer (TOF) {#sec-analyzer-TOF}
+
+Some history. Space applications. Nanoparticle and environmental applications.
+
+Geometries: reflection plates or not.
+
+Notch filters. If you have oxygen, you have to notch it because it overwhelms everything else. 
+
+Simultaneous collection of all ionized species regardless of mass.
+
+Disadvantages: Much less sensitive for low-z species. Lower sensitivity than quadrupole, also more expensive. Advantages: really fast, very small (fits on a benchtop), suited for imaging applications, portable applications, and extraterrestrial applications.
+
+## Accelerator Mass Spectrometer (AMS) {#sec-design-AMS}
+
+Large, expensive instruments, very high voltages. Contains several of the mass analyzers mentioned above, plus more components.
+
+## Orbitrap mass analyzer {#sec-design-Orbitrap}
+
+Max can clean this up later. Thanks Max!
+
+## Ion trap mass analyzer {#sec-design-ion-traps}
+
+Stephen can discuss advantages and disadvantages here.

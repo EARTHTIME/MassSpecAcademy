@@ -2,30 +2,106 @@
 title: "Mass spec history"
 ---
 
-## 1890s-1920s: Early developments
+## 1890s-1920s: Early developments {#sec-hist-EarlyHistory}
+### Cathode ray tubes {#sec-CRTs}
+In the 1890's scientists worked to understand atomic structure. This exploration eventually lead to the discovery of cathode rays specifically to determine mass, which we now call electrons. In probing cathode rays he deflected them magnetically or electrically, and then compared the heat generated when they hit a thermal junction. The deflection allowed him to calculate mass and the heat generation allowed him to calculate energy. By discovering these subatomic electrically charged particles he won the nobel prize for this in 1906
 
+JJ Thomson continued this work with his research assistant FW Aston. They would deflect accelerated gases using a magnetic and electric field and measure that deflection using a photographic plate in the path of the ion beam (@fig-history-neon). The physical dispersion was measured and due to the presence of two dispersion paths the two stable isotopes of neon were discovered in 1912, the first time stable isotopes were measured. The glass apparatus that the subatomic particles were accelerated through is a cathode ray tube, and is a predecessor to the modern day mass spectrometer. Aston continued the work combining magnetic and electronic separation increasing the mass resolving power of the instruments .
+
+
+![Deflection of different isotopes of neon by JJ Thomson and FW Aston captured on photographic film](figs/Discovery_of_neon_isotopes.jpeg){#fig-history-neon fig-alt="Neon First Contact" width="30%"}
+
+### Electron impact sources {#sec-hist-EIsources}
+Alternatively, in 1917 AJ Dempster published a work on positive rays largely considered to be the first description of an electron ionization source [@Dempster_1918]. He directed a positively charged beam at a solid surface generating ions he could determine a mass to charge ratio. He continued this work and eventually determined the stable isotopes of lithium and magnesium using this technique. Furthering the techniques developed by Dempster, W Bleakly was able to generate a monoenergetic beam of electrons to ionize gases in 1929 [@Bleakney_1929]. The beam in this type of instrument traversed a 180 $^\circ$ magnetic field and was deflected in a circle to the detector.
 <!-- Cathode rays, JJ Thomson, F Aston, AJ Dempster W Bleakney, 1906 Nobel Prize -->
 
-## 1930s: The first mass spectrometers
-
+## 1930s: The first mass spectrometers {#sec-hist-FirstSpecs}
+Due to the size and complexity of the 180 $^\circ$ magnetic field early spectrometers, they were difficult to build and maintain making them a relatively rare tool. In 1940 A Nier developed a mass spectrometer in which the ion source and the detectors were removed from the influence of the 60 $^\circ$ magnet. These sector field mass spectrometers greatly reduced the power consumption of the instruments, decreased complexity, and did not decrease the mass resolving power. With the knowledge that was gained during the war expansion, he published his seminal paper in 1947, describing the basis of most mass spectrometers that are still used today [@Nier_1947]. The Nier-Johnson or double focusing mass spectrometer combined the sector magnet with an energy filter allowing for pure separation by mass, a design that is still the norm for high mass resolution instruments. 
 <!-- A Nier, E Johnson,  -->
 <!-- https://pubs.acs.org/doi/10.1021/ac8013065 -->
 
-## 1940s-1950s: The Manhattan Project and World War II
+## 1940s-1950s: The Manhattan Project and World War II {#sec-hist-WWII}
 
 <!-- H Urey, W Paul, Calutrons, growth of isotope geochemistry, first TOF in late 40s -->
 
-## 1960s-1970s: Diversification of techniques
+World War II greatly accelerated the pace of scientific development in physics and chemistry as world powers competed to develop new weapons, production techniques, and energy sources. While international collaboration and public dissemination of research ground to a halt during the war years, scientists continued working in secret on much of the same basic research---alongside a focus on applications to wartime policy goals, particularly nuclear weapons development. During the war, massive industrial operations like the Manhattan Project focused on isotope separation technology and the physics of nuclear decay and chain reactions. After the war, many of the scientists who worked on these projects returned to basic research, publishing a wave of new publications based on previously secret wartime research. These developments in the late 1940s and 1950s laid the groundwork for the modern field of isotope geochemistry by bringing the tools of nuclear war to bear on chronology and chemical processes in the geosciences.
+
+### The Manhattan Project {#sec-hist-ManhattanProject}
+
+Nuclear weapons require a sufficient mass of concentrated fissile material (known as a *critical mass*) to maintain a nuclear chain reaction. Obtaining a critical mass involves mining and chemical separation of uranium and subsequent isotope enrichment to obtain an enrichment of at least 5.4\% uranium-235[ref](https://web.archive.org/web/20131102011417/http://web.ornl.gov/info/reports/1998/3445606060721.pdf) (usually much higher), which is the level required to sustain a chain reaction. The critical mass depends on the activity of the fissile species and its concentration or grade. For example, the critical mass of a sphere of metallic uranium-235 is around 50 kg, whereas for plutonium-239 it is only around 10kg [ref](https://www.euronuclear.org/glossary/critical-mass/). At 20% enrichment of uranium-235, the critical mass is well over 500 kg [ref](https://web.archive.org/web/20131102011417/http://web.ornl.gov/info/reports/1998/3445606060721.pdf).
+
+In addition to understanding the parameters of criticality and sourcing raw materials, the success of the Manhattan Project depended on achieving sufficient enrichment of fissile species. Natural uranium is about 0.7\% uranium-235, and while enriching it to just over 5\% provides the theoretical possibility of criticality, weapons charges with masses in excess of a ton are impractical. A standard definition of "highly-enriched uranium" is over 20\% uranium-235 [ref](https://www.iaea.org/newscenter/news/what-is-uranium), but in practice weapons-grade uranium is usually over 90\% uranium-235.
+
+Uranium isotope enrichment can be performed in multiple ways, and most modern enrichment facilities use gaseous diffusion of UF$_6$ in a chain of gas centrifuges to gradually separate the heavier and lighter natural isotopes of uranium [ref](https://www.acs.org/education/whatischemistry/landmarks/uranium-isotopes.html). However, the first uranium bomb produced during the Manhattan Project (the "Little Boy" gun bomb) used uranium produced by the Calutrons in the Y-12 enrichment facility at Oak Ridge [ref](https://www.nps.gov/articles/000/oak-ridge-y-12-pilot-plant-building-9731-panoramic-tour.htm). The Calutrons, so named because they were developed by Ernest Lawrence at The University of California and used large magnets originally built for cyclotrons, were essentially enormous mass spectrometers in which UCl$_4$ was ionized by hot filaments and then separated by travel through a magnetic field, the same way a mass spectrometer mass analyzer separates isotopes. However, rather than measuring nA and smaller ion beams using sensitive electronics, the Calutrons collected grams of enriched uranium from ion beams in the tens of mA in graphite collector cups that were later burned to allow recovery of the uranium metal [ref](https://www.sciencedirect.com/science/article/pii/S1044030597001232).
+
+### Postwar science {#sec-hist-PostwarSci}
+
+After the conclusion of the war, the physicists and chemists who had worked on the chemistry of isotope enrichment and the physics of nuclear weapons returned to other realms of basic and applied science. The same physics understanding that allowed scientists and engineers to construct nuclear weapons contributed to an understanding of the decay of radioactive nuclides to produce enrichments in radiogenic daughter products in natural materials, which is the basis for radiogenic isotope geochemistry. The principles underlying the chemical separation of isotopes, whether through electromagnetic separation or gaseous diffusion, applied as well to the separation of isotopes through natural geochemical processes, which is the basis for stable isotope geochemistry.
+
+<!-- #### Radiogenic isotope geochemistry
+
+
+
+#### Stable isotope geochemistry
+
+##### The Urey Equation
+
+The chemistry underlying modern stable isotope geochemistry can be seen in the Urey–Bigeleisen–Mayer equation (frequently referred to simply as the Urey Equation), which describes the equilibrium isotope fractionation that occurs during isotope exchange reactions. The relationship was published by Urey in 1945 and then by Bigeleisen and Mayer in a more accessible form in 1947. In that publication, they also acknowledged that an equivalent relationship was published by German physicist Ludwig Waldmann in 1943 based on simultaneous secret work conducted as part of the isotope separation efforts of the German nuclear program.
+
+$$
+\alpha = \prod_{i=1}^{3N-6} \left( \frac{u_i^*}{u_i} \cdot \frac{1 - e^{-u_i}}{1 - e^{-u_i^*}} \right)
+$$
+
+::: {.callout-caution appearance="minimal" collapse="true"}
+## Where:
+
+* $\alpha$ is the equilibrium isotope fractionation factor.
+* $u_i = \frac{h \nu_i}{k T}$ is the dimensionless vibrational frequency of the light isotopologue.
+* $u_i^* = \frac{h \nu_i^*}{k T}$ is the dimensionless vibrational frequency of the heavy isotopologue.
+* $h$ is Planck's constant.
+* $\nu_i$ and $\nu_i^*$ are the vibrational frequencies (in Hz) of the $i$-th normal mode for the light and heavy isotopologues, respectively.
+* $k$ is Boltzmann's constant.
+* $T$ is the absolute temperature in Kelvin.
+* The product is taken over all vibrational modes: $3N - 6$ for nonlinear molecules, or $3N - 5$ for linear molecules, where $N$ is the number of atoms in the molecule.
+
+:::
+
+While this equation may look complicated, it is actually a simplified model that allows scientists to calculate the equilibrium fraction of isotopes at different temperatures. Its application allows small differences in isotope ratio to be interpreted as indicators of different physical conditions during the formation or modification of different geological materials. -->
+
+#### Technological developments {#sec-hist-TechDev}
+
+In addition to the boosts that the underlying science of geochemistry received from the Manhattan Project, the early mass spectrometers pioneered by AO Nier and others benefited directly from the work on Calutrons and other scientific and industrial instruments during the war years. Rapid advances in vacuum systems and instrument design occured in this era. John Reynolds introduced the static vacuum noble gas mass spectrometer in 1956, dramatically improving the sensitivity of these instruments and paving the way for realistic measurement of noble gas samples from rocks and minerals [ref](https://doi.org/10.1063/1.1715415). This in turn enabled the rapid growth of the K/Ar dating technique, which allowed geochemists to produce a quantitative Geologic Time Scale and which dominated the next several decades of geochronology before being largely displaced by the related $^{40}$Ar/$^{39}$Ar technique and U/Pb geochronology.
+
+## 1960s-1970s: Diversification of techniques {#sec-hist-1960-1979}
 
 <!-- SIMS, glow discharge, Viking mass spectrometers, AMS, commercial TOF, commercial QMS -->
 
-## 1980s-1990s: Commercializaiton and plasma sources
-
+## 1980s-1990s: Commercializaiton and plasma sources {#sec-hist-1980-1999}
 <!-- Early ICP, very first laser ablation in 1980s -->
+@Houketal1980 and @Date&Gray1981 developed inductively coupled plasma mass spectrometry (ICP-MS). @Gray1985 coupled ICP-MS with laser ablation (LA) systems (as a sample introduction). Soon after their development ICP-MS (in 1983) and ICP-MS coupled with LA (1990) became comercially avaialble and experienced great improvements, which made them one of the most dominant techniques for trace, ultratrace and isotope analysis.
+
+The development of matrix-assisted laser desorption/ionization mass spectrometry (MALDI-MS) and electrospray ionization mass spectrometry (ESI-MS) [@karas&Hillenkamp1988 and @tanaka1988protein] enabled soft ionization large biomolecules. Earliest succesful analyzes on biomolecular on macromolecules using soft ionization published in late 1980's [@fenn1989electrospray; @fenn1990electrospray]. Fenn and Tanaka (together with Wüthrich) received the Nobel Prize for chemistry in 2002 (@https://www.nobelprize.org/prizes/chemistry/2002/popular-information/.). Nowadays, MALDI and ESI are soft ionization techniques that are combined with various [mass analyzers](@label4massanalyzers) to analyze proteins, peptides, syntheic polymers, small oligonucleotides, carbohydrates andlipids <!-- reewrite -->
+
+THe rapid improvements and development were triggered by extensive application fields, which included investigation of the hazardeous waste disposal (approved by US Enviremental Protection Agency), space explorations (@https://science.nasa.gov/mission/galileo-jupiter-atmospheric-probe/) <!-- continue -->
+
+
+<!-- Maybe write about___developments  in Fourier transform ion cyclotron resonance mass spectrometry? --- Wanczek, K. P., & Kanawati, B. (2019). Historical developments in Fourier transform ion cyclotron resonance mass spectrometry. Fundamentals and Applications of Fourier Transform Mass Spectrometry, 3-33. -->
+
+:
+
+
+
+
 <!-- https://www.isotopx.com/whats-the-story-behind-isotopx -->
 <!-- https://www.asms.org/docs/default-source/history-posters/vendor_tfs-history-asms-poster_mss_jeps_48-for-jane.pdf?sfvrsn=313576c3_0 -->
 <!-- Laser ablation's explosive growth in 90s, Galileo MS -->
 
-## 2000s-modern: Multicollection and modern electronics
+## 2000s-modern: Multicollection and modern electronics {#sec-hist-2000s+}
 
 <!-- Multicollector dominance, Mars rover -->
+
+
+
+## Further Reading
+[@Griffiths_2008]
+[@DeLaeter_2006]

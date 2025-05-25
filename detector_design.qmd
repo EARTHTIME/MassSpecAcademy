@@ -2,3 +2,46 @@
 title: "Detector design"
 ---
 
+## Overview {#sec-detectors-overview}
+
+What are we detecting, and why?
+
+Why you would choose to use one detector over another? 
+
+* beam size
+
+* statistics
+
+* detector size
+
+* other considerations (e.g., can't use scintillators for NGMS)
+
+## Faraday Detectors {#sec-detectors-faradays}
+
+### Faraday Cup Hardware {#sec-detectors-faradays-hardware}
+
+### Amplifier Electronics {#sec-detectors-faradays-electronics}
+
+* RTIAs
+
+* CTIAs
+
+## Electron Multipliers {#sec-detectors-em}
+
+### Operating Mode and Electronics {#sec-detectors-em-electronics}
+
+* Ion Counting
+
+* Analog 
+
+### Discrete Dynode Multipliers {#sec-detectors-em-dd}
+
+### Channeltrons {#sec-detectors-em-channeltrons}
+
+### Daly Detectors {#sec-detectors-em-daly}
+
+## Other Exotic Detector Type {#sec-detectors-other}
+
+CCDs
+Gas ionization detectors
+Other scintillation detectors
