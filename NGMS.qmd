@@ -8,8 +8,26 @@ Noble gas mass spectrometry
 
 * Also mention other platforms that are less commonly used to measure NG
 
-## Gas Exraction and Sample Preparation
+## Gas Extraction and Sample Preparation
 
+In order to measure noble gases, we first need to extract them from some sample material (solid, liquid, or gas) and, to the best of our ability, isolate the noble gas element we are interested in measuring from all of the other extracted gases. Because of this, essentially all noble gas mass spectrometer (NGMS) systems have what we call an extraction line in front of the ion source. This extraction line will look different in detail in every NGMS laboratory, but it will generally consist of a network of volumes (e.g., tubes, bellows, cans) that are interconnected to one another via valves that enable different volumes to be isolated from one another. Internally, this network of volumes and valves will be comprised entirely of metal that can be heated or "baked" to relatively high temperatures (ie., hundreds of degrees C). This "baking" processes facilitates the release adsorbed gases from the internal components so they can be pumped  away, enabling the NGMS extraction systems to achieve ultra-high vacuum (UHV) conditions with minimal contributions from gases that are not derived from the samples themselves. Below, we describe how gases are extracted and then processed within this UHV extraction system before being let into the NGMS itself.
+
+For solid samples, gas extraction is most often achieved by heating a sample up under ultra-high vacuum (UHV) conditions. Heating methods have evolved over time. Early on, heating was most often carried out by dropping samples into a resistance furnace. Today, many laboratories heat samples using what is sometimes called a "laser microfurnace": a sample is placed inside an UHV chamber with some form of transparent window, and the sample is heated through the window using a laser. The type of window, type of laser, and sample-laser coupling is highly application specific and will be discussed later. 
+
+In addition to heating, there are some niche gas extraction methods from solid samples; for example, the noble gas laboratory at ETH Zurich has a gold metal extraction line that enables them to dissolve silicate minerals in the UHV with hydrofluoric acid. However, the dominant technique is still heating.
+
+<!---
+I don't really know much about how water or gas samples would be treated at this stage so someone else should write this!
+--->
+
+Once gases have been extracted from a sample material, the noble gas analyst faces a challenge: they have extracted **all** the gases that will be released by the extraction method they chose, not just the noble gas element they are interested in or even just the noble gases. The presence of lots of other gases can negatively impact the measurement of the noble gas the analyst is interested in measuring (e.g., by reducing instrument sensitivity, creating large isobaric interferences, or inducing signal suppression; link to discussion of these topics below). It is therefore important, before attempting to analyze this gas, to "clean it up" or purify it as much as possible. 
+
+There are two primary ways that extracted gases are cleaned up before being let into an NGMS system. The first way is called gettering. In gettering, the gas is exposed to some type of metal alloy material with a very high surface area that will react with reactive gases like CO${_2}$ and H${_2}$O. Form some NGMS extraction systems, this is the extent of the gas clean up process. For others, gases are also purified or separated cryogenically. Cryogenic separation or cryofocusing broadly refers to the process of getting some portion of the extraction line cold, such that heavier gases you want to remove are focused or "trapped" within the cold portion of the line while lighter gases are not trapped and are able to be expanded into a different part of the extraction line.
+
+In addition to using the extraction line system to clean up the gas we have extracted from a sample, the extraction line system will also often have one or more reservoirs of gas attached to it that can be cleaned up and let into the mass spectrometer in the same fashion. Most often, these reservoirs will be filled with some type of reference gas and will have a pair of valves positioned in front of the reservoir, such that a very small aliquot of the gas inside the much bigger reservoir can be taken and processed through the extraction line for analysis. For some applications, it is only important to know the composition of the gas that is inside the reservoir. For example, in Ar-Ar geochronology, extraction lines will have reservoir filled with air, and most labs will not know precisely how much air is in the reservoir, but they will know that it has the argon isotopic composition of air. For other applications, both the composition and amount of gas in the reservoir must be known accurately. In this latter case, it is also important that the volume of space between the valves in front of the reservoir (often referred to as a pipette volume) is known and precisely calibrated. For example, measurements of radiogenic 4He for (U-Th)/He dating are often made by adding an aliquot of pure 3He from a calibrated reservoir volume, such that the amount of 4He in a sample can be determined by isotope dilution.
+
+<!---
+Outline of this section
 * Generic processes of cleaning up a sample
     - actual gas extraction
     - valves
@@ -22,6 +40,7 @@ Noble gas mass spectrometry
     - gas standards and how to prepare them
         - depletion
     -volume considerations (& design)
+--->
 
 ## Noble Gas Mass Spectrometer System
 

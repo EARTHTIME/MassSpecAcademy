@@ -47,7 +47,16 @@ Ion Extraction Lenses
 >low vs high voltage extraction - is this where we introduce the concept of quads vs multicollectors? 
 
 ## Ion optics
-Now we have an ion beam, and we are steering and shaping
+Beyond the interface, we have an ion beam that needs to be steered and shaped within the ion optics of any given instrument. Because of the range of isobaric interferences present in ICP-source mass spectrometers, they often have extensive ion optics packages to mitigate the heterogeneous nature of the ion beam. 
+
+::: {.callout-tip title="Interferences in ICP-MS"}
+Plasma source mass spectrometers have a more heterogeneous ion beam than some other mass spectrometers because the ion source is an Ar plasma. Thus, there are inevitably more species that can be created from the components of the plasma (i.e., Ar interferences), from the sample matrix (either the sample itself or the reagents used to prepare the sample), and also those that are created in the plasma from atmospheric gases that transmit through the interface (i.e., oxide interferences, hydride interferences). For instance, the $^{40}$Ar$^{16}$O interference at mass 56 is created by a combination of Ar from the plasma and O from the atmosphere, and is a significant interference on $^{56}$Fe. 
+
+Link to [A Table of Polyatomic Interferences in ICP-MS](https://dl.icdst.org/pdfs/files3/6614fc08aaf965e51d9f3c08cf3db8ed.pdf)
+
+:::
+
+Different types of ion optics and their functions:
 
 >appertures and defining slits
 
