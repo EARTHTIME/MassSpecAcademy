@@ -42,6 +42,7 @@ book:
     - part: "Mass Spectrometer Design"
       chapters: 
       - ion_source_design.qmd
+      - collision_reaction_cell_design.qmd
       - mass_analyzer_design.qmd
       - detector_design.qmd
       - vacuum_systems.qmd
