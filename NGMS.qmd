@@ -44,6 +44,12 @@ Outline of this section
 
 ## Noble Gas Mass Spectrometer System
 
+### Noble gas ion sources
+
+Noble gas mass spectrometer sources typically use a Nier-type ion source
+
+
+
 * Nier-type source
     - Cathode variety
     - Source parameters and tuning
