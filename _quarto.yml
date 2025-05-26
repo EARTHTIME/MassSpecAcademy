@@ -38,6 +38,7 @@ book:
       chapters: 
       - mass_spec_history.qmd
       - mass_spec_design.qmd
+      - ion_optics.qmd
       - mass_spec_types.qmd
     - part: "Mass Spectrometer Design"
       chapters: 

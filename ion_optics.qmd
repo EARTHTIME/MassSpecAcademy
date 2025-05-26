@@ -1,4 +1,4 @@
-# Ion Optics
+# Ion Optics {#sec-optics}
 
 ## SIMION simulation software {#sec-optics-SIMION}
 

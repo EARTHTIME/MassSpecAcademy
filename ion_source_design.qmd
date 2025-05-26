@@ -41,7 +41,7 @@ title: "Ion source design"
 #### Spikes
 
 
-## EI {@sec-source-EI}
+## EI {#sec-source-EI}
 
 ### Principles
 
@@ -72,15 +72,29 @@ As charged particles, electrons can be steered by electrostatic lenses the same 
 
 #### The ionization region
 
-Electrons produced by the emitter are guided through the ionization region by a potential drop from the filament to the ionization region and then to a Faraday cup also mounted external to the ionization region ("the electron trap"). The ionization region is simply a mostly enclosed space held at a high potential relative to ground in order to facilitate the creation of ions at that potential. The potential applied to the ionization region is referred to by several terms including the "accelerating voltage," "ionization energy," or simply the "high voltage."
+Electrons produced by the emitter are guided through the ionization region by a potential drop from the filament to the ionization region and then to a Faraday cup also mounted external to the ionization region ("the electron trap"). A Nier-type source is a closed source (see @sec-source-principles), meaning that the ionization region is simply a mostly enclosed space held at a high potential relative to ground in order to facilitate the creation of ions at that potential. The potential applied to the ionization region is referred to by several terms including the "accelerating voltage," "ionization energy," or simply the "high voltage." Components of the ionization apparatus that are held at different potentials to facilitate the movement of electrons--the filament, the electron trap, and other lenses such as a repeller if used--usually "float" on the high voltage with small differences applied relative to a potential produced by a single high voltage power supply.
 
 ::: {.callout-note collapse="true"}
 "High voltage" may also be referred to as the "HT," reflecting the archaic English usage of "tension" to mean "voltage." This usage is often more readily understood by speakers of other languages such as French and German that retain the words "tension" and "spannung" to mean the electric potential in common usage. Aside from its usage to refer to "high tension power lines" specifically, the phrase "high tension" written out rather than used as an acronym is comparatively quite rare in modern English.
 :::
 
+##### Collimating magnets
+
+Electrons traveling through the ionization region are usually collimated further by a pair of magnets placed along the axis between the filament and the electron trap. The magnetic field causes the electrons to precess, meaning they will travel in a helical motion along the axis. While @Nier_1947 states that the purpose of the magnets is to collimate the electron beam, it has become common to describe the magnets in a Nier-type source as increasing ionization efficiency by increasing the residence time of electrons in the source. The precession of the electrons creates a longer path length for the electrons, but this is incorrect because the component of the electron velocity normal to the magnetic field is unchanged. The sole purpose of the magnetic field is to collimate the electrons so that more of them follow a path through the middle of the ionization region toward the electron trap.
+
 #### The electron trap
 
-The flow of electrons is held constant by using a PID controller to maintain a constant "trap current" by adjusting the heating current of the filament. Modern instruments typically operate at trap currents ranging from 200 to 800 $\mu$A. This usually requires heating currents of 2–3 A applied to the filament to produce total emission ranging usually from 2 to 7 times higher than the desired trap current. The ratio of emission current to trap current is determined by the physical design of the ion source, the physical adjustment of the filament position during installation, and the tuning of the ion source. 
+The electron trap in a Nier-type source is simply a Faraday cup used to measure the current of electrons flowing through the ionization region. In the original Nier design, the electron trap was actually two components: a box that composed the trap and then an insulated metal plate inside the box that was operated as a slightly more positive potential to actually attract and measure the electron current. In modern designs, it is usually just a thin strip of metal foil, also held at a slight positive potential relative to the ionization region, that is placed opposite the filament on the outside of the ionization region. In some designs, the trap is mounted in such a way that it can be moved aside to visually inspect filament alignment from the other side of the ionization region, making it easier to see that the filament is aligned with the aperture of the electron defining slit. The electron trap voltage is usually between 15 and 40 volts relative to the ionization region. This value can be adjusted on some instruments, but it is not usually used as a tuning parameter.
+
+#### Emission regulation and trap current
+
+The flow of electrons is typically held constant by using a PID controller to maintain a constant "trap current" by adjusting the heating current of the filament. This mechanism allows for more precise control of the rate of ionization in the ionization region than holding either the heating current or the emission current measured at the filament constant, especially when the tuning parameters of the ion source are adjusted. Modern instruments typically operate at trap currents ranging from 200 to 800 $\mu$A. This usually requires heating currents of 2–3 A applied to the filament to produce total emission ranging usually from 2 to 7 times higher than the desired trap current. The ratio of emission current to trap current is determined by the physical design of the ion source, the physical adjustment of the filament position during installation, and the tuning of the ion source. 
+
+#### Ion focusing lenses
+
+After ions are created, they must be focused and steered into the mass analyzer. The electrostatic lenses used to do so can vary considerably in number and complexity, as described through @sec-optics. The most basic form of a Nier-type ion source includes a series of two lenses after the narrow slit that  ionization region
+
+An extraction lens 
 
 <!-- Nier, Alfred O. (1936), A mass-spectrographic study of the isotopes of argon, potassium, rubidium, zinc and cadmium, Physical Review 50, 1041-1045.
 Nier, Alfred O. (1940), A mass Spectrometer for routine isotope abundance measurements, Review of Scientific Instruments 11, 212-216.
