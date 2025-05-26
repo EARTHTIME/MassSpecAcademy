@@ -52,7 +52,39 @@ title: "Ion source design"
 
 ### Arcane knowledge/decision points
 
-#### Noble gas
+### Nier-type ion sources
+
+The Nier-type ion source is named after Alfred O. Nier, who described the design in a series of publications in the 1930s and 1940s (refs). The Nier-type source remains by far the most common type of ion source in noble gas and gas source IRMS instruments. Nier's design consists of an enclosed ionization region with narrow slits that allow electrons to flow through an ionization region (sometimes "the box") from a hot filament to a Faraday cup ("the electron trap" or just "the trap"). The voltages applied to the filament, the ionization region, and the trap, and a variable number of electrostatic lenses designed to focus the ion beam may be tuned by the user.
+
+#### The electron emitter ("the filament")
+
+The filament is typically a strip or coil of a refractory metal such as rhenium or tungsten, which may also be coated in a rare earth oxide such as yttria to lower the work function (the amount of energy required to liberate an electron). Filaments are consumable items with lifetimes that range from several months to many years in a UHV environment, depending on operating conditions. Electrons are produced with a certain energy relative to the ionization region that is maintained by holding the filament at a negative high voltage relative to the ionization region ("the electron energy").
+
+##### Cathode sources
+
+Newer designs incorporate an indirectly heated cathode that confers several advantages. In the context of a Nier-type ion source on a noble gas mass spectrometer, this arrangement is patented by Isotopx. Like the filaments used in traditional designs, these cathode emitters may be composed of a variety of refractory materials. The cathode is mounted on a separate filament with the sole purpose of heating the cathode. If a non-spherical geometry is chosen for the cathode, emission from the cathode surface will be directional rather than isotropic. Usually it is a flat disk so that 50% of the electrons produced are emitted in a circle directed toward the ionization region and 50% are emitted in the opposite direction. This means that a larger share of the electrons produced may be directed into the ionization region, increasing ionization efficiency and simultaneously reducing backgrounds caused by stray electrons colliding with other surfaces and by operation at high temperatures. Indirectly heated cathodes also tend to have longer lifetimes and more stable emission characteristics, as the heating element and emitting surface are physically distinct. This separation allows the emission temperature to be precisely controlled and kept constant, while the extraction and focusing of electrons from the surface is handled separately by adjusting the voltages on additional ion optical elements. It also allows the cathode to be kept a single fixed voltage ("the electron energy") rather than varying along the length of the filament wire as in the traditional design.
+
+##### Electron focusing lenses
+
+The cathode source lends itself particularly well to the use of additional electrostatic lenses to focus the electron beam. Although this is also possible with a traditional filament, it is not typically done. The advantage of using electrostatic lenses after the electron emitter is that the electron beam may be focused to increase ionization efficiency and to change the physical location and character of the ion beam (usually the goal is to create as many ions as close to the center of the ionization region as possible). The reason that the cathode source lends itself particularly well to this setup is that it already requires the use of an additional voltage to control electron extraction.
+
+As charged particles, electrons can be steered by electrostatic lenses the same way as ions, and there are many possibile configuraitons for a focusing lens. The simplest option is an Einzel lens, which is described in detail in @sec-optics-Einzel. The JPL ion trap mass spectrometer, for example, uses an Einzel lens to focus an electron beam produced by a cathode emitter into the ion trap. The Einzel can be configured two ways. In the most obvious configuration, a small negative voltage similar in magnitude to the electron energy applied to the lens can be tuned to refocus the image produced at the emitter in the middle of the ion trap. Less obvious is that a larger positive voltage (several times the electron energy in magnitude) applied to the Einzel creates a partially collimated electron beam that is less focused but actually achieves higher transmission into the ion trap. This higher transmission is both predicted by [SIMION](@sec-optics-SIMION) simulations of electron transmission and demonstrated in practice through higher sensitivity.
+
+#### The ionization region
+
+Electrons produced by the emitter are guided through the ionization region by a potential drop from the filament to the ionization region and then to a Faraday cup also mounted external to the ionization region ("the electron trap"). The ionization region is simply a mostly enclosed space held at a high potential relative to ground in order to facilitate the creation of ions at that potential. The potential applied to the ionization region is referred to by several terms including the "accelerating voltage," "ionization energy," or simply the "high voltage."
+
+::: {.callout-note collapse="true"}
+"High voltage" may also be referred to as the "HT," reflecting the archaic English usage of "tension" to mean "voltage." This usage is often more readily understood by speakers of other languages such as French and German that retain the words "tension" and "spannung" to mean the electric potential in common usage. Aside from its usage to refer to "high tension power lines" specifically, the phrase "high tension" written out rather than used as an acronym is comparatively quite rare in modern English.
+:::
+
+#### The electron trap
+
+The flow of electrons is held constant by using a PID controller to maintain a constant "trap current" by adjusting the heating current of the filament. Modern instruments typically operate at trap currents ranging from 200 to 800 $\mu$A. This usually requires heating currents of 2–3 A applied to the filament to produce total emission ranging usually from 2 to 7 times higher than the desired trap current. The ratio of emission current to trap current is determined by the physical design of the ion source, the physical adjustment of the filament position during installation, and the tuning of the ion source. 
+
+<!-- Nier, Alfred O. (1936), A mass-spectrographic study of the isotopes of argon, potassium, rubidium, zinc and cadmium, Physical Review 50, 1041-1045.
+Nier, Alfred O. (1940), A mass Spectrometer for routine isotope abundance measurements, Review of Scientific Instruments 11, 212-216.
+Nier, Alfred O. (1947), A mass spectrometer for isotope and gas analysis, Review of Scientific Instruments 18, 398-216. -->
 
 ##### Time zero
 
