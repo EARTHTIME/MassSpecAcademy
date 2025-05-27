@@ -1,0 +1,78 @@
+# Isotope Ratio Mass Spectrometry (IRMS) {#sec-IRMS}
+
+The main principle of gas source IRMS that sets it apart from many of the other techniques is that while the measurement itself might fractionate the sample, you are doing the same thing to the sample as you are doing to the standard, very close to at the same time. For example, in the most common practice a sample is stored in a sample bellows and is introduced into the source via a capillary such that the measurement is always done at a comparable voltage. A standard reference gas exists in a another set of bellows also attached to the source via capillary. During the measurement, the sample and standard gas are analyzed alternatively such that direct comparison between the two can be made, and the measurement can be normalized. 
+
+## Why would you use IRMS
+
+In general, isotope ratio mass spectrometry is used when a high precision measurement is necessary, there is sufficient sample volume, and insitu knowledge is not the main priority. If you have insufficient sample you can potentially use a microvolume (@sec-IRMS-Microvolume). If you need some relative placement you can microdrill your solid samples. 
+
+### Types of IRMS
+
+#### Dual Inlet
+This is the most common version of the instrumentation. The main advantage is that you can measure the gas over a long period of time so that if you have a relatively rare isotopologue you can count sufficiently to reach your desired error (see counting statistics). The only constraint is if you have too much noise from electronics, ionization, or other factors) .
+
+#### Continuous Flow
+
+This is used with specific sample introduction apparatus. Typically, after the preferred analyte gas is generated and cleaned of other species it is 'carried' into the mass spec with a co gas (typically He). This transient peak is integrated under in order to calculate the isotopic concentration of the sample. Standards are injected as pulses into the source, and have the typical flat peak shape that is more traditional of gas source IRMS.
+
+#### Long Integration Dual Inlet and related methods
+
+This method uses a microvolume (@sec-IRMS-Microvolume). You either let one side completely bleed down, and then do the same with your reference gas (that you let an aliquot into a corresponding microvolume on the reference side from the bellows stockpile of reference gas), or you more rapidly go back and forth between the sample and the standard microvolume if the bleed down rate is sufficiently slow to allow this. The advantage of this is that you can typically measure smaller samples. The disadvantage is that you measure the entirety of your sample and cannot continue to measure relatively indefinitely. In addition, there are tuning constraints that you need to make sure that you are linear over all of your isotopes of interest much more rigorously than you need for a conventional dual inlet measurement. This can be challenging, and often sacrifice some sensitivity making reaching counting statistics that much more difficult. 
+
+#### Orbitrap 
+
+
+
+## Parts of IRMS 
+
+### Electron impact ionization source
+
+We use a Nier type electron impact ionization source (@sec-source-EI). Depending on the analyte a range of accelerating voltage is used from 3-15 kV. 
+
+### Analyzer
+
+#### Single Focusing
+
+The vast majority of gas source IRMS are single focusing with a magnetic sector. The mass resolving power necessary to achieve one amu resloution is a lot easier to achieve than in other situations becasue we are working at the low end of the mass range. Therefore the relative resolving power is much greater. Typical analytes are smaller than 66 amu in almost all cases. 
+
+#### Double Focusing
+
+The newest traditional instruments are double focusing normal geometry sector instruments. This allows for greater than 1 amu mass resolution below ~50 amu allowing for many isotopologues at the same nominal mass to be measured (i.e. $^{13}$CH$_4$ and $^{12}$CH$_3$D).
+
+### Bellows
+
+The bellows are what typically set a gas source IRMS apart from the other common types of mass spectrometer. They are typically 3 - 40 mL from maximum compression and expansion. This variability allows a constant source pressure to be achieved making ionization (and the potential for fractionation during) very consistent. This allows in addition for the standard to be at the same pressure as the sample, also mitigating the variation between the two. Due to the ease of this standardization higher precision is able to be achieved than the vacuum system suggests. The downside is that significantly higher sample volume is needed compared to insitu and other measurements. 
+
+### Capillaries
+
+In order to transfer the analyze from the large volume bellows to the source without fractionation capillaries are used. The four main types are stainless steel (very durable, can have exchange for water sensitive analytes like carbon dioxide), nickel (falling out of favor due to the finicky nature but minimizes isotope exchange for carbon dioxide), coated stainless steel (the new standard), and silica (very sensitive to ambient conditions in the room like humidity and if a vent is blowing near the capillary waving it in the wind). Besides silica capillaries all other types have a crimp at one end to ensure laminar flow through the capillary eliminating a fractionation that would occur if you were just emptying the bellows through the capillary under a different flow regime. It is necessary to ensure the crimp in the sample and the standard side is similar so similar bellows pressure generate similar source pressures (there can be complications if one sides bleeds down faster during an acquisition causing a violation of the principle that the same thing is done to the reference and the sample).
+
+### Microvolume {#sec-IRMS-Microvolume}
+
+A microvolume is a small volume that exists just before a capillary. It can be between the bellows and the capillary or between a sample introduction system and a capillary. It is used when there is insufficient gas for a traditional dual inlet measurement. Typically, the sample is cryofocused into the microvolume, and then released into the capillary for immediate measurement. There can be some issues in the first moments after the cryofocusing ceases where the measured ratio is not representative of the entire sample. The reference gas ideally should also be in a microvolume to mimic the decline in detector voltage throughout the measurement. 
+
+### Detectors
+
+In general, these instruments use mostly faradays. In the most modern instruments the range is typically $1*10^8\Omega$ resistors to $1*10^{13}\Omega$ resistors. In some special applications for multiply substituted isotopologes SEMs are used.
+
+## Sample Introduction and Preparation
+
+Unlike many other versions of mass spectrometry discussed here, the sample is modified from its solid or liquid phase into a gas before it is introduced into the mass spectrometer. In the first iterations this was done manually offline one sample at a time. There are now many modern homemade and commercially available preparatory systems to ease, speed, and increase reproducibility of this process. 
+
+### Examples of sample common sample introduction techniques
+
+#### Combustion / Pyrolysis
+
+Typically the apparatus is purchased from a commercial source for most current users of this technique. This is used for solid samples that can be converted into constituent gases (i.e. CO$_2$ for carbon isotopes, N$_2$ for nitrogen isotopes, SO$_2$ for sulfur isotopes). For example it can be used for sulfates, nitrates, and organic material but not for silicates that are too recalcitrant. There are two main modes, anoxic and oxic. The sample is dropped into a packed column in a furnace. It is then passed over a series of substrates to ensure lack of oxygen if applicable as well as removing other species that would interfere with the mass spectrometry. The last step is typically being passed through a gas chromatograph (GC) column with a carrier gas, and measured using continuous flow.
+
+#### Acid Digestion
+
+Acid digestion is typically used to create CO$_2$ gas from carbonate material so the carbon and oxygen isotopes (and potentially clumped) can be measured. A powdered carbonate sample is dropped into phosphoric acid under vacuum and dissolved. Typically calcite is dissolved at 20$^{\circ}$ overnight or 90$^{\circ}$ for a shorter (on the order of minutes) time.
+
+#### Flourination
+
+In order to measure oxygen isotopes trapped in silicates, the Si-O bond must be broken and O$_2$ is released. This can also be applied to liberate sulfur for triple sulfur applications. To do this for gas source measurements a flourinating agent (typically BrF$_5$ sometimes F$_2$) is used. After the gas is liberated, it is cryogenically cleaned of other coevolving gases before being introduced into the bellows or microvolume. 
+
+#### Gas Chromatography
+
+Even without a combustion user interface, some species are passed through a gas chromatography before being introduced into the mass spectrometer via continuous flow. This is helpful if your analyte is mixed with other gas species. The drawbacks are frequently there is insufficient gas in a single throughput of a GC to make a dual inlet measurement. 
