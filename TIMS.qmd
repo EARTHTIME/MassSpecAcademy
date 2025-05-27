@@ -16,6 +16,22 @@ There's a list of ingredients in the components chapters. Here is the general re
 
 ## Making ions {#sec-TIMS-making-ions}
 
+Thermal Ionization in Inorganic Mass Spectrometry
+Thermal ionization is a widely used technique in inorganic mass spectrometry for converting neutral atoms into positively and negatively charged ions. Ionization is a critical step that allows the precise separation and direction of ions in the analyzer based on their mass-to-charge (m/z) ratio. In Thermal Ionization Mass Spectrometry (TIMS)—a non-plasma-based method—a small sample (often in the picogram range) is deposited onto a refractory metal filament. Rhenium (melting point ~3180 °C) and platinum (melting point ~1772 °C) are commonly used as filament materials. The filament is then gradually heated to temperatures between 800 °C and 2200 °C, depending on the ionization characteristics of the element. The resulting thermal excitation causes atoms in the sample to lose electrons, forming positive ions. Negative ions form when electronegative atoms or molecules, often loaded as oxides or fluorides, capture thermionically emitted electrons from the hot filament.
+
+TIMS is capable of producing stable ion beams and achieving extremely high precision in isotope ratio measurements (up to ~0.0001%), with minimal isobaric interference of trace quantities of a sample (Analytica Chimica Acta, 2017).
+The technique is suitable for analyzing a wide range of elements in both positive and negative thermal ion modes (Heumann et al., 1995).
+
+- Elements that preferably form positive thermal ions include:
+Li, Na, K, Rb, Cs, Mg, Ca, Ba, Sc, Ti, V, Cr, Mn, Fe, Co, Ni, Cu, Zn, Ga, Zr, Nb, Mo, Ru, Rh, Pd, Ag, Cd, Sn, In, Sb, La, Ce, Pr, Nd, Pm, Sm, Eu, Gd, Tb, Dy, Ho, Er, Tm, Yb, Lu, Hf, Ta, W, Re, Os, Ir, Pt, Au, Hg, Pb, Bi, Th, Pa, U, Np, Pu, Am, Cm.
+- Elements that preferably form negative thermal ions include:
+B, C, N, O, F, Al, Si, P, S, Cl, As, Se, Br, Te, and I.
+The ionization efficiency of a TIMS analysis depends on several factors:
+- The ionization potential (IP) of the element,
+- The work function (W) of the filament material,
+- And the temperature (T) of the filament.
+
+
 - how we get samples on filaments. emitters, sample loading schemes (triple filament with an evaporation filament and an ionization filament). Silica gel + phosphoric or graphite or tantalum oxide or etc. 
 - What determines which of these schemes gets used? Work function, first ionization potential, other concerns (electrochemistry of glasses). Dark arts and magic.
 - Langmuir and Langmuir-Saha equation, filament temperature, controls on ionization efficiency vs. ionization rate. Note we should ignore Carlson here.
