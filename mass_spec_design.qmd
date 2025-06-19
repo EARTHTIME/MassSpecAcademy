@@ -91,26 +91,11 @@ RIMS
 ### Electrostatic analyzers
 
 ### Quadrupoles {#sec-design-quadrupoles}
- 
-Quadrupole mass analyzers generate electric fields through which only ions of certain mass to charge ratios are able to pass. As shown in the figure -need fig-, ions enter the quadrupole along it's z-axis. Those with m/z within the selected range will maintain a stable trajectory along the z-axis and reach the spectrometer's detector. The electric fields will destabilize the paths of ions with m/z outside the selected range, knocking them "off course" and preventing them from passing through the analyzer. 
 
-Dynamic.
+Quadrupole mass analyzers – also referred to as [quadrupole mass filters](#sec-quadrupole-mass-filtering) depending on the application and/or reference source – generate dynamic electric fields through which only ions of certain mass to charge ratios (m/z) can pass. By varying the strength and frequency of the field, quadrupoles can filter for a single m/z, or scan sequentially across a range of m/z to produce a mass spectrum. 
 
-Analyzer vs. filter? filtering vs. bending?
+Variants on the quadrupole mass filter include monopoles, quadrupole ion traps, and other multipole geometries (e.g hexapoles, octopoles, dodecapoles), all of which can be used for focusing ion beams in addition to filtering/analyzing. 
 
-**How does quadrupole mass filtering work?**
-
-Quadrupole mass analyzers use four parallel rods that are connected in cross-wise pairs. A potential of (U+Vcosωt) is applied to one pair, while a potential of -(U+ωt) applied to the second pair. Here, Vcosωt represents an alternating RF voltage and U represents a DC voltage ("DC offset"). The applied potentials create orthogonal electrical fields--one in the x-plane, and one in the y-plane--that interact differently with ions of different m/z. 
-
-In the X-direction, low m/z ions generally follow the RF component of the field, gain energy, and oscillate with increasing amplitude until they collide with the rods. This creates a "high-pass" filter in the X-direction that allows only heavier ions to maintain their trajectory. 
-
-In the Y-direction, the DC component of the field has a "de-focusing" or destabilizing effect, but the RF component can keep lighter ions on course by periodically correcting their paths. In this direction, the applied electric fields create a "low-pass" filter through which only lighter ions can maintain their trajectory. By manipulating the RF and DC components of the field, the high and low-pass filters can be set to resolve individual atomic masses. 
-
-**Some math!** or **More details!** or **How are potentials calculated?**  
-- follow an ex: stability of ion of a single mass 
--       mathieu equation and "stability triangle" 
-
-**Advantages of quadrupoles**
 
 
 ### Collision/Reaction cells (CRCs){#sec-design-crc}
