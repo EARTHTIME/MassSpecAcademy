@@ -22,19 +22,35 @@ Why use an ESA instead of a magnet? Before or after magnet? Why is it so often s
 
 Advantage is that you can change a voltage quickly (nanoseconds), for instance to deflect a beam.
 
-## Quadrupole Mass Analyzers {#sec-analzer-quadrupoles}
+## Quadrupole Mass Analyzers {#sec-analyzer-quadrupoles}
 
-Quadrupoles are a dynamic mass analyzer. Quickly changing voltages. Radio frequency.
+### Background
+Using a combination of static and alternating voltages, quadrupole mass analyzers generate electric fields, rather than magnetic fields, that filter ions based on their mass to charge ratio (m/z). The possibility of using a quadrupole electric field for mass filtering was first proposed in the 1950's by Wolfgang Paul and Helmut Steinwedel, who drew from earlier use of quadrupole magnetic fields for high energy accelerators [@Dawson_1976]. In contrast to sector instruments, quadrupole mass analyzers are considered “dynamic” – to produce a mass spectrum, the strength and/or frequency of their electric fields must be incrementally adjusted throughout the duration of a scan. 
 
-Hexapoles and Octopoles. RF multipoles in general.
+### Mass filtering - how does it work? {#sec-quadrupole-mass-filtering}
 
-Rod shapes and resulting EM field lines. Compromises with number and shape of rods.
+Quadrupole mass filters consist of four parallel rods, connected in crosswise pairs. A potential of (U+Vcosωt) is applied to one pair, while a potential of -(U+Vcosωt) is applied to the second pair. Here, Vcosωt represents an alternating RF voltage with an amplitude of V and frequency of ω; U represents a static voltage ("DC offset"). More simply, you could express the potentials as (DC+RF), and -(DC+RF).
 
-Advantages: no moving parts, very fast, reliable, inexpensive (see also, vacuum systems and requirements). Disadvantages: One m/z out the back end at a time. Throughput can be low. 
+Though the voltage applied to each pair of rods oscillates continuously, the DC component can be thought of as the *average* voltage applied to each pair. In general, high m/z ions respond to the average voltage. If the DC component is positive, they are repelled by the rods, and thus stabilized. If the DC component is negative, they are attracted to the rods and destabilized. Lighter ions respond mainly to the RF component, though in a somewhat less intuitive way.
 
-Stability triangle figure.
+Because the forces acting on ions traveling through the quadrupole are uncoupled in the X, Y, and Z directions, we can think of mass filtering in terms of two separate planes: the XZ-plane, or X-direction, and the YZ-plane, or Y-direction. Note that in the Z-direction (along the length of the quadrupole), the net force acting on ions is zero. 
 
-Lots of math with funny symbols.
+In the X-direction, ion stability is determined by the two rods with positive DC voltage. In this direction, low m/z ions generally follow the RF component of the field, gain energy, and oscillate with increasing amplitude until they collide with the rods. Meanwhile, high m/z ions are pushed toward the Z-axis and stabilized by the positive DC component. This creates a "high-pass" filter in the X-direction that allows only heavier ions to maintain their trajectory. 
+
+In the Y-direction, ion stability is determined by the rods with negative DC voltage. While the negative DC component has a "de-focusing" or destabilizing effect on large ions, the RF component can keep lighter ions on course by periodically correcting their paths. In this direction, the applied electric fields create a "low-pass" filter through which only lighter ions can maintain their trajectory. 
+
+By manipulating the RF and DC components of the field, the high and low-pass filters can be set to resolve individual atomic masses. The following section discusses the impact of RF and DC voltages on ion stability in more detail.  
+
+### Equations of motion and stability diagrams
+
+
+### Operation and typical geometry of instrument
+
+
+### Advantages
+
+Quadrupoles can be used on their own, linked in series (e.g. triple quadrupole), or combined (either as filters or analyzers) with other mass analyzers. Compared to sector instruments, they are reliable, fast, and relatively inexpensive. However, they generally offer lower throughput and resolving power.
+
 
 ## Time of flight mass analyzer (TOF) {#sec-analyzer-TOF}
 
