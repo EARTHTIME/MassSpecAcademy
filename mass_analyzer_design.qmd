@@ -31,9 +31,12 @@ Using a combination of static and alternating voltages, quadrupole mass analyzer
 
 Quadrupole mass filters consist of four parallel rods, connected in crosswise pairs. A potential of (U+Vcosωt) is applied to one pair, while a potential of -(U+Vcosωt) is applied to the second pair. Here, Vcosωt represents an alternating RF voltage with an amplitude of V and frequency of ω; U represents a static voltage ("DC offset"). More simply, you could express the potentials as (DC+RF), and -(DC+RF).
 
-Though the voltage applied to each pair of rods oscillates continuously, the DC component can be thought of as the *average* voltage applied to each pair. In general, high m/z ions respond to the average voltage. If the DC component is positive, they are repelled by the rods, and thus stabilized. If the DC component is negative, they are attracted to the rods and destabilized. Lighter ions respond mainly to the RF component, though in a somewhat less intuitive way.
+Though the voltage applied to each pair of rods oscillates continuously, the DC component can be thought of as the *average* voltage applied to each pair. In general, high m/z ions respond to the average voltage – positive DC voltage repels and thus stabilizes them, negative DC voltage attracts and destabilizes them – while lighter ions are more sensitive to the RF component.
 
 Because the forces acting on ions traveling through the quadrupole are uncoupled in the X, Y, and Z directions, we can think of mass filtering in terms of two separate planes: the XZ-plane, or X-direction, and the YZ-plane, or Y-direction. Note that in the Z-direction (along the length of the quadrupole), the net force acting on ions is zero. 
+
+
+![Ions with m/z within the selected range will maintain a stable trajectory along the z-axis and reach the spectrometer's detector](figs/quad-fig6.png)
 
 In the X-direction, ion stability is determined by the two rods with positive DC voltage. In this direction, low m/z ions generally follow the RF component of the field, gain energy, and oscillate with increasing amplitude until they collide with the rods. Meanwhile, high m/z ions are pushed toward the Z-axis and stabilized by the positive DC component. This creates a "high-pass" filter in the X-direction that allows only heavier ions to maintain their trajectory. 
 
@@ -42,6 +45,20 @@ In the Y-direction, ion stability is determined by the rods with negative DC vol
 By manipulating the RF and DC components of the field, the high and low-pass filters can be set to resolve individual atomic masses. The following section discusses the impact of RF and DC voltages on ion stability in more detail.  
 
 ### Equations of motion and stability diagrams
+
+- Equations of motion depend both on the (a) geometry of the E-field and (b) on time-dependent potentials
+- Beginning with a general geometric description of s quadrupole E-field, impose differential form of Gauss’ law (/Laplace eqn), integrate to get a general eqn for potential, move some things around and plug in the time dependent potentials ±(U+Vcosωt)
+- Plug potential into equations of motion (using F=ma=Eq), this is almost Mathieu’s eqn
+- SUMMARY → we can use the geometry of the electric field within the analyzer and the time dependent potentials on the rods (bc we already know the relationship between E and Φ) to express the force on an ion and thus determine its equation of motion…solving the equation of motion is trickier
+- Substitute in a and q → express the potential within the quadrupole as a second order diff eq. that resembles Mathieu eqn
+- Not going to solve the mathieu equation here, bc Mathieu already did → link a paper
+- And what does “solving” an equation of motion mean anyway?
+- Physical implications of bounded vs unbounded solutions to the equation:
+   - “Unbounded” = unstable ion trajectory
+   - “Bounded” = stable ion trajectory
+- Introduce stability diagram of U/V (specific to a particular m/z), and demonstrate how a and q can be used to generalize the stability diagram
+- Altering U and V but keeping a/q constant → ions of increasing or decreasing m/z traverse the mass filter, creating a mass spectrum
+- what happens if a/q is not kept constant? → alters resolution, ie pushes the a/q line either above the peak or too far down to provide unit mass resolution → question: how does this compare to a U/V plot?
 
 
 ### Operation and typical geometry of instrument
