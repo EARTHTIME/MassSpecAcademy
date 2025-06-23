@@ -46,8 +46,21 @@ By manipulating the RF and DC components of the field, the high and low-pass fil
 
 ### Equations of motion and stability diagrams
 
-- Equations of motion depend both on the (a) geometry of the E-field and (b) on time-dependent potentials
-- Beginning with a general geometric description of s quadrupole E-field, impose differential form of Gauss’ law (/Laplace eqn), integrate to get a general eqn for potential, move some things around and plug in the time dependent potentials ±(U+Vcosωt)
+The equations of motion that describe ion paths within a quadrupole depend on:
+   (a) the hyperbolic geometry of the electric field 
+   (b) the time-dependent potentials (voltages) applied to the rods
+
+Starting with the geometry, we can come up with a general equation for the electric potential throughout the quadrupole, which is just the equation for potential within a hyperbolic electric field:
+$$\Phi=-\frac{\Phi_0}{2r^2}(x^2-y^2)$$
+
+For a step-by-step derivation of this equation, check out [section II]<https://books.google.com/books?id=A6o3BQAAQBAJ&lpg=PA9&dq=quadrupole%20mass%20analyzer&lr&pg=PA9&output=embed" width=500 height=500> in [@Dawson].
+
+::: {.callout-note collapse=true}
+## Or see this brief overview, for reference
+  Start with a general geometric description of a quadrupole electric field$$E=E_0(\lambda x+\sigma y+\gamma z)$$ Choose $\lambda$, $\sigma$, and $\delta$ such that they satisfy the differential form of Gauss’ Law (the Laplace equation, since the charge enclosed in the quadrupole is zero): $$\nabla \cdot E=0$$ There are multiple solutions, but we will use: $$\lambda=-\sigma , \gamma = 0$$
+  Integrate general equation of electric field to get the potential and then plug in our values for $\lambda$, $\sigma$, and $\gamma$: $$\Phi = -\frac{1}{2}\lambdaE_0(x^2-y^2)$$ Now, assume the distance between the rods is $2r_o$ and the potential on each rod is $\frac{Phi_0}{2}$. Then, at the interior surface of the rods in the X-plane, $x=r_0$, and y=0, such that $$\Phi=-\frac{1}{2}E_0\lambda r_0^2$ and $\Phi = -\frac{\Phi_0}{2r^2} (x^2-y^2)
+:::
+
 - Plug potential into equations of motion (using F=ma=Eq), this is almost Mathieu’s eqn
 - SUMMARY → we can use the geometry of the electric field within the analyzer and the time dependent potentials on the rods (bc we already know the relationship between E and Φ) to express the force on an ion and thus determine its equation of motion…solving the equation of motion is trickier
 - Substitute in a and q → express the potential within the quadrupole as a second order diff eq. that resembles Mathieu eqn
