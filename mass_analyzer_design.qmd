@@ -22,19 +22,173 @@ Why use an ESA instead of a magnet? Before or after magnet? Why is it so often s
 
 Advantage is that you can change a voltage quickly (nanoseconds), for instance to deflect a beam.
 
-## Quadrupole Mass Analyzers {#sec-analzer-quadrupoles}
+## Quadrupole Mass Analyzers {#sec-analyzer-quadrupoles}
 
-Quadrupoles are a dynamic mass analyzer. Quickly changing voltages. Radio frequency.
+### Background
+Using a combination of static and alternating voltages, quadrupole mass analyzers generate electric fields, rather than magnetic fields, that filter ions based on their mass to charge ratio (m/z). The possibility of using a quadrupole electric field for mass filtering was first proposed in the 1950's by Wolfgang Paul and Helmut Steinwedel, who drew from earlier use of quadrupole magnetic fields for high energy accelerators [@Dawson_1976]. In contrast to sector instruments, quadrupole mass analyzers are considered “dynamic” – to produce a mass spectrum, the strength and/or frequency of their electric fields must be incrementally adjusted throughout the duration of a scan. 
 
-Hexapoles and Octopoles. RF multipoles in general.
+### Mass filtering - how does it work? {#sec-quadrupole-mass-filtering}
 
-Rod shapes and resulting EM field lines. Compromises with number and shape of rods.
+Quadrupole mass filters consist of four parallel rods, connected in crosswise pairs. A potential of (U+Vcosωt) is applied to one pair, while a potential of -(U+Vcosωt) is applied to the second pair. Here, Vcosωt represents an alternating RF voltage with an amplitude of V and angular frequency of ω; U represents a static voltage ("DC offset"). More simply, you could express the potentials as (DC+RF), and -(DC+RF).
 
-Advantages: no moving parts, very fast, reliable, inexpensive (see also, vacuum systems and requirements). Disadvantages: One m/z out the back end at a time. Throughput can be low. 
+Though the voltage applied to each pair of rods oscillates continuously, the DC component can be thought of as the *average* voltage applied to each pair. In general, high m/z ions respond to the average voltage – positive DC voltage repels and thus stabilizes them, negative DC voltage attracts and destabilizes them – while lighter ions are more sensitive to the RF component.
 
-Stability triangle figure.
+::: {.callout-note collapse=true}
 
-Lots of math with funny symbols.
+## RF Voltage with DC Offset? 
+
+The plots below illustrate how a DC component, or U term, shifts the RF potential and changes its symmetry. A positive DC component shifts the signal upward, both increasing the average voltage and extending its time in the positive region; a negative DC component skews it downward, extending the length of time that the signal is negative.  
+```{python}
+#| label: quad-potentials
+#| fig-cap: "Quadrupole Potentials "
+
+import numpy as np
+import matplotlib.pyplot as plt
+
+f = 100_000  # 100 kHz
+omega = 2 * np.pi * f
+period = 1 / f  # = 10 μs
+
+V = 6000.0
+U = 1000.0
+
+num_cycles = 2
+samples_per_cycle = 1000  
+t_max = num_cycles * period
+num_points = num_cycles * samples_per_cycle
+t = np.linspace(0, t_max, num_points)
+
+phi1 = V * np.cos(omega * t)
+phi2 = U + V * np.cos(omega * t)
+phi3 = - (U + V * np.cos(omega * t))
+
+fig, axs = plt.subplots(3, 1, figsize=(6, 10), sharex=True)  # plot dimensions
+colors = ['blue', 'green', 'red']
+functions = [
+    (phi1, 'Φ = V·cos(ωt)', 0),
+    (phi2, 'Φ = U + V·cos(ωt)', 1000),
+    (phi3, 'Φ = –(U + V·cos(ωt))', -1000)
+]
+
+ymin, ymax = -8000, 8000
+
+for i, (ax, (y, label, true_mean), color) in enumerate(zip(axs, functions, colors)):
+    ax.plot(t * 1e6, y, label=label, color=color)  # time in μs
+    ax.axhline(0, color='black', linewidth=2.0)
+    ax.axhline(true_mean, color='darkmagenta', linestyle='--', linewidth=2,
+               label=f'U = {true_mean} V')
+    ax.set_ylabel('Φ (V)')
+    ax.set_ylim(ymin, ymax)
+    ax.legend(loc='upper right')
+    ax.grid(True)
+
+    if i in [1, 2]:
+        ax.annotate(
+            '',
+            xy=(t[50] * 1e6, true_mean),
+            xytext=(t[50] * 1e6, 0),
+            arrowprops=dict(arrowstyle='->', color='darkmagenta', lw=1)
+        )
+
+axs[2].set_xlabel('Time (μs)')
+
+plt.suptitle('RF Potentials and DC Offsets (100 kHz, V = 6000 Volts, U = 1000 Volts)', fontsize=10.5, x = .49, fontweight='bold')
+plt.subplots_adjust(hspace=10)  
+plt.tight_layout(rect=[0, 0, 1, 0.95])
+plt.show()
+```
+:::
+
+Because the forces acting on ions traveling through the quadrupole are uncoupled in the X, Y, and Z directions, we can think of mass filtering in terms of two separate planes: the XZ-plane, or X-direction, and the YZ-plane, or Y-direction. Note that in the Z-direction (along the length of the quadrupole), the net force acting on ions is zero. 
+
+
+![Ions with m/z within the selected range will maintain a stable trajectory along the z-axis and reach the spectrometer's detector](figs/quad-fig6.png)
+
+In the X-direction, ion stability is determined by the two rods with positive DC voltage. In this direction, low m/z ions generally follow the RF component of the field, gain energy, and oscillate with increasing amplitude until they collide with the rods. Meanwhile, high m/z ions are pushed toward the Z-axis and stabilized by the positive DC component. This creates a "high-pass" filter in the X-direction that allows only heavier ions to maintain their trajectory. 
+
+In the Y-direction, ion stability is determined by the rods with negative DC voltage. While the negative DC component has a "de-focusing" or destabilizing effect on large ions, the RF component can keep lighter ions on course by periodically correcting their paths. In this direction, the applied electric fields create a "low-pass" filter through which only lighter ions can maintain their trajectory. 
+
+By manipulating the RF and DC components of the field, the high and low-pass filters can be set to resolve individual atomic masses. The following section discusses the impact of RF and DC voltages on ion stability in more detail.  
+
+### Equations of motion and stability diagrams
+
+The equations of motion that describe ion paths within a quadrupole depend on:  
+
+(a) the hyperbolic geometry of the electric field  
+(b) the time-dependent potentials (voltages) applied to the rods
+
+Starting with the geometry, we can come up with a general equation for the electric potential throughout the quadrupole, i.e. the equation for potential within a hyperbolic electric field:  
+$$
+\Phi = -\frac{\Phi_0}{2r^2}(x^2 - y^2)
+$$
+For a step-by-step derivation of this equation, check out [Section II](https://books.google.com/books?id=A6o3BQAAQBAJ&lpg=PA9&dq=quadrupole%20mass%20analyzer&lr&pg=PA9&output=embed) in [@Dawson_1976].
+
+::: {.callout-note collapse=true}
+## Or see this brief overview, for reference:
+
+Start with a general geometric description of a quadrupole electric field:  
+
+\begin{equation}
+E = E_0(\lambda x + \sigma y + \gamma z)
+\end{equation}
+
+
+Choose weighting constants $\lambda$, $\sigma$, and $\gamma$ such that they satisfy the differential form of Gauss’ Law (the Laplace equation, since the charge enclosed in the quadrupole is zero):  
+$$
+\nabla \cdot E = 0
+$$
+
+There are multiple solutions, but we will use: $\lambda = -\sigma$, $\gamma = 0$
+
+Integrate the general equation of the electric field to get the potential and then plug in our values for $\lambda$, $\sigma$, and $\gamma$:  
+
+\begin{equation}
+\Phi = -\frac{1}{2}\lambda E_0(x^2 - y^2) 
+\end{equation}
+
+Now, assume the distance between the rods is $2r_0$ and the potential on each rod is $\frac{\Phi_0}{2}$. 
+
+Then, at the interior surface of the two rods in the XZ-plane, $x = r_0$ and $y = 0$, such that:
+$$
+\frac{\Phi_0}{2} = -\frac{1}{2}E_0 \lambda r_0^2
+$$
+
+Solving for $E_0 \lambda$ and plugging back in to the first equation for potential gives:  
+$$
+\Phi = -\frac{\Phi_0}{2r^2} (x^2 - y^2)
+$$
+:::
+
+Now, to come up with equations of motion for ions in the X and Y directions, we will need to relate this potential to Newton's second law: $$F=ma$$
+
+At any point in an electric field, the electrostatic force on a ion is the product of the electric field at that point and the charge of the ion:
+$$F=Eq$$
+
+So, splitting up Newton's second law into X and Y directions, and substituting Eq in for F, we re-write it as follows:
+$$Eq=mẍ$$ $$Eq=mÿ$$
+
+(Double dots represent the second derivative of a term, the second derivative of position being acceleration.)
+
+- finish setting up equations of motion
+- SUMMARY → we can use the geometry of the electric field within the analyzer and the time dependent potentials on the rods (bc we already know the relationship between E and Φ) to express the force on an ion and thus determine its equation of motion…solving the equation of motion is trickier
+- Substitute in a and q → express the potential within the quadrupole as a second order diff eq. that resembles Mathieu eqn
+- Not going to solve the mathieu equation here, bc Mathieu already did → link a paper
+- And what does “solving” an equation of motion mean anyway?
+- Physical implications of bounded vs unbounded solutions to the equation:
+   - “Unbounded” = unstable ion trajectory
+   - “Bounded” = stable ion trajectory
+- Introduce stability diagram of U/V (specific to a particular m/z), and demonstrate how a and q can be used to generalize the stability diagram
+- Altering U and V but keeping a/q constant → ions of increasing or decreasing m/z traverse the mass filter, creating a mass spectrum
+- what happens if a/q is not kept constant? → alters resolution, ie pushes the a/q line either above the peak or too far down to provide unit mass resolution → question: how does this compare to a U/V plot?
+
+
+### Operation and typical geometry of instrument
+
+
+### Advantages
+
+Quadrupoles can be used on their own, linked in series (e.g. triple quadrupole), or combined (either as filters or analyzers) with other mass analyzers. Compared to sector instruments, they are reliable, fast, and relatively inexpensive. However, they generally offer lower throughput and resolving power.
+
 
 ## Time of flight mass analyzer (TOF) {#sec-analyzer-TOF}
 
