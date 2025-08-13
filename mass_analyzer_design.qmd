@@ -110,7 +110,7 @@ In the Y-direction, ion stability is determined by the rods with negative DC vol
 
 By manipulating the RF and DC components of the field, the high and low-pass filters can be set to resolve individual atomic masses. The following section discusses the impact of RF and DC voltages on ion stability in more detail.  
 
-### Equations of motion and stability diagrams
+### Equations of motion
 
 
 The equations of motion that describe ion paths within a quadrupole depend on: 
@@ -120,86 +120,68 @@ The equations of motion that describe ion paths within a quadrupole depend on:
 (b) the time-dependent potentials (voltages) applied to the rods
 
 
-Since, in the case of quadrupole mass analyzers, the time-dependent potentials contain a cosin function, the equations that describe ion motion within a quadrupole will be "Mathieu-type" equations. That is, linear second order differential equations with *periodic* (oscillating) coefficients.
+Since, in the case of quadrupole mass analyzers, the time-dependent potentials contain a cosine function, the equations that describe ion motion within a quadrupole will be "Mathieu-type" equations. The Mathieu equation is a specific case of the Hill differential equation--a linear, second-order differential equation with a periodic (oscillating) coefficient--whose coefficient is a cosine function.
 
-The canonical form of Mathieu's equation is:
+The canonical form of the Mathieu equation is:
 $$\frac{d^2u}{dξ^2} + (a_u - 2q_ucos2ξ)u = 0$$
 
-Since we are concerned with equations of *motion*, we can replace ξ with t, taking the second derivative of some position u with respect to time t:
+Importantly, there are two categories of solutions to this equation: bounded solutions, which correspond to stable ion trajectories through the analyzer, and unbounded solutions, which correspond to unstable ion trajectories. 
 
-$$\frac{d^2u}{dt^2} + (a_u - 2q_ucos2t)u = 0$$
+::: {.callout-warning}
+## Parameters a and q
+Here a and q are dimensionless parameters that modify *which solutions* to the equation are stable and which are unstable. That is, **different values of a and q will result in different equations, each with a unique set of stable and unstable solutions**. Modifying a and q thus allows you to control which m/z are stable in the analyzer and which are not. 
+:::
 
-Importantly, there are two categories of solutions to this equation: bounded solutions, which correspond to stable ion trajectories through the analyzer, and unbounded solutions, which correspond to unstable ion trajectories. Here a and q are parameters which can be modified to control which m/z are stable in the analyzer and which are not, i.e. to modify *which solutions* to the equation are stable and which are unstable. Below is a loose derivation of the equations of ion motion which will relate the direct and alternating components of the applied potentials (U and V) to the parameters a and q.
+Below is a loose derivation of the equations of ion motion relating the direct and alternating components of the voltages (U and V) to the parameters a and q. For a step-by-step derivation, check out [Section II](https://books.google.com/books?id=A6o3BQAAQBAJ&lpg=PA9&dq=quadrupole%20mass%20analyzer&lr&pg=PA9&output=embed) in [@Dawson_1976].
 
 Starting with the geometry, we can come up with a general equation for the electric potential throughout the quadrupole, i.e. the equation for potential within a hyperbolic electric field: 
-$$
-\Phi = -\frac{\Phi_0}{2r^2}(x^2 - y^2)
-$$
-For a step-by-step derivation of this equation, check out [Section II](https://books.google.com/books?id=A6o3BQAAQBAJ&lpg=PA9&dq=quadrupole%20mass%20analyzer&lr&pg=PA9&output=embed) in [@Dawson_1976].
-
-
-
 
 ::: {.callout-note collapse=true}
-## Or see this brief overview, for reference:
-
+## More detailed steps
 
 Start with a general geometric description of a quadrupole electric field: 
-
 
 \begin{equation}
 E = E_0(\lambda x + \sigma y + \gamma z)
 \end{equation}
-
-
-
 
 Choose weighting constants $\lambda$, $\sigma$, and $\gamma$ such that they satisfy the differential form of Gauss’ Law (the Laplace equation, since the charge enclosed in the quadrupole is zero): 
 $$
 \nabla \cdot E = 0
 $$
 
-
 There are multiple solutions, but we will use: $\lambda = -\sigma$, $\gamma = 0$
 
-
 Integrate the general equation of the electric field to get the potential and then plug in our values for $\lambda$, $\sigma$, and $\gamma$: 
-
 
 \begin{equation}
 \Phi = -\frac{1}{2}\lambda E_0(x^2 - y^2)
 \end{equation}
 
-
 Now, assume the distance between the rods is $2r_0$ and the potential on each rod is $\frac{\Phi_0}{2}$.
 
+![](figs/quad-fig9.png)
 
 Then, at the interior surface of the two rods in the XZ-plane, $x = r_0$ and $y = 0$, such that:
 $$
 \frac{\Phi_0}{2} = -\frac{1}{2}E_0 \lambda r_0^2
 $$
 
-
 Solving for $E_0 \lambda$ and plugging back in to the first equation for potential gives: 
 $$
 \Phi = -\frac{\Phi_0}{2r^2} (x^2 - y^2)
 $$
 :::
+$$
+\Phi = -\frac{\Phi_0}{2r^2}(x^2 - y^2)
+$$
 
+To derive the equations of motion for ions in the X and Y directions, we relate the potential within the quadrupole to Newton’s second law, $F=ma$.
 
-Now, to come up with equations of motion for ions in the X and Y directions, we will need to relate this potential to Newton's second law, $F=ma$.
-
-
-This can be done by gradient of our potential function and making a series of substitutions, which result in the following two equations:
-
-
-$$\frac{d^2x}{dt^2} + \frac{q}{mr_0^2}(\Phi_0)(x) = 0$$
-
-
-$$\frac{d^2y}{dt^2} + \frac{q}{mr_0^2}(\Phi_0)(y) = 0$$
+This can be done by taking gradient of our potential function and making appropriate substitutions, which yield:
 
 ::: {.callout-note collapse=true}
-## For a walkthrough of this derivation, see below:
+## More detailed steps
 At any point in an electric field, the electrostatic force on a ion is the product of the electric field at that point and the charge (q) of the ion:
 $$F=Eq$$
 
@@ -208,60 +190,60 @@ So, splitting up Newton's second law into X and Y directions, and substituting E
 $$E_xq=m\frac{d^2x}{dt^2}$$ $$E_yq=m\frac{d^2y}{dt^2}$$
 
 
-(Double dots indicate the second derivative of a term, the second derivative of position being acceleration.)
+Acceleration is now denoted as the second derivative of position with respect to time.
 
 
-Taking partial derivatives of the potential (above) with respect to x and y will give us equation for the Electric field as functions of x and y, which we can plug in for $E_x$ and $E_y$:
+Taking partial derivatives of the potential (above) with respect to x and y will give us equation for the Electric field as functions of x and y, which we can plug in for $E_x$ and $E_y$. Substituting e (elementary charge) in for q, we have:
 
 
-$$ \frac{x\Phi_0}{r_0^2}(q) = m\frac{d^2x}{dt^2}$$
+$$ \frac{x\Phi_0}{r_0^2}(e) = m\frac{d^2x}{dt^2}$$
 
 
-$$ \frac{y\Phi_0}{r_0^2}(q) = m\frac{d^2y}{dt^2}$$
+$$ \frac{y\Phi_0}{r_0^2}(e) = m\frac{d^2y}{dt^2}$$
 
 
 Moving all terms to the left side of the equation, we have:
 
 
-$$\frac{d^2x}{dt^2} + \frac{q}{mr_0^2}(\Phi_0)x = 0$$
+$$\frac{d^2x}{dt^2} + \frac{e}{mr_0^2}(\Phi_0)x = 0$$
 
 
-$$\frac{d^2y}{dt^2} + \frac{q}{mr_0^2}(\Phi_0)y = 0$$
+$$\frac{d^2y}{dt^2} + \frac{e}{mr_0^2}(\Phi_0)y = 0$$
 :::
 
+$$\frac{d^2x}{dt^2} + \frac{q}{mr_0^2}(\Phi_0)(x) = 0$$
 
-Now, we can replace $\Phi_0$ in each equation with the actual potentials applied to the rods. Note, again, that the applied potentials are sinusoidal functions of *time*:
-
-
-$$\frac{d^2x}{dt^2} + \frac{q}{mr_0^2}(U+\cos(ωt))x = 0$$
+$$\frac{d^2y}{dt^2} + \frac{q}{mr_0^2}(\Phi_0)(y) = 0$$
 
 
-$$\frac{d^2y}{dt^2} - \frac{q}{mr_0^2}(U+\cos(ωt))y = 0$$
+In each equation, $\Phi_0$ can be replaced with the actual potentials applied to the rods. Note, again, that the applied potentials are periodic functions of *time*:
 
 
-These are the equations of motion! YAY!
+$$\frac{d^2x}{dt^2} + \frac{e}{mr_0^2}(U+V\cos(ωt))x = 0$$
 
 
-In summary, we can use the (a) geometry of the electric field within the analyzer and (b) the time dependent potentials on the rods to express the force acting on an ion in the analyzer, and thus determine the equations of motion that will describe its path.
+$$\frac{d^2y}{dt^2} - \frac{e}{mr_0^2}(U+V\cos(ωt))y = 0$$
 
 
-Solving the equations of motion is trickier, but fortunately, they are of the Mathieu "type" -- linear, second order differential equations with "harmonic" coefficients, i.e. a cosin function modifying the x and y terms -- and there are multiple well-documented methods for solving them. The canonical form of Mathieu's equation looks a bit different though:
+These are the equations of motion! YAY! A final substitution is needed to put them in the standard form of Mathieu's equation, defining the parameters a and q as follows [@Dawson_1976]:
 
+(Definitions of a and q may differ between sources by a factor of 2, depending on whether U and V have been defined as the full potential or half the potential applied to each pair of rods.)
+$$ a = \frac{4eU}{mω^2r_0^2}$$
+$$ q = \frac{2eV}{mω^2r_0^2}$$
 
-INSERT THE EQUATION HERE
+Substituting in a and q, and defining the parameter $ξ = \frac{ωt}{2}$, yields:
+$$\frac{d^2x}{dξ^2} + (a - 2qcos2ξ)x = 0$$
+$$\frac{d^2y}{dξ^2} + (a - 2qcos2ξ)y = 0$$
 
+Solving these equations is complicated, and most easily done with a computer. For the purpose of understanding quadrupoles, however, analyzing the impact of the parameters a and q is perhaps more important than knowing actual solutions to the equations. 
 
-In order to get our equations in this form, some substitutions still have to be made.
+Since a and q both contain a factor of $\frac{e}{mω^2r_0^2}$: $$\frac{a}{q} = \frac{2U}{V}$$ Notice that if U and V are multiplied by the same constant (preserving $\frac{U}{V}$), any of the factors m, ω, or $r_0$ can also be multiplied by that constant such that a and q remained unchanged, preserving the stability boundaries of the solutions. 
 
+In practice, these stability boundaries translate to mass resolution. Typically, only U and V are manipulated--the dimensions of the instrument and the frequency of the RF voltage remain constant. The result is that scaling U and V proportionately preserves the resolution of the mass filter but selects for a different range of masses. 
 
+So, if $\frac{U}{V}$ has been tuned to resolve individual atomic masses, then scaling $\frac{U}{V}$ up or down will select for a higher or lower individual atomic mass. Scaling $\frac{U}{V}$ throughout the duration of a scan can thus produce a mass spectrum. If, instead, the ratio of DC to RF voltage is altered, then the mass resolution of the analyzer will change. 
 
-
-- Substitute in a and q → express the potential within the quadrupole as a second order diff eq. that resembles Mathieu eqn
-- Not going to solve the mathieu equation here, bc Mathieu already did → link a paper
-- And what does “solving” an equation of motion mean anyway?
-- Physical implications of bounded vs unbounded solutions to the equation:
-  - “Unbounded” = unstable ion trajectory
-  - “Bounded” = stable ion trajectory
+### Stability diagrams
 - Introduce stability diagram of U/V (specific to a particular m/z), and demonstrate how a and q can be used to generalize the stability diagram
 - Altering U and V but keeping a/q constant → ions of increasing or decreasing m/z traverse the mass filter, creating a mass spectrum
 - what happens if a/q is not kept constant? → alters resolution, ie pushes the a/q line either above the peak or too far down to provide unit mass resolution → question: how does this compare to a U/V plot?
